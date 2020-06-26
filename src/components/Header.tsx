@@ -64,7 +64,7 @@ const InnerHeader = styled.div`
   max-width: ${sizes.xLarge / 16}em;
   margin: auto;
   display: flex;
-  height: 70px;
+  height: 100%;
   a {
     color: var(--primaryColor);
   }
