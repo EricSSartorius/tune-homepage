@@ -1,0 +1,132 @@
+html {
+  /* Sets 1 REM to 10px */
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bgColor);
+  color: var(--textColor);
+  font-family: var(--bodyFont);
+  font-size: var(--baseFontSize);
+  line-height: 1.5;
+}
+
+main {
+  overflow: hidden;
+  background: var(--bgColor);
+  min-height: 60vh;
+}
+
+section {
+  padding: var(--topSectionPadding) 0 var(--bottomSectionPadding) 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  font-style: normal;
+  font-family: var(--headingFont);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: var(--margins);
+}
+
+h5,
+h6,
+p {
+  margin: var(--smallBaseMargin) 0;
+}
+
+h1 {
+  line-height: 1.125;
+  font-size: var(--heading-one);
+}
+
+h2 {
+  line-height: 1.16;
+  font-size: var(--heading-two);
+}
+
+h3 {
+  line-height: 1.2;
+  font-size: var(--heading-three);
+}
+
+h4 {
+  line-height: 1.375;
+  font-size: var(--heading-four);
+}
+
+h5 {
+  line-height: 1.5;
+  font-size: var(--heading-five);
+}
+
+h6 {
+  line-height: 1.5;
+  font-size: var(--heading-six);
+}
+
+p {
+  font-family: var(--bodyFont);
+  font-size: var(--baseFontSize);
+  line-height: 1.5;
+}
+
+p a {
+  color: var(--linkColor);
+}
+
+a {
+  text-decoration: none;
+  color: var(--linkColor);
+  font-size: var(--baseFontSize);
+  line-height: 1.5;
+  transition: all 0.3s;
+}
+
+a:hover {
+  color: var(--primaryColor);
+}
+
+hr {
+  border: none;
+  background: none;
+  border-bottom: 1px solid var(--lineColor);
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  margin: 1.5rem 0 0;
+  display: block;
+  width: 100%;
+  padding: 2.3rem 2rem;
+  font-size: var(--baseFontSize);
+  color: var(--darkGray);
+  border-radius: var(--inputRadius);
+  border: 1px solid var(--lineColor);
+  max-width: 100%;
+}
+
+label,
+label span {
+  display: block;
+  margin: var(--smallBaseMargin) 0;
+}
+
+::placeholder {
+  color: var(--lightGray);
+}
