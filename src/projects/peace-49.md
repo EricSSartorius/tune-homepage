@@ -16,4 +16,4 @@ The teahouse is a solid volume that has an open corner to the exterior which we 
 
 #### Design Development - Architecture & Interior
 
-#### Construction Drawing - Architecture & Interior
+#### Constrction Drawing - Architecture & Interior
