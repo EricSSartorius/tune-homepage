@@ -1,0 +1,85 @@
+/* Global Classes */
+/* 🔒 Not configurable */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* --- Color Classes --- */
+.gray-bg {
+  background: var(--lightesterGray);
+}
+
+.white-text {
+  color: var(--white);
+}
+
+/* --- Typography Classes --- */
+.center-text {
+  text-align: center;
+}
+
+p.largest,
+p.largest a {
+  font-size: var(--largestFontSize);
+  margin: 4rem 0;
+}
+
+p.large,
+p.large a {
+  font-size: var(--largeFontSize);
+}
+
+p.small,
+p.small a {
+  font-size: var(--smallestFontSize);
+  margin: 1.5rem 0;
+}
+
+p.subtext {
+  display: inline-block;
+  margin: 0;
+  font-size: var(--smallestFontSize);
+  color: var(--darkGray);
+}
+
+/* --- Container Classes --- */
+
+/* Vertical container padding wrapper */
+.container {
+  padding: var(--topSectionPadding) 0 var(--bottomSectionPadding) 0;
+}
+
+/* Vertical margins wrapper */
+.margins {
+  margin: var(--margins);
+}
+
+.no-margins {
+  margin: 0;
+}
+
+.no-top-margin {
+  margin-top: 0;
+}
+
+/* Only top section padding */
+.top-padding {
+  padding-top: var(--topSectionPadding);
+}
+
+/* Only bottom section padding */
+.bottom-padding {
+  padding-bottom: var(--bottomSectionPadding);
+}
+
+/* --- Mobile Classes (Below medium screen size) --- */
+@media (max-width: 880px) {
+  /* Change order of grid item on mobile
+  ? This class should be placed on the first item in a grid with 2 desktop columns to change it's order on mobile
+*/
+  .mobile-reverse-item {
+    grid-row: 2;
+  }
+  /* Hide item on mobile */
+  .hide-mobile {
+    display: none;
+  }
+}
