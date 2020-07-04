@@ -3,6 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { Grid } from "../styles"
+import Hero from "../components/Hero"
 
 const ProjectsPage = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
@@ -28,7 +29,11 @@ const ProjectsPage = () => {
     }
   `)
 
-  // TODO  map the projects and put them in a grid below
+  // TODO
+  //* add a layout component to wrap the page
+  //* add the hero component (no need for an image yet)
+  //* use wrapper around all the projects
+  //* map the projects and put them in a grid below
   const projects = allMarkdownRemark.edges
   console.log("PROJECTS", projects)
 
