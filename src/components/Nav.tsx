@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 import { Flex, below } from "../styles"
 import { useScrollFreeze } from "../hooks"
 import { motion, AnimatePresence } from "framer-motion"
@@ -23,7 +24,11 @@ const MobileMenu = ({ links }: Props) => {
   const closeMenu = () => setIsMenuOpen(false)
 
   return (
-    <>
+    <nav>
+      <Link to="/projects/">
+        <Icon name="fist" />
+      </Link>
+
       <MenuIcon onClick={toggleMenu}>
         <Icon name="hamburger" />
       </MenuIcon>
@@ -38,7 +43,7 @@ const MobileMenu = ({ links }: Props) => {
           )}
         </AnimatePresence>
       </Portal>
-    </>
+    </nav>
   )
 }
 
