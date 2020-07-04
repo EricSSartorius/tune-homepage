@@ -6,8 +6,6 @@ images: "/images/private-residence/"
 description: "Private Residence"
 ---
 
-# Private Residence
-
 ### Rama IV
 
 #### Conceptual Design - Architecture & Interior

@@ -6,8 +6,6 @@ images: "/images/bhavana-house/"
 description: "Bhavana House"
 ---
 
-# Bhavana House
-
 ### Wang Nam Kiew
 
 #### Conceptual Design - Architecture & Interior

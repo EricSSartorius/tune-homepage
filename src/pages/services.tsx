@@ -2,11 +2,11 @@ import React from "react"
 import Layout from "../layouts"
 import SEO from "../components/Seo"
 
-const ContactPage: React.FC = () => (
+const ServicesPage: React.FC = () => (
   <Layout>
-    <SEO title="Contact" />
-    <h1>Contact</h1>
+    <SEO title="Projects" />
+    <h1>Services</h1>
   </Layout>
 )
 
-export default ContactPage
+export default ServicesPage

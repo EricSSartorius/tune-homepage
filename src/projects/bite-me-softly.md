@@ -6,8 +6,6 @@ images: "/images/bite-me-softly"
 description: "Bite Me Softly"
 ---
 
-# Bite Me Softly
-
 ### Kaijae Lane, Phra Sumen Rd
 
 The architecture of Bite Me Softly Cafe gives significance and context to the site’s existing trees and landscape.
