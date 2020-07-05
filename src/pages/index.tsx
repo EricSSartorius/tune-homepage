@@ -27,7 +27,9 @@ const IndexPage = ({ data }) => (
           dream become a reality
         </h2>
         <p>
-          Services Breakdown <Icon name="arrow" />
+          <Link to="/services/">
+            Services Breakdown <Icon name="arrow" />
+          </Link>
         </p>
       </section>
     </Wrapper>
