@@ -55,8 +55,8 @@
   --heading-five: var(--largeFontSize);
   --heading-six: var(--baseFontSize);
 
-  --headingFont: sans-serif;
-  --bodyFont: var(--headingFont);
+  --headingFont: "Playfair Display", Helvetica, arial, sans-serif;
+  --bodyFont: "Roboto", Helvetica, arial, sans-serif;
 }
 
 /* Change root sizes above medium breakpoint */
