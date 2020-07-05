@@ -1,8 +1,8 @@
 ---
 slug: "/bhavana-house/"
 title: "Bhavana House"
-thumbnail:
-images: "/images/bhavana-house/"
+thumbnail: "./images/bhavana-house/bhavana-house.jpg"
+images: "./images/bhavana-house/"
 description: "Bhavana House"
 ---
 

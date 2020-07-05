@@ -15,9 +15,10 @@ type LinkType = {
 
 type Props = {
   links: LinkType[]
+  hasScrolled: boolean
 }
 
-const MobileMenu = ({ links }: Props) => {
+const MobileMenu = ({ links, hasScrolled = false }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
@@ -26,11 +27,18 @@ const MobileMenu = ({ links }: Props) => {
   return (
     <nav>
       <Link to="/projects/">
-        <Icon name="fist" />
+        <Icon
+          name="grid"
+          style={{ marginRight: "2rem" }}
+          color={hasScrolled ? "var(--textColor)" : "var(--white)"}
+        />
       </Link>
 
       <MenuIcon onClick={toggleMenu}>
-        <Icon name="hamburger" />
+        <Icon
+          name="hamburger"
+          color={hasScrolled ? "var(--textColor)" : "var(--white)"}
+        />
       </MenuIcon>
       <Portal>
         <AnimatePresence>

@@ -1,13 +1,15 @@
 import React from "react"
+import { graphql } from "gatsby"
+import styled from "styled-components"
+import Img from "gatsby-image"
 import Layout from "../layouts"
 import SEO from "../components/Seo"
-import Hero from "../components/Hero"
 import { Wrapper } from "../styles"
 
-const ServicesPage: React.FC = () => (
+const ServicesPage: React.FC = ({ data }) => (
   <Layout>
     <SEO title="Services" />
-    <Hero title="Services" />
+    <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
     <Wrapper>
       <section>
         {services.map(({ title, items }) => (
@@ -49,3 +51,19 @@ including (Interior Plans, Elevations, Sections, Detail Drawing) - Loose
 Furniture Recommendations - Built-in Furniture Drawings Construction
 Period Project Handover - Assist the Client to oversee the quality of work
 done by the Contractor. */
+
+const HeroImg = styled(Img)`
+  max-height: 30rem;
+`
+
+export const query = graphql`
+  query {
+    heroImg: file(relativePath: { eq: "hero/peace-hero.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`

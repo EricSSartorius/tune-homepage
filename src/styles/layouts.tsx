@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components'
-import { media } from './breakpoints'
+import styled, { css } from "styled-components"
+import { media } from "./breakpoints"
 // Grids & Utilities
 // 🔒 Not configurable
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -14,7 +14,7 @@ export const Flex = styled.div`
     margin-left: 20px;
   }
   justify-content: ${({ scalign }: { scalign?: string }) =>
-    scalign || 'space-between'};
+    scalign || "space-between"};
 `
 
 // Used anytime you need a grid of anything.
@@ -25,7 +25,7 @@ export const Grid = styled.div`
   grid-gap: 3rem;
   margin: 0 auto;
   ${({ cols = [] }) => {
-    if (typeof cols === 'object') {
+    if (typeof cols === "object") {
       return cols.map((_, index: number) => {
         // This nifty map goes over each col and adds style to a breakpoint
         const key = Object.keys(media)[index]
@@ -57,10 +57,10 @@ export const Card = styled.div`
 export const Wrapper = styled.div`
   padding: 0 var(--basePadding);
   margin: 0 auto;
-  max-width: 1146px;
+  max-width: 1400px;
   ${media.large`
     max-width: ${({ width }: { width: string }) =>
-      width === 'tight' ? '940px' : width};
+      width === "tight" ? "940px" : width};
   `}
 `
 
@@ -72,6 +72,6 @@ export const Cols = styled.div`
   grid-template-columns: 1fr;
   ${media.medium`
     grid-template-columns: ${({ isReverse }: { isReverse: boolean }) =>
-      isReverse ? '360px 1fr' : '1fr 360px'};
+      isReverse ? "360px 1fr" : "1fr 360px"};
   `}
 `

@@ -44,7 +44,7 @@ const Header = () => {
           </Link>
         </h1>
         <div className="nav-wrapper">
-          <Nav links={links} />
+          <Nav links={links} hasScrolled={hasHeaderBg} />
         </div>
       </InnerHeader>
     </HeaderWrapper>
@@ -60,10 +60,16 @@ const HeaderWrapper = styled.header`
   z-index: var(--headerLevel);
   position: fixed;
   transition: all ease-out 0.5s;
+  .logo a {
+    color: var(--white);
+  }
   &.active {
-    background-color: var(--white);
+    background-color: var(--bgColor);
     height: 100px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    .logo a {
+      color: var(--textColor);
+    }
   }
 `
 
@@ -71,9 +77,8 @@ const InnerHeader = styled.div`
   position: relative;
   align-items: center;
   justify-content: space-between;
-  align-items: center;
   padding: var(--basePadding);
-  max-width: 1146px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   height: 100%;

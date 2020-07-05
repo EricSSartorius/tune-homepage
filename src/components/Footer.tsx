@@ -30,8 +30,8 @@ const Footer = () => (
           </p>
           <div>
             <a href="tel:1-408-555-5555">
-              <Icon name="fist" />
-              <Icon name="fist" />
+              <Icon name="phone" style={{ marginRight: "1rem" }} />
+              <Icon name="line" style={{ marginRight: "1rem" }} />
               1-408-555-5555
             </a>
           </div>

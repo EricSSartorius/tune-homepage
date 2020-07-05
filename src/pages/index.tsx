@@ -1,15 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Hero from "../components/Hero"
 import { Wrapper } from "../styles"
 import Layout from "../layouts"
 import SEO from "../components/Seo"
 import Icon from "../components/Icon"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <Hero title="hello" />
+    <Hero title="hello" fluid={data.heroImg.childImageSharp.fluid} />
     <Wrapper>
       <section>
         <h6>Tune & Flying Home Studio</h6>
@@ -42,3 +42,15 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    heroImg: file(relativePath: { eq: "hero/peace-hero.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`

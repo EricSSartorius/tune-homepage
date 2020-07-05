@@ -20,7 +20,7 @@ const ProjectTemplate = ({ data }) => {
             }}
           />
           <Link to="/projects/">
-            <Icon name="arrow" /> All Projects
+            <Icon name="back" /> All Projects
           </Link>
         </section>
       </Wrapper>

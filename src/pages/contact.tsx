@@ -1,16 +1,19 @@
 import React from "react"
+import { graphql } from "gatsby"
+import styled from "styled-components"
+import Img from "gatsby-image"
 import Layout from "../layouts"
 import SEO from "../components/Seo"
-import Hero from "../components/Hero"
 import Icon from "../components/Icon"
 import { Wrapper } from "../styles"
 
-const ContactPage: React.FC = () => (
+const ContactPage: React.FC = ({ data }) => (
   <Layout>
     <SEO title="Contact" />
-    <Hero title="Contact" />
+    <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
     <Wrapper>
       <section>
+        <h1>Contact</h1>
         <div>
           <p>
             <a href="mailto:iam@flyinghomestudio.com">
@@ -32,3 +35,19 @@ const ContactPage: React.FC = () => (
 )
 
 export default ContactPage
+
+const HeroImg = styled(Img)`
+  max-height: 30rem;
+`
+
+export const query = graphql`
+  query {
+    heroImg: file(relativePath: { eq: "hero/private-hero.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
