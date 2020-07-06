@@ -62,7 +62,7 @@ const services = [
     title: "Construction Period",
     items: [
       "Project Handover",
-      "Assist the Client to oversee the quality of work done by the Contractor.",
+      "Assist the Client to oversee the quality of work done by the Contractor",
     ],
   },
 ]
