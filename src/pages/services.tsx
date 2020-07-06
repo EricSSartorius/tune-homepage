@@ -34,7 +34,37 @@ const services = [
     title: "Conceptual Design",
     items: ["Layout (basic schematic drawing)", "3 or 4 Conceptual Renderings"],
   },
-  { title: "Service 2", items: ["cool", "awesome", "dope"] },
+  {
+    title: "Design Development",
+    items: [
+      "Schematic drawing and lighting plan",
+      "Elevations and Sections ",
+      "Updated Renderings",
+    ],
+  },
+  {
+    title:
+      "Construction Drawing 1 - Permit Drawing (Architecture) and Tender Drawing",
+    items: [
+      "Tender Package including (Interior Plans, Elevations, Sections, Structural Section)",
+      "Permit Drawing",
+    ],
+  },
+  {
+    title: "Construction Drawing 2 - Tender Drawing",
+    items: [
+      "Complete drawing including finishing (floor, ceiling), and lighting plan",
+      "Complete drawing including finishing (wall), and lighting elevation",
+      "Loose Furniture Recommendations",
+    ],
+  },
+  {
+    title: "Construction Period",
+    items: [
+      "Project Handover",
+      "- Assist the Client to oversee the quality of work done by the Contractor.",
+    ],
+  },
 ]
 
 // TODO: Add these below to the services array to get the page populated properly
