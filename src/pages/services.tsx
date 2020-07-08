@@ -38,7 +38,7 @@ const services = [
     title: "Design Development",
     items: [
       "Schematic drawing and lighting plan",
-      "Elevations and Sections ",
+      "Elevations and Sections",
       "Updated Renderings",
     ],
   },
