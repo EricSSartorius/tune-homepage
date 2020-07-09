@@ -4,6 +4,9 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { Grid } from "../styles"
 import Hero from "../components/Hero"
+import Layout from "../layouts"
+import SEO from "../components/Seo"
+import { Wrapper } from "../styles"
 
 const ProjectsPage = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
@@ -37,7 +40,23 @@ const ProjectsPage = () => {
   const projects = allMarkdownRemark.edges
   console.log("PROJECTS", projects)
 
-  return <div>PROJECTS PAGE</div>
+  return (
+    <Layout>
+      <SEO title="Projects" />
+      {/* <HeroImg /> */}
+      <Wrapper>
+        <section>
+          <Grid cols={[1, 1, 2]}>
+            {projects.map(({ node }) => (
+              <p>
+                <Link to={node.frontmatter.slug}>{node.frontmatter.title}</Link>
+              </p>
+            ))}
+          </Grid>
+        </section>
+      </Wrapper>
+    </Layout>
+  )
 }
 
 export default ProjectsPage
