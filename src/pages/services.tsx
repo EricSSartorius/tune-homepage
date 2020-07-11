@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React, { Fragment, FC } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
@@ -6,7 +6,7 @@ import Layout from "../layouts"
 import SEO from "../components/seo"
 import { Wrapper, Cols } from "../styles"
 
-const ServicesPage: React.FC = ({ data }) => (
+const ServicesPage: FC = ({ data }) => (
   <Layout>
     <SEO title="Services" />
     <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
@@ -27,6 +27,15 @@ const ServicesPage: React.FC = ({ data }) => (
                 )}
               </Fragment>
             ))}
+            <p className="margins">
+              <em>*included: Structural engineer</em>
+            </p>
+            <p>
+              <em>
+                **not included: Permit Drawing Architect fee, Electrical
+                engineer, Sanitary engineer, Land Survey, Landscape Design
+              </em>
+            </p>
           </div>
         </Cols>
       </section>
