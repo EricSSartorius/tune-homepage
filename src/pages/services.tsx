@@ -1,10 +1,10 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import Layout from "../layouts"
 import SEO from "../components/Seo"
-import { Wrapper } from "../styles"
+import { Wrapper, Cols } from "../styles"
 
 const ServicesPage: React.FC = ({ data }) => (
   <Layout>
@@ -12,16 +12,23 @@ const ServicesPage: React.FC = ({ data }) => (
     <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
     <Wrapper>
       <section>
-        {services.map(({ title, items }) => (
-          <>
-            <h3>{title}</h3>
-            <ul>
-              {items.map(item => (
-                <li>{item}</li>
-              ))}
-            </ul>
-          </>
-        ))}
+        <Cols isReverse>
+          <h1>Breakdown of Architecture and Interior design services</h1>
+          <div>
+            {services.map(({ title, items }) => (
+              <Fragment key={title}>
+                <h3>{title}</h3>
+                {items && (
+                  <ul>
+                    {items.map(item => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+              </Fragment>
+            ))}
+          </div>
+        </Cols>
       </section>
     </Wrapper>
   </Layout>
@@ -60,8 +67,10 @@ const services = [
   },
   {
     title: "Construction Period",
+  },
+  {
+    title: "Project Handover",
     items: [
-      "Project Handover",
       "Assist the Client to oversee the quality of work done by the Contractor",
     ],
   },
@@ -73,7 +82,7 @@ const HeroImg = styled(Img)`
 
 export const query = graphql`
   query {
-    heroImg: file(relativePath: { eq: "hero/peace-hero.jpg" }) {
+    heroImg: file(relativePath: { eq: "hero/private-hero.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp

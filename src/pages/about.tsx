@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import Layout from "../layouts"
 import SEO from "../components/Seo"
-import { Wrapper } from "../styles"
+import { Wrapper, Cols } from "../styles"
 
 const AboutPage: React.FC = ({ data }) => (
   <Layout>
@@ -12,8 +12,12 @@ const AboutPage: React.FC = ({ data }) => (
     <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
     <Wrapper>
       <section>
-        <h1>About</h1>
-        <p>about info here</p>
+        <Cols isReverse>
+          <h1>About</h1>
+          <div style={{ marginTop: "var(--baseMargin)" }}>
+            <p>about info here</p>
+          </div>
+        </Cols>
       </section>
     </Wrapper>
   </Layout>

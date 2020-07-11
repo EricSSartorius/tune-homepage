@@ -1,9 +1,10 @@
 import React from "react"
+import styled from "styled-components"
 import { graphql, Link } from "gatsby"
 import Hero from "../components/Hero"
 import SEO from "../components/Seo"
 import Layout from "../layouts"
-import { Wrapper } from "../styles"
+import { Wrapper, Cols } from "../styles"
 
 const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data
@@ -17,11 +18,13 @@ const ProjectTemplate = ({ data }) => {
       />
       <Wrapper>
         <section>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: markdownRemark.html,
-            }}
-          />
+          <Cols>
+            <ProjectHTML
+              dangerouslySetInnerHTML={{
+                __html: markdownRemark.html,
+              }}
+            />
+          </Cols>
           <div className="center-text top-padding">
             <Link to="/projects/">&#8592; All Projects</Link>
           </div>
@@ -32,6 +35,27 @@ const ProjectTemplate = ({ data }) => {
 }
 
 export default ProjectTemplate
+
+const ProjectHTML = styled.div`
+  p,
+  p a {
+    font-size: var(--hugeFontSize);
+    margin: 4rem 0;
+    font-family: var(--headingFont);
+  }
+
+  h3 {
+    font-family: var(--bodyFont);
+    font-weight: normal;
+  }
+  h4 {
+    font-family: var(--bodyFont);
+
+    font-weight: bold;
+    font-size: var(--baseFontSize);
+    margin: 2rem 0;
+  }
+`
 
 export const query = graphql`
   query PostQuery($slug: String!) {

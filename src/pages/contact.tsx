@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import Layout from "../layouts"
 import SEO from "../components/Seo"
 import Icon from "../components/Icon"
-import { Wrapper } from "../styles"
+import { Wrapper, Grid, Cols } from "../styles"
 
 const ContactPage: React.FC = ({ data }) => (
   <Layout>
@@ -13,22 +13,41 @@ const ContactPage: React.FC = ({ data }) => (
     <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
     <Wrapper>
       <section>
-        <h1>Contact</h1>
-        <div>
-          <p>
-            <a href="mailto:iam@flyinghomestudio.com">
-              iam@flyinghomestudio.com
-            </a>
-          </p>
+        <Cols isReverse>
           <div>
-            <a href="tel:1-408-555-5555">
-              <Icon name="phone" style={{ marginRight: "1rem" }} />
-              <Icon name="line" style={{ marginRight: "1rem" }} />
-              1-408-555-5555
-            </a>
+            <h1>Let’s Work Together</h1>
+            {/* <h2>
+              Have a project in mind? Need help bringing it to the world? We’d
+              love to hear from you.
+            </h2> */}
           </div>
-          <p>87 Chalermpong, Saimai Bangkok 10220 Thailand</p>
-        </div>
+          <div>
+            <h4 className="small-title">For design inquiries</h4>
+            <p>
+              <a
+                href="mailto:iam@flyinghomestudio.com"
+                style={{ fontSize: "var(--heading-two)" }}
+              >
+                iam@flyinghomestudio.com
+              </a>
+            </p>
+            <div>
+              <p className="large">
+                <Icon name="phone" style={{ marginRight: "1rem" }} />+
+                088-694-4946
+              </p>
+              <p className="large">
+                <Icon name="line" style={{ marginRight: "1rem" }} />+
+                088-694-4946
+              </p>
+            </div>
+            <p className="large">
+              87 Chalermpong, Saimai
+              <br /> Bangkok 10220
+              <br /> Thailand
+            </p>
+          </div>
+        </Cols>
       </section>
     </Wrapper>
   </Layout>
@@ -42,7 +61,7 @@ const HeroImg = styled(Img)`
 
 export const query = graphql`
   query {
-    heroImg: file(relativePath: { eq: "hero/private-hero.jpg" }) {
+    heroImg: file(relativePath: { eq: "hero/yutaro-hero.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp

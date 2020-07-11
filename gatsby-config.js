@@ -43,10 +43,10 @@ module.exports = {
         name: `tune-homepage`,
         short_name: `tune`,
         start_url: `/`,
-        background_color: `#fff`,
+        background_color: `#f5f3f0`,
         theme_color: `#e95424`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/favicon.png`,
       },
     },
     {

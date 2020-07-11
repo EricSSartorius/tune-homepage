@@ -1,9 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import { Link, graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 import Img from "gatsby-image"
 import Hero from "../components/Hero"
-import { Wrapper, Grid, below } from "../styles"
+import { Wrapper, Grid, below, Cols } from "../styles"
 import Layout from "../layouts"
 import Carousel from "react-multi-carousel"
 import SEO from "../components/Seo"
@@ -12,11 +13,15 @@ import "react-multi-carousel/lib/styles.css"
 const IndexPage = ({ data }) => {
   const { heroImg, allMarkdownRemark } = data
   const projects = allMarkdownRemark.edges
-  console.log("PROJ", projects)
   return (
     <Layout>
       <SEO title="Home" />
-      <Hero title="hello" fluid={heroImg.childImageSharp.fluid} />
+      <Hero
+        title="Need to put something dope here perhaps"
+        fluid={heroImg.childImageSharp.fluid}
+        position="top -20px  center"
+        height="100vh"
+      />
       <Wrapper>
         <section>
           <RotateGrid>
@@ -46,14 +51,18 @@ const IndexPage = ({ data }) => {
                 your dream become a reality
               </p>
               <p>
-                <Link to="/services/">Services Breakdown &#8594;</Link>
+                <Link to="/services/">Services Breakdown ;</Link>
               </p>
             </div>
             <div>
               <Img
-                style={{ width: "100%", height: "100%" }}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  transform: "translate3d(var(--basePadding),0,0)",
+                }}
                 fluid={data.bhavanaHouse.childImageSharp.fluid}
-                alt=""
+                alt="Bhavana house"
               />
             </div>
           </Grid>
@@ -106,7 +115,38 @@ const IndexPage = ({ data }) => {
               ))}
           </Carousel>
         </CarouselWrapper>
+        <Wrapper>
+          <div className="top-padding" style={{ textAlign: "right" }}>
+            <Link to="/projects/">View All Projects &#8594;</Link>
+          </div>
+        </Wrapper>
       </section>
+      {/* <BackgroundImage fluid={data.contactBanner.childImageSharp.fluid}> */}
+      <Wrapper>
+        <section className="center-text">
+          <div>
+            <h2>Have a project in mind?</h2>
+            <h2 className="no-top-margin">
+              Need help bringing it to the world?
+            </h2>
+            <h2 className="no-top-margin"> We’d love to hear from you.</h2>
+          </div>
+
+          <p className="margins">
+            <a
+              href="mailto:iam@flyinghomestudio.com"
+              style={{
+                fontSize: "var(--hugeFontSize)",
+                fontFamily: "var(--headingFont)",
+                fontWeight: "bold",
+              }}
+            >
+              iam@flyinghomestudio.com
+            </a>
+          </p>
+        </section>
+      </Wrapper>
+      {/* </BackgroundImage> */}
     </Layout>
   )
 }
@@ -136,6 +176,7 @@ const CarouselWrapper = styled.div`
     padding: 10px;
     overflow: hidden;
     position: relative;
+    /* height: 40rem; */
   }
 
   ${below.medium`
@@ -191,7 +232,7 @@ const responsive = {
 
 export const query = graphql`
   query {
-    heroImg: file(relativePath: { eq: "hero/peace-hero.jpg" }) {
+    heroImg: file(relativePath: { eq: "hero/khao-hero.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
@@ -217,10 +258,17 @@ export const query = graphql`
     }
     #
     bhavanaHouse: file(
-      relativePath: { eq: "images/bhavana-house/bhavana-house.jpg" }
+      relativePath: { eq: "images/bhavana-house/bhavana-house-03.jpg" }
     ) {
       childImageSharp {
-        fluid(quality: 100) {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    contactBanner: file(relativePath: { eq: "hero/yutaro-hero.jpg" }) {
+      childImageSharp {
+        fluid {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

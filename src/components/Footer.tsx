@@ -1,53 +1,96 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 import styled from "styled-components"
 import Icon from "./Icon"
 import { below, Wrapper } from "../styles"
 
-const Footer = () => (
-  <FooterWrapper>
-    <Wrapper>
-      <div className="footer-grid">
-        <div>
-          <h3 className="no-top-margin">Tune & his flying home studio</h3>
+const Footer = () => {
+  const { logo } = useStaticQuery(
+    graphql`
+      query {
+        logo: file(relativePath: { eq: "favicon.png" }) {
+          childImageSharp {
+            fixed(width: 100) {
+              ...GatsbyImageSharpFixed_withWebp
+            }
+          }
+        }
+      }
+    `
+  )
+  return (
+    <FooterWrapper>
+      <Wrapper>
+        <div className="footer-grid">
+          <div className="footer-logo">
+            <h3 className="no-top-margin">
+              Tune <br />
+              <span className="and">and his</span>
+              <br /> flying home studio
+            </h3>
+          </div>
+          <div className="footer-contact">
+            <Img
+              fixed={logo.childImageSharp.fixed}
+              alt="Site logo"
+              style={{ marginLeft: "2rem" }}
+            />
+            <p className="no-top-margin">
+              <a href="mailto:iam@flyinghomestudio.com">
+                iam@flyinghomestudio.com
+              </a>
+            </p>
+            <div>
+              <Icon name="line" style={{ marginRight: "1rem" }} />
+              + 088-694-4946
+              <Icon name="phone" style={{ marginLeft: "1rem" }} />
+            </div>
+            <p>
+              87 Chalermpong, Saimai
+              <br /> Bangkok 10220
+              <br /> Thailand
+            </p>
+          </div>
+          <nav className="footer-links">
+            {siteLinks.map(({ text, to }) => (
+              <p key={text}>
+                <Link to={to}>{text}</Link>
+              </p>
+            ))}
+          </nav>
         </div>
-        <div className="footer-contact">
-          <p className="no-top-margin">
-            <a href="mailto:iam@flyinghomestudio.com">
-              iam@flyinghomestudio.com
+        <div className="footer-bottom">
+          <p>
+            &copy; {new Date().getFullYear()} Tune and his Flying Home Studio
+          </p>
+          <p className="pure-func">
+            Created by{" "}
+            <a href="https://www.purefunc.dev/" target="_blank">
+              <strong>Pure Func LLC</strong>
             </a>
           </p>
-          <div>
-            <a href="tel:1-408-555-5555">
-              <Icon name="line" style={{ marginRight: "1rem" }} />
-              1-408-555-5555
-              <Icon name="phone" style={{ marginLeft: "1rem" }} />
-            </a>
-          </div>
-          <p>87 Chalermpong, Saimai Bangkok 10220 Thailand</p>
         </div>
-        <nav className="footer-links">
-          {siteLinks.map(({ text, to }) => (
-            <p key={text}>
-              <Link to={to}>{text}</Link>
-            </p>
-          ))}
-        </nav>
-      </div>
-      <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Tune and his Flying Home Studio</p>
-      </div>
-    </Wrapper>
-  </FooterWrapper>
-)
+      </Wrapper>
+    </FooterWrapper>
+  )
+}
 
 const FooterWrapper = styled.footer`
   border-top: 1px solid var(--lineColor);
   .footer-grid {
     padding: var(--margins);
+    /* display: flex;
+    justify-content: space-between; */
     display: grid;
     align-items: flex-start;
-    grid-template-columns: 15% 1fr 15%;
+    grid-template-columns: 25% 1fr 25%;
+    .footer-logo {
+      .and {
+        font-size: var(--baseFontSize);
+        font-weight: normal;
+      }
+    }
     .footer-contact {
       text-align: center;
     }
@@ -64,11 +107,19 @@ const FooterWrapper = styled.footer`
     }
   }
   .footer-bottom {
-    p {
+    display: flex;
+    justify-content: space-between;
+    p,
+    p a {
       font-size: var(--smallestFontSize);
     }
   }
   ${below.medium`
+    .footer-contact {
+      ${Img} {
+        display: none;
+      }
+    }
     .footer-grid {
       grid-template-columns: 1fr;
       text-align: center;
@@ -81,6 +132,10 @@ const FooterWrapper = styled.footer`
     }
     .footer-bottom {
       text-align: center;
+      justify-content: center;
+      .pure-func {
+        display: none;
+      }
     }
   `};
 `

@@ -2,7 +2,7 @@
 slug: "/honeyful-cafe/"
 title: "Honeyful Cafe"
 thumbnail: "./images/honeyful-cafe/honeyful-cafe-01.jpg"
-hero:
+hero: "./images/honeyful-cafe/honeyful-cafe-01.jpg"
 description: "Honeyful Cafe"
 ---
 

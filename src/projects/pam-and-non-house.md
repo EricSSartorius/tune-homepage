@@ -6,7 +6,7 @@ hero: "./images/pam-and-non-house/pam-and-non-house-02.jpg"
 description: "Pam and Non House"
 ---
 
-The interior of Pam and Nonn House is inspired by Scandinavian material tones, Danish furniture details tailored each space in the house. The house is in progress and to be built in the next year.
+The interior of Pam and Non House is inspired by Scandinavian material tones, Danish furniture details tailored each space in the house. The house is in progress and to be built in the next year.
 
 #### Conceptual Design - Interior
 

@@ -1,9 +1,13 @@
 import React, { useRef, useEffect, useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import Nav from "./Nav"
-import { media } from "../styles"
+import { media, Flex, below } from "../styles"
 import { useScrollPosition } from "../hooks"
+import { useScrollFreeze } from "../hooks"
+import { motion, AnimatePresence } from "framer-motion"
+import Portal from "./Portal"
+import Icon from "./Icon"
+import Menu from "./Menu"
 
 const links = [
   {
@@ -26,6 +30,9 @@ const links = [
 
 const Header = () => {
   const [hasHeaderBg, setHasHeaderBg] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const closeMenu = () => setIsMenuOpen(false)
 
   useScrollPosition(
     ({ currPos }) => {
@@ -44,7 +51,32 @@ const Header = () => {
           </Link>
         </div>
         <div className="nav-wrapper">
-          <Nav links={links} hasScrolled={hasHeaderBg} />
+          <nav>
+            <Link to="/projects/" style={{ marginRight: "4.5rem" }}>
+              <Icon
+                name="grid"
+                color={hasHeaderBg ? "var(--textColor)" : "var(--white)"}
+              />
+            </Link>
+
+            <MenuIcon onClick={toggleMenu}>
+              <Icon
+                name="hamburger"
+                color={hasHeaderBg ? "var(--textColor)" : "var(--white)"}
+              />
+            </MenuIcon>
+            <Portal>
+              <AnimatePresence>
+                {isMenuOpen && (
+                  <MenuModal
+                    isMenuOpen={isMenuOpen}
+                    closeMenu={closeMenu}
+                    links={links}
+                  />
+                )}
+              </AnimatePresence>
+            </Portal>
+          </nav>
         </div>
       </InnerHeader>
     </HeaderWrapper>
@@ -52,6 +84,62 @@ const Header = () => {
 }
 
 export default Header
+
+const MenuModal = ({ isMenuOpen, closeMenu, links }) => {
+  useScrollFreeze()
+  const pointerEvents = isMenuOpen ? `all` : `none`
+
+  return (
+    <>
+      <ModalWrapper>
+        <Transport
+          initial={{ bottom: "100%" }}
+          animate={{ bottom: "0%" }}
+          exit={{ bottom: "100%" }}
+          transition={{ duration: 0.3 }}
+          style={{ position: "relative" }}
+        >
+          <MenuWrapper style={{ pointerEvents }}>
+            <Flex>
+              LOGO
+              <button onClick={closeMenu}>
+                <Icon name="close" />
+              </button>
+            </Flex>
+            <Menu links={links} closeMenu={closeMenu} />
+          </MenuWrapper>
+        </Transport>
+      </ModalWrapper>
+    </>
+  )
+}
+
+const MenuIcon = styled.button``
+
+const MenuWrapper = styled.div`
+  padding: var(--basePadding);
+  background: var(--white);
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  margin-right: 1rem;
+  z-index: var(--highestLevel);
+`
+
+const ModalWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  height: 100vh;
+  overflow-y: scroll;
+  pointer-events: none;
+  z-index: var(--highestLevel);
+`
+
+const Transport = styled(motion.div)`
+  width: 100%;
+`
 
 const HeaderWrapper = styled.header`
   top: 0;
