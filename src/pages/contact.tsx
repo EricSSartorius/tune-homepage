@@ -1,13 +1,13 @@
-import React from "react"
+import React, { FC } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import Layout from "../layouts"
 import SEO from "../components/Seo"
 import Icon from "../components/Icon"
-import { Wrapper, Grid, Cols } from "../styles"
+import { Wrapper, below, Cols } from "../styles"
 
-const ContactPage: React.FC = ({ data }) => (
+const ContactPage: FC = ({ data }) => (
   <Layout>
     <SEO title="Contact" />
     <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
@@ -23,14 +23,11 @@ const ContactPage: React.FC = ({ data }) => (
           </div>
           <div>
             <h4 className="small-title">For design inquiries</h4>
-            <p>
-              <a
-                href="mailto:iam@flyinghomestudio.com"
-                style={{ fontSize: "var(--heading-two)" }}
-              >
+            <Email>
+              <a className="email-link" href="mailto:iam@flyinghomestudio.com">
                 iam@flyinghomestudio.com
               </a>
-            </p>
+            </Email>
             <div>
               <p className="large">
                 <Icon name="phone" style={{ marginRight: "1rem" }} />+
@@ -57,6 +54,17 @@ export default ContactPage
 
 const HeroImg = styled(Img)`
   max-height: 30rem;
+`
+
+const Email = styled.p`
+  .email-link {
+    font-size: var(--heading-two);
+  }
+  ${below.medium`
+    .email-link {
+      font-size: var(--heading-three);
+    }
+  `};
 `
 
 export const query = graphql`

@@ -29,13 +29,13 @@ const Footer = () => {
               <span className="and">and his</span>
               <br /> flying home studio
             </h3>
-          </div>
-          <div className="footer-contact">
             <Img
               fixed={logo.childImageSharp.fixed}
               alt="Site logo"
-              style={{ marginLeft: "2rem" }}
+              style={{ marginLeft: "5rem" }}
             />
+          </div>
+          <div className="footer-contact">
             <p className="no-top-margin">
               <a href="mailto:iam@flyinghomestudio.com">
                 iam@flyinghomestudio.com
@@ -96,11 +96,12 @@ const FooterWrapper = styled.footer`
     }
     .footer-links {
       justify-self: flex-end;
-      display: grid;
-      grid-template-columns: 1fr 50%;
+      /* display: grid;
+      grid-template-columns: 1fr 50%; */
       p {
         margin: 1rem;
         a {
+          font-weight: bold;
           font-size: var(--smallFontSize);
         }
       }
@@ -115,11 +116,6 @@ const FooterWrapper = styled.footer`
     }
   }
   ${below.medium`
-    .footer-contact {
-      ${Img} {
-        display: none;
-      }
-    }
     .footer-grid {
       grid-template-columns: 1fr;
       text-align: center;
@@ -127,14 +123,22 @@ const FooterWrapper = styled.footer`
         grid-row: 2;
         grid-template-columns: 1fr;
         justify-self: center;
-        margin: 2rem 0;
+        margin-bottom: 2rem;
+        p {
+          margin: 2rem 0;
+          a {
+          font-size: var(--largeFontSize);
+        }}
       }
     }
     .footer-bottom {
-      text-align: center;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      p {
+        margin: 0;
+      }
       .pure-func {
-        display: none;
+        margin: 1rem;
       }
     }
   `};

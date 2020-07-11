@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Img from "gatsby-image"
 import Hero from "../components/Hero"
-import { Wrapper, Grid, below, Cols } from "../styles"
+import { Wrapper, Grid, below, media } from "../styles"
 import Layout from "../layouts"
 import Carousel from "react-multi-carousel"
 import SEO from "../components/Seo"
@@ -51,16 +51,11 @@ const IndexPage = ({ data }) => {
                 your dream become a reality
               </p>
               <p>
-                <Link to="/services/">Services Breakdown ;</Link>
+                <Link to="/services/">Services Breakdown &#8594;</Link>
               </p>
             </div>
             <div>
-              <Img
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  transform: "translate3d(var(--basePadding),0,0)",
-                }}
+              <HomeImg
                 fluid={data.bhavanaHouse.childImageSharp.fluid}
                 alt="Bhavana house"
               />
@@ -132,18 +127,11 @@ const IndexPage = ({ data }) => {
             <h2 className="no-top-margin"> We’d love to hear from you.</h2>
           </div>
 
-          <p className="margins">
-            <a
-              href="mailto:iam@flyinghomestudio.com"
-              style={{
-                fontSize: "var(--hugeFontSize)",
-                fontFamily: "var(--headingFont)",
-                fontWeight: "bold",
-              }}
-            >
+          <Contact className="margins">
+            <a href="mailto:iam@flyinghomestudio.com">
               iam@flyinghomestudio.com
             </a>
-          </p>
+          </Contact>
         </section>
       </Wrapper>
       {/* </BackgroundImage> */}
@@ -169,6 +157,14 @@ const RotateGrid = styled.div`
   .content {
     padding: 0 8rem;
   }
+`
+
+const HomeImg = styled(Img)`
+  width: 100%;
+  height: 100%;
+  ${media.medium`
+  transform: translate3d(var(--basePadding), 0, 0);
+  `}
 `
 
 const CarouselWrapper = styled.div`
@@ -209,6 +205,18 @@ const Slide = styled.div`
     p {
       transform: translate3d(10px, 0, 0);
     }
+  }
+`
+
+const Contact = styled.p`
+  a {
+    font-size: var(--hugeFontSize);
+    font-family: var(--headingFont);
+    font-weight: bold;
+    ${below.medium`
+      font-size: var(--largeFontSize);
+      color: var(--primaryColor);
+    `};
   }
 `
 
