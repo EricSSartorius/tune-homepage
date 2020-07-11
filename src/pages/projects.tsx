@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import { Grid } from "../styles"
 import Hero from "../components/Hero"
 import Layout from "../layouts"
-import SEO from "../components/Seo"
+import SEO from "../components/seo"
 import { Wrapper } from "../styles"
 
 const ProjectsPage = () => {
