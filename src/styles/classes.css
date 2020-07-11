@@ -16,10 +16,21 @@
   text-align: center;
 }
 
-p.largest,
-p.largest a {
-  font-size: var(--largestFontSize);
+h1.small-title,
+h2.small-title,
+h3.small-title,
+h4.small-title,
+h5.small-title {
+  font-weight: bold;
+  font-family: var(--bodyFont);
+  font-size: var(--baseFontSize);
+}
+
+p.huge,
+p.huge a {
+  font-size: var(--hugeFontSize);
   margin: 4rem 0;
+  font-family: var(--headingFont);
 }
 
 p.large,

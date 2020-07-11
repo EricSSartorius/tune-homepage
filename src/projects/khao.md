@@ -1,7 +1,8 @@
 ---
 slug: "/khao/"
 title: "Khao"
-thumbnail:
+thumbnail: images/khao/khao-04.jpg
+hero:
 images: "/images/khao/"
 description: "Khao"
 ---

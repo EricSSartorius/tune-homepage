@@ -1,7 +1,8 @@
 ---
 slug: "/fuji-kindergarten/"
 title: "Fuji Kindergarten"
-thumbnail:
+thumbnail: images/fuji-kindergarten/fuji-kindergarten-02.jpg
+hero:
 images: "/images/fuji-kindergarten/"
 description: "Fuji Kindergarten"
 ---

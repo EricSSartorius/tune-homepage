@@ -67,21 +67,6 @@ const services = [
   },
 ]
 
-// TODO: Add these below to the services array to get the page populated properly
-
-/* Design Development - Schematic drawing and lighting plan -
-Elevations and Sections - Updated Renderings Construction Drawing 1 -
-Permit Drawing (Architecture) and Tender Drawing - Tender Package
-including (Interior Plans, Elevations, Sections, Structural Section) -
-Permit Drawing Construction Drawing 2 - Tender Drawing - Complete drawing
-including finishing (floor, ceiling), and lighting plan - Complete drawing
-including finishing (wall), and lighting elevation - Loose Furniture
-Recommendations Construction Drawing 3 - Detail - Construction Drawing
-including (Interior Plans, Elevations, Sections, Detail Drawing) - Loose
-Furniture Recommendations - Built-in Furniture Drawings Construction
-Period Project Handover - Assist the Client to oversee the quality of work
-done by the Contractor. */
-
 const HeroImg = styled(Img)`
   max-height: 30rem;
 `

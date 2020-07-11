@@ -1,17 +1,20 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Hero from "../components/Hero"
-import Icon from "../components/Icon"
 import SEO from "../components/Seo"
+import Layout from "../layouts"
 import { Wrapper } from "../styles"
 
 const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data
 
   return (
-    <>
+    <Layout>
       <SEO title={markdownRemark.frontmatter.title} />
-      <Hero title={markdownRemark.frontmatter.title} />
+      <Hero
+        title={markdownRemark.frontmatter.title}
+        fluid={markdownRemark.frontmatter.thumbnail.childImageSharp.fluid}
+      />
       <Wrapper>
         <section>
           <div
@@ -19,12 +22,12 @@ const ProjectTemplate = ({ data }) => {
               __html: markdownRemark.html,
             }}
           />
-          <Link to="/projects/">
-            <Icon name="back" /> All Projects
-          </Link>
+          <div className="center-text top-padding">
+            <Link to="/projects/">&#8592; All Projects</Link>
+          </div>
         </section>
       </Wrapper>
-    </>
+    </Layout>
   )
 }
 
@@ -38,6 +41,13 @@ export const query = graphql`
         title
         slug
         description
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 600, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
       }
     }
   }

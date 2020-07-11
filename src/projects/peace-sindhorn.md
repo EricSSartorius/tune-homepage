@@ -1,7 +1,8 @@
 ---
 slug: "/peace-sindhorn/"
 title: "Peace Sindhorn"
-thumbnail:
+thumbnail: images/peace-sindhorn/peace-sindhorn-02.jpg
+hero:
 images: "/images/peace-sindhorn/"
 description: "Peace Sindhorn"
 ---

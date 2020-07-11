@@ -38,11 +38,11 @@ const Header = () => {
   return (
     <HeaderWrapper className={hasHeaderBg ? "active" : ""}>
       <InnerHeader>
-        <h1 className="logo">
+        <div className="logo">
           <Link to="/" aria-label="Home page">
-            Tune & Flying Home Studio
+            Tune <span className="and">&</span> Flying Home Studio
           </Link>
-        </h1>
+        </div>
         <div className="nav-wrapper">
           <Nav links={links} hasScrolled={hasHeaderBg} />
         </div>
@@ -62,6 +62,12 @@ const HeaderWrapper = styled.header`
   transition: all ease-out 0.5s;
   .logo a {
     color: var(--white);
+    font-size: var(--heading-three);
+    font-family: var(--headingFont);
+    .and {
+      font-size: var(--smallFontSize);
+      margin: 0 0.5rem;
+    }
   }
   &.active {
     background-color: var(--bgColor);

@@ -2,6 +2,7 @@
 slug: "/peace-49/"
 title: "Peace 49"
 thumbnail:
+hero:
 images: "/images/peace-49/"
 description: "Peace 49"
 ---

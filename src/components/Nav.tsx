@@ -26,10 +26,9 @@ const MobileMenu = ({ links, hasScrolled = false }: Props) => {
 
   return (
     <nav>
-      <Link to="/projects/">
+      <Link to="/projects/" style={{ marginRight: "4.5rem" }}>
         <Icon
           name="grid"
-          style={{ marginRight: "2rem" }}
           color={hasScrolled ? "var(--textColor)" : "var(--white)"}
         />
       </Link>
@@ -92,9 +91,7 @@ const MenuModal = ({ isMenuOpen, closeMenu, links }: MenuModalProps) => {
   )
 }
 
-const MenuIcon = styled.button`
-  margin-top: 5px;
-`
+const MenuIcon = styled.button``
 
 const MenuWrapper = styled.div`
   padding: var(--basePadding);

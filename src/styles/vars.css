@@ -19,12 +19,12 @@
   --primaryColor: var(--orange);
   --secondaryColor: var(--darkGray);
   --bgColor: var(--lightestGray);
-  --lineColor: var(--gray);
+  --lineColor: var(--lighterGray);
 
   /* Misc Sizes */
   --baseMargin: 6rem;
   --smallBaseMargin: 2rem;
-  --margins: 6rem 0 2rem;
+  --margins: 4rem 0 2rem;
 
   --basePadding: 2rem;
   --baseSectionPadding: 6rem;
@@ -46,7 +46,7 @@
   --baseFontSize: 1.6rem;
   --smallFontSize: 1.4rem;
   --smallestFontSize: 1.2rem;
-  --largestFontSize: 2.1rem;
+  --hugeFontSize: 4rem;
   --largeFontSize: 1.8rem;
   --heading-one: 4.8rem;
   --heading-two: 3.6rem;
@@ -62,11 +62,12 @@
 /* Change root sizes above medium breakpoint */
 @media (min-width: 880px) {
   :root {
-    --margins: 8rem 0 2rem;
+    --margins: 6rem 0 2rem;
     --topSectionPadding: 7rem;
     --bottomSectionPadding: 12.5rem;
     --baseSectionPadding: 15rem;
     --baseMargin: 8rem;
     --basePadding: 3rem;
+    --hugeFontSize: 6rem;
   }
 }

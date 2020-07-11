@@ -12,9 +12,9 @@ const Icon = ({ color = "var(--black)", name, onClick, style = {} }: Props) => {
     case "hamburger":
       return (
         <svg
-          width="26"
-          height="26"
-          viewBox="0 0 26 26"
+          width="28"
+          height="23"
+          viewBox="0 0 28 23"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           style={style}
@@ -22,18 +22,19 @@ const Icon = ({ color = "var(--black)", name, onClick, style = {} }: Props) => {
           aria-labelledby="hamburger-icon"
           className="icon"
         >
+          {" "}
           <title id="hamburger-icon">Hamburger Menu</title>
-          <line y1="1.5" x2="26" y2="1.5" stroke={color} stroke-width="3" />
-          <line y1="13" x2="26" y2="13" stroke={color} stroke-width="3" />
-          <line y1="24.5" x2="26" y2="24.5" stroke={color} stroke-width="3" />
+          <line y1="1.5" x2="28" y2="1.5" stroke={color} stroke-width="3" />
+          <line y1="11.5" x2="28" y2="11.5" stroke={color} stroke-width="3" />
+          <line y1="21.5" x2="28" y2="21.5" stroke={color} stroke-width="3" />
         </svg>
       )
     case "grid":
       return (
         <svg
-          width="26"
-          height="26"
-          viewBox="0 0 26 26"
+          width="25"
+          height="25"
+          viewBox="0 0 25 25"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           style={style}
@@ -42,59 +43,15 @@ const Icon = ({ color = "var(--black)", name, onClick, style = {} }: Props) => {
           className="icon"
         >
           <title id="grid-icon">Grid</title>
-          <rect width="6.84211" height="6.84211" fill={color} />
-          <rect y="9.5791" width="6.84211" height="6.84211" fill={color} />
-          <rect y="19.1577" width="6.84211" height="6.84211" fill={color} />
-          <rect x="9.5791" width="6.84211" height="6.84211" fill={color} />
-          <rect
-            x="9.5791"
-            y="9.5791"
-            width="6.84211"
-            height="6.84211"
-            fill={color}
-          />
-          <rect
-            x="9.5791"
-            y="19.1577"
-            width="6.84211"
-            height="6.84211"
-            fill={color}
-          />
-          <rect x="19.1582" width="6.84211" height="6.84211" fill={color} />
-          <rect
-            x="19.1582"
-            y="9.5791"
-            width="6.84211"
-            height="6.84211"
-            fill={color}
-          />
-          <rect
-            x="19.1582"
-            y="19.1577"
-            width="6.84211"
-            height="6.84211"
-            fill={color}
-          />
-        </svg>
-      )
-    case "arrow":
-      return (
-        <svg
-          width="10"
-          height="8"
-          viewBox="0 0 10 8"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          style={style}
-          onClick={onClick}
-          aria-labelledby="arrow-icon"
-          className="icon"
-        >
-          <title id="arrow-icon">Arrow</title>
-          <path
-            d="M9.35355 4.35355C9.54882 4.15829 9.54882 3.84171 9.35355 3.64645L6.17157 0.464466C5.97631 0.269204 5.65973 0.269204 5.46447 0.464466C5.2692 0.659728 5.2692 0.976311 5.46447 1.17157L8.29289 4L5.46447 6.82843C5.2692 7.02369 5.2692 7.34027 5.46447 7.53553C5.65973 7.7308 5.97631 7.7308 6.17157 7.53553L9.35355 4.35355ZM0 4.5L9 4.5V3.5L0 3.5L0 4.5Z"
-            fill="black"
-          />
+          <rect width="5" height="5" fill={color} />
+          <rect y="10" width="5" height="5" fill={color} />
+          <rect y="20" width="5" height="5" fill={color} />
+          <rect x="10" width="5" height="5" fill={color} />
+          <rect x="10" y="10" width="5" height="5" fill={color} />
+          <rect x="10" y="20" width="5" height="5" fill={color} />
+          <rect x="20" width="5" height="5" fill={color} />
+          <rect x="20" y="10" width="5" height="5" fill={color} />
+          <rect x="20" y="20" width="5" height="5" fill={color} />
         </svg>
       )
     case "phone":
@@ -107,7 +64,7 @@ const Icon = ({ color = "var(--black)", name, onClick, style = {} }: Props) => {
           xmlns="http://www.w3.org/2000/svg"
           style={style}
           onClick={onClick}
-          aria-labelledby="arrow-icon"
+          aria-labelledby="phone-icon"
           className="icon"
         >
           <title id="phone-icon">Phone</title>
@@ -220,27 +177,6 @@ const Icon = ({ color = "var(--black)", name, onClick, style = {} }: Props) => {
           <path
             d="M17.4936 6.65311C17.6064 6.65311 17.6976 6.5709 17.6976 6.46913V5.80652C17.6976 5.70492 17.6064 5.62235 17.4936 5.62235H14.553H14.5526C14.4975 5.62235 14.4478 5.64227 14.411 5.67432C14.4102 5.67505 14.4092 5.67559 14.4086 5.67631C14.4074 5.6774 14.4064 5.67849 14.4054 5.67957C14.3704 5.71253 14.3486 5.75708 14.3486 5.80634V5.80652V9.92197V9.92215C14.3486 9.97159 14.3706 10.0163 14.4058 10.0493C14.4066 10.0502 14.4076 10.0513 14.4086 10.052C14.4094 10.0529 14.4106 10.0538 14.4116 10.0545C14.4482 10.0862 14.4979 10.106 14.5526 10.106H14.553H17.4936C17.6064 10.106 17.6976 10.0234 17.6976 9.92197V9.25918C17.6976 9.15777 17.6064 9.07519 17.4936 9.07519H15.4937V8.37944H17.4936C17.6064 8.37944 17.6976 8.29705 17.6976 8.19546V7.53285C17.6976 7.43126 17.6064 7.34868 17.4936 7.34868H15.4937V6.65311H17.4936Z"
             fill="var(--bgColor)"
-          />
-        </svg>
-      )
-
-    case "back":
-      return (
-        <svg
-          width="10"
-          height="8"
-          viewBox="0 0 10 8"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          style={style}
-          onClick={onClick}
-          className="icon"
-          aria-labelledby="back-icon"
-        >
-          <title id="back-icon">Back</title>
-          <path
-            d="M0.646446 3.64645C0.451184 3.84171 0.451184 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.97631 4.7308 0.659728 4.53553 0.464466C4.34027 0.269203 4.02369 0.269203 3.82843 0.464466L0.646446 3.64645ZM10 3.5L1 3.5L1 4.5L10 4.5L10 3.5Z"
-            fill="black"
           />
         </svg>
       )
