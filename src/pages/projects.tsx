@@ -37,7 +37,15 @@ const ProjectsPage = () => {
   const projects = allMarkdownRemark.edges
   console.log("PROJECTS", projects)
 
-  return <div>PROJECTS PAGE</div>
+  return (
+    <div>
+      {projects.map(({ node }) => (
+        <p>
+          <a href={node.frontmatter.slug}>{node.frontmatter.title}</a>
+        </p>
+      ))}
+    </div>
+  )
 }
 
 export default ProjectsPage
