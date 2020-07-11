@@ -1,9 +1,8 @@
 ---
 slug: "/pam-and-non-house/"
 title: "Pam and Non House"
-thumbnail: images/pam-and-non-house/pam-and-non-house-03.jpg
-hero:
-images: "/images/pam-and-non-house/"
+thumbnail: "./images/pam-and-non-house/pam-and-non-house-03.jpg"
+hero: "./images/pam-and-non-house/pam-and-non-house-02.jpg"
 description: "Pam and Non House"
 ---
 

@@ -1,9 +1,8 @@
 ---
 slug: "/bite-me-softly/"
 title: "Bite Me Softly"
-thumbnail: images/bite-me-softly/bite-me-softly-03.jpg
-hero:
-images: "/images/bite-me-softly"
+thumbnail: "./images/bite-me-softly/bite-me-softly-03.jpg"
+hero: "./images/bite-me-softly/bite-me-softly-03.jpg"
 description: "Bite Me Softly"
 ---
 

@@ -2,8 +2,7 @@
 slug: "/bhavana-house/"
 title: "Bhavana House"
 thumbnail: "./images/bhavana-house/bhavana-house.jpg"
-hero:
-images: "./images/bhavana-house/"
+hero: "./images/bhavana-house/bhavana-house.jpg"
 description: "Bhavana House"
 ---
 

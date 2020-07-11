@@ -13,7 +13,7 @@ const ProjectTemplate = ({ data }) => {
       <SEO title={markdownRemark.frontmatter.title} />
       <Hero
         title={markdownRemark.frontmatter.title}
-        fluid={markdownRemark.frontmatter.thumbnail.childImageSharp.fluid}
+        fluid={markdownRemark.frontmatter.hero.childImageSharp.fluid}
       />
       <Wrapper>
         <section>
@@ -41,9 +41,9 @@ export const query = graphql`
         title
         slug
         description
-        thumbnail {
+        hero {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(quality: 100) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }

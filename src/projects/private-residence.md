@@ -1,9 +1,8 @@
 ---
 slug: "/private-residence/"
 title: "Private Residence"
-thumbnail: images/private-residence/private-residence-02.jpg
-hero:
-images: "/images/private-residence/"
+thumbnail: "./images/private-residence/private-residence-02.jpg"
+hero: "./images/private-residence/private-residence-01.jpg"
 description: "Private Residence"
 ---
 

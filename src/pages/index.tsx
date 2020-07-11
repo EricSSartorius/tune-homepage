@@ -79,11 +79,12 @@ const IndexPage = ({ data }) => {
             responsive={responsive}
             ssr={true} // means to render carousel on server-side.
             infinite={true}
+            autoPlay={true}
             // autoPlay={deviceType !== "mobile" ? true : false}
-            // autoPlaySpeed={1000}
+            autoPlaySpeed={5000}
             keyBoardControl={true}
             // customTransition="all .5"
-            // transitionDuration={500}
+            transitionDuration={900}
             containerClass="carousel-container"
             // removeArrowOnDeviceType={["tablet", "mobile"]}
             // deviceType={deviceType}
@@ -92,18 +93,16 @@ const IndexPage = ({ data }) => {
           >
             {projects
               .filter(project => project.node.frontmatter.thumbnail)
-              .map(project => (
-                <Link
-                  to={project.node.frontmatter.slug}
-                  key={project.node.frontmatter.slug}
-                >
-                  <Img
-                    fluid={
-                      project.node.frontmatter.thumbnail.childImageSharp.fluid
-                    }
-                    alt={project.node.frontmatter.title}
-                  />
-                </Link>
+              .map(({ node }) => (
+                <Slide key={node.frontmatter.slug}>
+                  <Link to={node.frontmatter.slug}>
+                    <Img
+                      fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+                      alt={node.frontmatter.title}
+                    />
+                  </Link>
+                  <p>{node.frontmatter.title}</p>
+                </Slide>
               ))}
           </Carousel>
         </CarouselWrapper>
@@ -134,13 +133,42 @@ const RotateGrid = styled.div`
 
 const CarouselWrapper = styled.div`
   li {
-    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
   }
+
   ${below.medium`
-  li {
+    li {
+      padding: 0;
+    }
+  `};
+`
+
+const Slide = styled.div`
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s ease all;
+  p {
+    transition: 0.5s ease all;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 2rem;
+    color: var(--white);
+    z-index: 1000;
+    font-family: var(--headingFont);
+    font-size: var(--largeFontSize);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
     margin: 0;
   }
-  `};
+  &:hover {
+    transform: scale(1.1);
+    p {
+      transform: translate3d(10px, 0, 0);
+    }
+  }
 `
 
 const responsive = {
@@ -192,7 +220,7 @@ export const query = graphql`
       relativePath: { eq: "images/bhavana-house/bhavana-house.jpg" }
     ) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

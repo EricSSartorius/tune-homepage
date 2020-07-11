@@ -1,9 +1,8 @@
 ---
 slug: "/roofless-house/"
 title: "Roofless House"
-thumbnail: images/roofless-house/roofless-house-01.jpg
-hero:
-images: "/images/roofless-house/"
+thumbnail: "./images/roofless-house/roofless-house-01.jpg"
+hero: "./images/roofless-house/roofless-house-01.jpg"
 description: "Roofless House"
 ---
 
