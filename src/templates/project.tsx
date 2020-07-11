@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, Link } from "gatsby"
 import Hero from "../components/Hero"
-import SEO from "../components/Seo"
+import SEO from "../components/seo"
 import Layout from "../layouts"
 import { Wrapper, Cols } from "../styles"
 

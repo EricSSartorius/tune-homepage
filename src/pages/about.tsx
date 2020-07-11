@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import Layout from "../layouts"
-import SEO from "../components/Seo"
+import SEO from "../components/seo"
 import { Wrapper, Cols } from "../styles"
 
 const AboutPage: React.FC = ({ data }) => (

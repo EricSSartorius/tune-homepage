@@ -7,7 +7,7 @@ import Hero from "../components/Hero"
 import { Wrapper, Grid, below, media } from "../styles"
 import Layout from "../layouts"
 import Carousel from "react-multi-carousel"
-import SEO from "../components/Seo"
+import SEO from "../components/seo"
 import "react-multi-carousel/lib/styles.css"
 
 const IndexPage = ({ data }) => {
