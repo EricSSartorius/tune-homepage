@@ -1,12 +1,10 @@
 ---
 slug: "/honeyful-cafe/"
 title: "Honeyful Cafe"
-thumbnail:
-images: "/images/honeyful-cafe/"
+thumbnail: "./images/honeyful-cafe/honeyful-cafe-01.jpg"
+hero: "./images/honeyful-cafe/honeyful-cafe-01.jpg"
 description: "Honeyful Cafe"
 ---
-
-# Honeyful Cafe
 
 ### Sukhumvit Soi 24
 

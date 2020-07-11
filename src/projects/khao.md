@@ -1,12 +1,10 @@
 ---
 slug: "/khao/"
 title: "Khao"
-thumbnail:
-images: "/images/khao/"
+thumbnail: "./images/khao/khao-04.jpg"
+hero: "./images/khao/khao-04.jpg"
 description: "Khao"
 ---
-
-# Khao
 
 ### Ekkamai Bangkok
 

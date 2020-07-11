@@ -1,12 +1,10 @@
 ---
 slug: "/peace-sindhorn/"
 title: "Peace Sindhorn"
-thumbnail:
-images: "/images/peace-sindhorn/"
+thumbnail: "./images/peace-sindhorn/peace-sindhorn-02.jpg"
+hero: "./images/peace-sindhorn/peace-sindhorn-02.jpg"
 description: "Peace Sindhorn"
 ---
-
-# Peace Sindhorn
 
 ### Sindhorn Village
 

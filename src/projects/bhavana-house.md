@@ -1,12 +1,10 @@
 ---
 slug: "/bhavana-house/"
 title: "Bhavana House"
-thumbnail:
-images: "/images/bhavana-house/"
+thumbnail: "./images/bhavana-house/bhavana-house.jpg"
+hero: "./images/bhavana-house/bhavana-house.jpg"
 description: "Bhavana House"
 ---
-
-# Bhavana House
 
 ### Wang Nam Kiew
 

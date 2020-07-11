@@ -9,28 +9,28 @@ export const sizes: any = {
   xLarge: 1440,
 }
 
-export const above = Object.keys(sizes).reduce(
-  (accumulator: any, label: any) => {
+export const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (literals: TemplateStringsArray, ...placeholders: any[]) => {
     const emSize = sizes[label] / 16
-    accumulator[label] = (...args: any[]) => css`
+    return css`
       @media (min-width: ${emSize}em) {
-        ${css(...args)};
+        ${css(literals, ...placeholders)};
       }
     `
-    return accumulator
-  },
-  {}
-)
+  }
 
-export const below = Object.keys(sizes).reduce(
-  (accumulator: any, label: any) => {
+  return acc
+}, {} as Record<keyof typeof sizes, (l: TemplateStringsArray, ...p: any[]) => string>)
+
+export const below = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (literals: TemplateStringsArray, ...placeholders: any[]) => {
     const emSize = sizes[label] / 16
-    accumulator[label] = (...args: any[]) => css`
+    return css`
       @media (max-width: ${emSize}em) {
-        ${css(...args)};
+        ${css(literals, ...placeholders)};
       }
     `
-    return accumulator
-  },
-  {}
-)
+  }
+
+  return acc
+}, {} as Record<keyof typeof sizes, (l: TemplateStringsArray, ...p: any[]) => string>)
