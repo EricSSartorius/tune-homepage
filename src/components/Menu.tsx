@@ -57,9 +57,3 @@ const NavBar = styled.nav`
     }
   }
 `
-
-if (true) {
-  "a"
-}
-
-true && "a"
