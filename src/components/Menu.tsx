@@ -1,6 +1,7 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { Link } from "gatsby"
+import { Flex } from "../styles"
 
 type LinkType = {
   to: string
@@ -10,10 +11,11 @@ type LinkType = {
 type Props = {
   links: LinkType[]
   closeMenu: () => void
+  isMenuOpen: boolean
 }
 
-const MobileNav = ({ links, closeMenu }: Props) => (
-  <NavBar>
+const MobileNav = ({ links, closeMenu, isMenuOpen }: Props) => (
+  <NavBar isMenuOpen={isMenuOpen}>
     <ul>
       {links.map(({ to, text }) => (
         <li key={text}>
@@ -34,6 +36,11 @@ const MobileNav = ({ links, closeMenu }: Props) => (
 export default MobileNav
 
 const NavBar = styled.nav`
+  display: ${({ isMenuOpen }) => (isMenuOpen ? "flex" : "none")};
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   ul {
     margin: 0;
     li {
@@ -50,3 +57,9 @@ const NavBar = styled.nav`
     }
   }
 `
+
+if (true) {
+  "a"
+}
+
+true && "a"
