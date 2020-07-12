@@ -8,51 +8,34 @@ import Layout from "../layouts"
 import SEO from "../components/seo"
 import { Wrapper } from "../styles"
 
-const ProjectsPage = () => {
-  const { allMarkdownRemark } = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            excerpt
-            frontmatter {
-              title
-              slug
-              # thumbnail {
-              #   childImageSharp {
-              #     fluid {
-              #       ...GatsbyImageSharpFluid_withWebp
-              #     }
-              #   }
-              # }
-            }
-          }
-        }
-      }
-    }
-  `)
-
+const ProjectsPage = ({ data }) => {
   // TODO
   //* add a layout component to wrap the page
   //* add the hero component (no need for an image yet)
   //* use wrapper around all the projects
   //* map the projects and put them in a grid below
-  const projects = allMarkdownRemark.edges
+  const projects = data.allMarkdownRemark.edges
   console.log("PROJECTS", projects)
 
   return (
     <Layout>
       <SEO title="Projects" />
-      {/* <HeroImg /> */}
+      <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
       <Wrapper>
         <section>
-          <Grid cols={[1, 1, 2]}>
+          <ProjectGrid cols={[1, 1, 2]}>
             {projects.map(({ node }) => (
-              <p>
-                <Link to={node.frontmatter.slug}>{node.frontmatter.title}</Link>
-              </p>
+              <div key={node.frontmatter.title}>
+                <Link to={node.frontmatter.slug}>
+                  <Img
+                    fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+                    alt={node.frontmatter.title}
+                  />
+                  <p>{node.frontmatter.title}</p>
+                </Link>
+              </div>
             ))}
-          </Grid>
+          </ProjectGrid>
         </section>
       </Wrapper>
     </Layout>
@@ -60,3 +43,39 @@ const ProjectsPage = () => {
 }
 
 export default ProjectsPage
+
+const ProjectGrid = styled(Grid)``
+
+const HeroImg = styled(Img)`
+  max-height: 30rem;
+`
+
+export const query = graphql`
+  query {
+    heroImg: file(relativePath: { eq: "hero/private-hero.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          excerpt
+          frontmatter {
+            title
+            slug
+            thumbnail {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
