@@ -26,15 +26,13 @@ const ProjectsPage = ({ data }) => {
           <ProjectGrid cols={[1, 1, 2]}>
             {projects.map(({ node }) => (
               <div key={node.frontmatter.title}>
-                <Img
-                  fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
-                  alt={node.frontmatter.title}
-                />
-                <p>
-                  <Link to={node.frontmatter.slug}>
-                    {node.frontmatter.title}
-                  </Link>
-                </p>
+                <Link to={node.frontmatter.slug}>
+                  <Img
+                    fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+                    alt={node.frontmatter.title}
+                  />
+                  <p>{node.frontmatter.title}</p>
+                </Link>
               </div>
             ))}
           </ProjectGrid>
