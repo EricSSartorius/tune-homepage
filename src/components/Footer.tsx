@@ -27,7 +27,7 @@ const Footer = () => {
             <h3 className="no-top-margin">
               Tune <br />
               <span className="and">and his</span>
-              <br /> flying home studio
+              <br /> Flying home studio
             </h3>
             <Img
               fixed={logo.childImageSharp.fixed}
@@ -65,7 +65,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Tune and his Flying Home Studio
           </p>
           <p className="pure-func">
-            Created by{" "}
+            Crafted by{" "}
             <a href="https://www.purefunc.dev/" target="_blank">
               <strong>Pure Func LLC</strong>
             </a>
