@@ -4,6 +4,7 @@ title: "Khao"
 thumbnail: "./images/khao/khao-04.jpg"
 hero: "./images/khao/khao-04.jpg"
 description: "Khao"
+isPersonalProject: true;
 ---
 
 ### Ekkamai Bangkok

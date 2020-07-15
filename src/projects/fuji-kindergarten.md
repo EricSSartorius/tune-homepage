@@ -4,6 +4,7 @@ title: "Fuji Kindergarten"
 thumbnail: "./images/fuji-kindergarten/tezuka-02.jpg"
 hero: "./images/fuji-kindergarten/tezuka-02.jpg"
 description: "Fuji Kindergarten"
+isPersonalProject: true;
 ---
 
 Fuji Kindergarten is selected as one of the first ten Global Innovations by the Finland-based educational organization, HundrED.cts
