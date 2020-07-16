@@ -4,6 +4,7 @@ title: "Peace 49"
 thumbnail: "./images/peace-49/peace-49-04.jpg"
 hero: "./images/peace-49/peace-49-01.jpg"
 description: "Peace 49"
+isPersonalProject: true;
 ---
 
 ### Sukhumvit 49 Bangkok
