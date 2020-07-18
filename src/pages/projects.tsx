@@ -1,21 +1,14 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { Grid } from "../styles"
-import Hero from "../components/Hero"
 import Layout from "../layouts"
 import SEO from "../components/seo"
 import { Wrapper } from "../styles"
 
 const ProjectsPage = ({ data }) => {
-  // TODO
-  //* add a layout component to wrap the page
-  //* add the hero component (no need for an image yet)
-  //* use wrapper around all the projects
-  //* map the projects and put them in a grid below
   const projects = data.allMarkdownRemark.edges
-  console.log("PROJECTS", projects)
 
   return (
     <Layout>
@@ -25,13 +18,15 @@ const ProjectsPage = ({ data }) => {
         <section>
           <ProjectGrid cols={[1, 1, 2]}>
             {projects.map(({ node }) => (
-              <div key={node.frontmatter.title}>
+              <div className="project" key={node.frontmatter.title}>
                 <Link to={node.frontmatter.slug}>
-                  <Img
-                    fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
-                    alt={node.frontmatter.title}
-                  />
-                  <p>{node.frontmatter.title}</p>
+                  <div className="project-image">
+                    <Img
+                      fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+                      alt={node.frontmatter.title}
+                    />
+                  </div>
+                  <h3 className="project-title">{node.frontmatter.title}</h3>
                 </Link>
               </div>
             ))}
@@ -44,7 +39,51 @@ const ProjectsPage = ({ data }) => {
 
 export default ProjectsPage
 
-const ProjectGrid = styled(Grid)``
+const ProjectGrid = styled(Grid)`
+  .project {
+    position: relative;
+    .project-image {
+      line-height: 0;
+      overflow: hidden;
+      .gatsby-image-wrapper {
+        transition: 0.5s ease all;
+      }
+    }
+    .project-title {
+      z-index: 1;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      margin: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+    }
+    &:hover {
+      .project-title {
+        opacity: 1;
+      }
+      .project-image .gatsby-image-wrapper {
+        filter: blur(2px);
+        transform: scale(1.1);
+      }
+    }
+    @media (hover: none) {
+      .project-title {
+        opacity: 1;
+      }
+      .project-image .gatsby-image-wrapper {
+        filter: blur(2px);
+      }
+    }
+  }
+`
 
 const HeroImg = styled(Img)`
   max-height: 30rem;

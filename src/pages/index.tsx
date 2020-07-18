@@ -25,10 +25,7 @@ const IndexPage = ({ data }) => {
       <Wrapper>
         <section>
           <RotateGrid>
-            <h3
-              className="rotate small-title"
-              style={{ margin: "80px 0 0 -60px" }}
-            >
+            <h3 className="rotate small-title" id="mission-title">
               Tune & <br />
               Flying Home Studio
             </h3>
@@ -100,10 +97,12 @@ const IndexPage = ({ data }) => {
               .map(({ node }) => (
                 <Slide key={node.frontmatter.slug}>
                   <Link to={node.frontmatter.slug}>
-                    <Img
-                      fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
-                      alt={node.frontmatter.title}
-                    />
+                    <div className="slide-img">
+                      <Img
+                        fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+                        alt={node.frontmatter.title}
+                      />
+                    </div>
                   </Link>
                   <p>{node.frontmatter.title}</p>
                 </Slide>
@@ -111,12 +110,11 @@ const IndexPage = ({ data }) => {
           </Carousel>
         </CarouselWrapper>
         <Wrapper>
-          <div className="top-padding" style={{ textAlign: "right" }}>
+          <LinkContainer className="top-padding" style={{ textAlign: "right" }}>
             <Link to="/projects/">View All Projects &#8594;</Link>
-          </div>
+          </LinkContainer>
         </Wrapper>
       </section>
-      {/* <BackgroundImage fluid={data.contactBanner.childImageSharp.fluid}> */}
       <Wrapper>
         <section className="center-text">
           <div>
@@ -134,7 +132,6 @@ const IndexPage = ({ data }) => {
           </Contact>
         </section>
       </Wrapper>
-      {/* </BackgroundImage> */}
     </Layout>
   )
 }
@@ -142,21 +139,29 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 const RotateGrid = styled.div`
-  /* display: grid;
-  grid-template-columns: 100px 1fr 100px; */
   position: relative;
-  .rotate {
-    transform-origin: 50% 50%;
-    align-self: center;
-    /* white-space: nowrap; */
-    transform: rotate(-90deg);
-    position: absolute;
-    margin: 0;
-    left: 0;
-  }
-  .content {
-    padding: 0 8rem;
-  }
+  ${media.small`
+    .rotate {
+      transform-origin: 50% 50%;
+      align-self: center;
+      transform: rotate(-90deg);
+      position: absolute;
+      margin: 0;
+      left: 0;
+    }
+    #mission-title {
+       margin: 80px 0 0 -60px;
+    }
+    .content {
+      padding: 0 8rem;
+    }
+  `};
+`
+
+const LinkContainer = styled.div`
+  ${below.medium`
+    margin-top: 1rem;
+  `}
 `
 
 const HomeImg = styled(Img)`
@@ -200,11 +205,16 @@ const Slide = styled.div`
     background: rgba(0, 0, 0, 0.4);
     margin: 0;
   }
+  .gatsby-image-wrapper {
+    transition: 0.5s ease all;
+  }
   &:hover {
-    transform: scale(1.1);
-    p {
-      transform: translate3d(10px, 0, 0);
+    .gatsby-image-wrapper {
+      transform: scale(1.1);
     }
+    /* p {
+      transform: translate3d(10px, 0, 0);
+    } */
   }
 `
 
