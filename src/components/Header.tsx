@@ -252,6 +252,12 @@ const HeaderWrapper = styled.header`
             height: 100px;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
               0 3px 6px rgba(0, 0, 0, 0.23);
+            ${below.medium`
+                height: 80px;
+              `};
+            ${below.small`
+                height: 100px;
+              `};
           }
         `}
   top: 0;
@@ -301,7 +307,7 @@ const InnerHeader = styled.div`
   }
   ${media.small`
     .logo {
-      margin: 0 0 0 -1.5rem;
+      /* margin: 0 0 0 -1.5rem; */
     }
 
   `};

@@ -227,7 +227,7 @@ export default IndexPage
 const contactList = [
   "Have a project in mind?",
   "Need help bringing it to the world?",
-  "We’d love to hear from you.",
+  "I’d love to hear from you.",
 ]
 
 const RotateGrid = styled.div`
