@@ -120,6 +120,11 @@ const MenuModal = ({ isMenuOpen, closeMenu, links }) => {
 }
 
 const MenuIcon = styled.button`
+  transition: opacity 0.2s ease;
+  outline: none;
+  &:hover {
+    opacity: 0.7;
+  }
   &.is-active .hamburger-inner,
   &.is-active .hamburger-inner::before,
   &.is-active .hamburger-inner::after {
@@ -146,9 +151,7 @@ const MenuIcon = styled.button`
     background-color: var(--white);
     border-radius: 4px;
     position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
+    transition: transform 0.15s ease;
   }
   .hamburger-inner::before,
   .hamburger-inner::after {
@@ -258,11 +261,15 @@ const HeaderWrapper = styled.header`
   position: fixed;
   transition: all ease-out 0.5s;
   .logo a {
+    transition: opacity 0.2s ease;
     font-size: var(--heading-three);
     font-family: var(--headingFont);
     .and {
       font-size: var(--smallFontSize);
       margin: 0 0.5rem;
+    }
+    &:hover {
+      opacity: 0.7;
     }
   }
 `
@@ -287,6 +294,10 @@ const InnerHeader = styled.div`
   }
   .grid-link {
     margin-right: 4.5rem;
+    transform: 0.3s ease;
+    &:hover {
+      opacity: 0.7;
+    }
   }
   ${media.small`
     .logo {

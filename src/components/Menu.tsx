@@ -48,6 +48,9 @@ const NavBar = styled.nav`
       margin: 40px 0;
       .nav-link {
         font-size: var(--heading-three);
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
   }
