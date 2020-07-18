@@ -15,7 +15,7 @@ const ProjectsPage = ({ data }) => {
       <SEO title="Projects" />
       <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
       <Wrapper>
-        <section>
+        <section className="margins">
           <ProjectGrid cols={[1, 1, 2]}>
             {projects.map(({ node }) => (
               <div className="project" key={node.frontmatter.title}>

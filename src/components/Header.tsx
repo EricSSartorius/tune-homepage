@@ -67,15 +67,13 @@ const Header = () => {
               />
             </Link>
 
-            <MenuIcon onClick={toggleMenu}>
-              <Icon
-                name="hamburger"
-                color={
-                  hasHeaderBg || isMenuOpen
-                    ? "var(--textColor)"
-                    : "var(--white)"
-                }
-              />
+            <MenuIcon
+              onClick={toggleMenu}
+              className={isMenuOpen ? "is-active" : ""}
+            >
+              <span className="hamburger-box">
+                <span className="hamburger-inner"></span>
+              </span>
             </MenuIcon>
 
             <Portal>
@@ -92,7 +90,6 @@ const Header = () => {
           </nav>
         </div>
       </InnerHeader>
-      {/* <Menu links={links} closeMenu={closeMenu} isMenuOpen={isMenuOpen} /> */}
     </HeaderWrapper>
   )
 }
@@ -122,7 +119,78 @@ const MenuModal = ({ isMenuOpen, closeMenu, links }) => {
   )
 }
 
-const MenuIcon = styled.button``
+const MenuIcon = styled.button`
+  &.is-active .hamburger-inner,
+  &.is-active .hamburger-inner::before,
+  &.is-active .hamburger-inner::after {
+    background-color: var(--textColor);
+  }
+
+  .hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+  }
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: var(--white);
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+  }
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    content: "";
+    display: block;
+  }
+  .hamburger-inner::before {
+    top: -10px;
+  }
+  .hamburger-inner::after {
+    bottom: -10px;
+  }
+
+  .hamburger-inner {
+    transition-duration: 0.22s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    &::before {
+      transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    }
+    &::after {
+      transition: bottom 0.1s 0.25s ease-in,
+        transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+  }
+
+  &.is-active .hamburger-inner {
+    transform: rotate(225deg);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    &::before {
+      top: 0;
+      opacity: 0;
+      transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    }
+    &::after {
+      bottom: 0;
+      transform: rotate(-90deg);
+      transition: bottom 0.1s ease-out,
+        transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  }
+`
 
 const MenuWrapper = styled.div`
   padding: var(--basePadding);
@@ -154,6 +222,13 @@ const HeaderWrapper = styled.header`
     background-color: var(--bgColor);
     .logo a {
       color: var(--textColor);
+    }
+    ${MenuIcon} {
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        background-color: var(--textColor);
+      }
     }
   }
   ${({ isMenuOpen }) =>
