@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <Hero
-        title="Need to put something dope here perhaps"
+        // title="Need to put something dope here perhaps"
         fluid={heroImg.childImageSharp.fluid}
         position="top -20px  center"
         height="100vh"
@@ -243,7 +243,7 @@ export const query = graphql`
     heroImg: file(relativePath: { eq: "hero/khao-hero.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
@@ -270,14 +270,14 @@ export const query = graphql`
     ) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     contactBanner: file(relativePath: { eq: "hero/yutaro-hero.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }

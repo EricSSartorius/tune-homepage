@@ -50,12 +50,13 @@ const Header = () => {
       <InnerHeader>
         <div className="logo">
           <Link to="/" aria-label="Home page">
-            Tune <span className="and">&</span> Flying Home Studio
+            Tune <span className="and">&</span>{" "}
+            <span className="flying">Flying Home Studio</span>
           </Link>
         </div>
         <div className="nav-wrapper">
           <nav>
-            <Link to="/projects/" style={{ marginRight: "4.5rem" }}>
+            <Link to="/projects/" className="grid-link">
               <Icon
                 name="grid"
                 color={
@@ -77,7 +78,7 @@ const Header = () => {
               />
             </MenuIcon>
 
-            {/* <Portal>
+            <Portal>
               <AnimatePresence>
                 {isMenuOpen && (
                   <MenuModal
@@ -87,56 +88,50 @@ const Header = () => {
                   />
                 )}
               </AnimatePresence>
-            </Portal> */}
+            </Portal>
           </nav>
         </div>
       </InnerHeader>
-      <Menu links={links} closeMenu={closeMenu} isMenuOpen={isMenuOpen} />
+      {/* <Menu links={links} closeMenu={closeMenu} isMenuOpen={isMenuOpen} /> */}
     </HeaderWrapper>
   )
 }
 
 export default Header
 
-// const MenuModal = ({ isMenuOpen, closeMenu, links }) => {
-//   useScrollFreeze()
-//   const pointerEvents = isMenuOpen ? `all` : `none`
+const MenuModal = ({ isMenuOpen, closeMenu, links }) => {
+  useScrollFreeze()
+  const pointerEvents = isMenuOpen ? `all` : `none`
 
-//   return (
-//     <>
-//       <ModalWrapper>
-//         <Transport
-//           initial={{ bottom: "100%" }}
-//           animate={{ bottom: "0%" }}
-//           exit={{ bottom: "100%" }}
-//           transition={{ duration: 0.3 }}
-//           style={{ position: "relative" }}
-//         >
-//           <MenuWrapper style={{ pointerEvents }}>
-//             <Flex>
-//               LOGO
-//               <button onClick={closeMenu}>
-//                 <Icon name="close" />
-//               </button>
-//             </Flex>
-//             <Menu links={links} closeMenu={closeMenu} />
-//           </MenuWrapper>
-//         </Transport>
-//       </ModalWrapper>
-//     </>
-//   )
-// }
+  return (
+    <>
+      <ModalWrapper>
+        <Transport
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          style={{ position: "relative" }}
+        >
+          <MenuWrapper style={{ pointerEvents }}>
+            <Menu links={links} closeMenu={closeMenu} isMenuOpen={isMenuOpen} />
+          </MenuWrapper>
+        </Transport>
+      </ModalWrapper>
+    </>
+  )
+}
 
 const MenuIcon = styled.button``
 
 const MenuWrapper = styled.div`
   padding: var(--basePadding);
-  background: var(--white);
+  background: var(--lightGray);
   height: 100vh;
   width: 100vw;
   overflow-y: scroll;
   margin-right: 1rem;
-  z-index: var(--highestLevel);
+  z-index: 9;
 `
 
 const ModalWrapper = styled.div`
@@ -147,7 +142,7 @@ const ModalWrapper = styled.div`
   height: 100vh;
   overflow-y: scroll;
   pointer-events: none;
-  z-index: var(--highestLevel);
+  z-index: 9;
 `
 
 const Transport = styled(motion.div)`
@@ -155,13 +150,20 @@ const Transport = styled(motion.div)`
 `
 
 const HeaderWrapper = styled.header`
+  &.active {
+    background-color: var(--bgColor);
+    .logo a {
+      color: var(--textColor);
+    }
+  }
   ${({ isMenuOpen }) =>
     isMenuOpen
       ? css`
-          background-color: var(--bgColor);
-          height: 100%;
           .logo a {
             color: var(--textColor);
+          }
+          &.active {
+            background: var(--lightGray);
           }
         `
       : css`
@@ -188,12 +190,6 @@ const HeaderWrapper = styled.header`
       margin: 0 0.5rem;
     }
   }
-  &.active {
-    background-color: var(--bgColor);
-    .logo a {
-      color: var(--textColor);
-    }
-  }
 `
 
 const InnerHeader = styled.div`
@@ -204,7 +200,6 @@ const InnerHeader = styled.div`
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  /* height: 100%; */
   .logo {
     font-size: var(--baseFontSize);
     flex-shrink: 1;
@@ -215,9 +210,29 @@ const InnerHeader = styled.div`
       background: none;
     }
   }
-  ${media.medium`
+  .grid-link {
+    margin-right: 4.5rem;
+  }
+  ${media.small`
     .logo {
       margin: 0 0 0 -1.5rem;
+    }
+
+  `};
+  ${below.small`
+    align-items: flex-start;
+    .grid-link {
+      display: none;
+    }
+    .logo a {
+      display: block;
+      margin-top: -10px;
+      .and {
+        margin: 0;
+      }
+      .flying {
+        display: block;
+      }
     }
   `};
 `

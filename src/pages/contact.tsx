@@ -72,7 +72,7 @@ export const query = graphql`
     heroImg: file(relativePath: { eq: "hero/yutaro-hero.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
