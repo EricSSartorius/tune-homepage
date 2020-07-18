@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql, Link } from "gatsby"
-import Hero from "../components/Hero"
 import SEO from "../components/seo"
 import Layout from "../layouts"
-import { Wrapper, Cols } from "../styles"
+import { Wrapper, Cols, Container } from "../styles"
+import BackgroundImage from "gatsby-background-image"
 
 const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data
@@ -12,10 +12,22 @@ const ProjectTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={markdownRemark.frontmatter.title} />
-      <Hero
-        title={markdownRemark.frontmatter.title}
+
+      <HeroBackgroundImage
         fluid={markdownRemark.frontmatter.hero.childImageSharp.fluid}
-      />
+        alt={markdownRemark.frontmatter.title}
+        Tag="div"
+      >
+        <div className={"white-text"}>
+          <Wrapper>
+            <HeroContents>
+              <Container>
+                <h1>{markdownRemark.frontmatter.title}</h1>
+              </Container>
+            </HeroContents>
+          </Wrapper>
+        </div>
+      </HeroBackgroundImage>
       <Wrapper>
         <section>
           <Cols>
@@ -26,7 +38,9 @@ const ProjectTemplate = ({ data }) => {
             />
           </Cols>
           <div className="center-text top-padding">
-            <Link to="/projects/">&#8592; All Projects</Link>
+            <p>
+              <Link to="/projects/">&#8592; All Projects</Link>
+            </p>
           </div>
         </section>
       </Wrapper>
@@ -39,7 +53,7 @@ export default ProjectTemplate
 const ProjectHTML = styled.div`
   p,
   p a {
-    font-size: var(--hugeFontSize);
+    font-size: var(--heading-three);
     margin: 4rem 0;
     font-family: var(--headingFont);
   }
@@ -54,6 +68,17 @@ const ProjectHTML = styled.div`
     font-weight: bold;
     font-size: var(--baseFontSize);
     margin: 2rem 0;
+  }
+`
+
+const HeroBackgroundImage = styled(BackgroundImage)``
+
+export const HeroContents = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding: 15rem 0;
+  h1 {
+    margin: 0;
   }
 `
 

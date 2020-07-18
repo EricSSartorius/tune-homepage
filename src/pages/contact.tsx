@@ -62,7 +62,7 @@ const Email = styled.p`
   }
   ${below.medium`
     .email-link {
-      font-size: var(--heading-three);
+      font-size: var(--heading-five);
     }
   `};
 `

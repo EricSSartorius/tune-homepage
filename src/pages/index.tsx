@@ -1,27 +1,23 @@
 import React from "react"
 import styled from "styled-components"
 import { Link, graphql } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
 import Img from "gatsby-image"
-import Hero from "../components/Hero"
 import { Wrapper, Grid, below, media } from "../styles"
 import Layout from "../layouts"
+import HomeHero from "../components/HomeHero"
 import Carousel from "react-multi-carousel"
 import SEO from "../components/seo"
 import "react-multi-carousel/lib/styles.css"
 
 const IndexPage = ({ data }) => {
-  const { heroImg, allMarkdownRemark } = data
+  const { heroImg, heroImg2, heroImg3, allMarkdownRemark } = data
   const projects = allMarkdownRemark.edges
   return (
     <Layout>
       <SEO title="Home" />
-      <Hero
-        // title="Need to put something dope here perhaps"
-        fluid={heroImg.childImageSharp.fluid}
-        position="top -20px  center"
-        height="100vh"
-      />
+
+      <Img fluid={heroImg.childImageSharp.fluid} style={{ height: "100vh" }} />
+
       <Wrapper>
         <section>
           <RotateGrid>
@@ -83,6 +79,7 @@ const IndexPage = ({ data }) => {
             autoPlay={true}
             // autoPlay={deviceType !== "mobile" ? true : false}
             autoPlaySpeed={5000}
+            centerMode={true}
             keyBoardControl={true}
             // customTransition="all .5"
             transitionDuration={900}
@@ -110,8 +107,10 @@ const IndexPage = ({ data }) => {
           </Carousel>
         </CarouselWrapper>
         <Wrapper>
-          <LinkContainer className="top-padding" style={{ textAlign: "right" }}>
-            <Link to="/projects/">View All Projects &#8594;</Link>
+          <LinkContainer style={{ textAlign: "right" }}>
+            <p>
+              <Link to="/projects/">View All Projects &#8594;</Link>
+            </p>
           </LinkContainer>
         </Wrapper>
       </section>
@@ -173,16 +172,28 @@ const HomeImg = styled(Img)`
 `
 
 const CarouselWrapper = styled.div`
+  .react-multiple-carousel__arrow {
+    z-index: 8;
+  }
   li {
-    padding: 10px;
     overflow: hidden;
     position: relative;
-    /* height: 40rem; */
   }
-
   ${below.medium`
     li {
       padding: 0;
+    }
+  `};
+  ${media.medium`
+    li {
+      padding: 30px;
+
+    }
+    .react-multi-carousel-item {
+      transition: 0.5s ease all;
+      &.react-multi-carousel-item--active {
+        transform: scale(1.1);
+      }
     }
   `};
 `
@@ -212,9 +223,6 @@ const Slide = styled.div`
     .gatsby-image-wrapper {
       transform: scale(1.1);
     }
-    /* p {
-      transform: translate3d(10px, 0, 0);
-    } */
   }
 `
 
@@ -233,8 +241,26 @@ const Contact = styled.p`
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-    slidesToSlide: 3, // optional, default to 1.
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
+}
+
+const responsiveHero = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -251,6 +277,20 @@ const responsive = {
 export const query = graphql`
   query {
     heroImg: file(relativePath: { eq: "hero/khao-hero.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    heroImg2: file(relativePath: { eq: "hero/honeyful-hero.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    heroImg3: file(relativePath: { eq: "hero/private-hero.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
@@ -278,13 +318,6 @@ export const query = graphql`
     bhavanaHouse: file(
       relativePath: { eq: "images/bhavana-house/bhavana-house-03.jpg" }
     ) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    contactBanner: file(relativePath: { eq: "hero/yutaro-hero.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp_noBase64

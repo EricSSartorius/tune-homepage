@@ -15,7 +15,7 @@ const AboutPage: React.FC = ({ data }) => (
         <Cols isReverse>
           <h1>About</h1>
           <div style={{ marginTop: "var(--baseMargin)" }}>
-            <p>about info here</p>
+            <p>Coming Soon</p>
           </div>
         </Cols>
       </section>
