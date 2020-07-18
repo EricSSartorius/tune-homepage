@@ -4,6 +4,7 @@ title: "Honeyful Cafe"
 thumbnail: "./images/honeyful-cafe/honeyful-cafe-01.jpg"
 hero: "./images/honeyful-cafe/honeyful-cafe-01.jpg"
 description: "Honeyful Cafe"
+isPersonalProject: true;
 ---
 
 ### Sukhumvit Soi 24

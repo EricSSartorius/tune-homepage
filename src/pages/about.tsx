@@ -15,7 +15,7 @@ const AboutPage: React.FC = ({ data }) => (
         <Cols isReverse>
           <h1>About</h1>
           <div style={{ marginTop: "var(--baseMargin)" }}>
-            <p>about info here</p>
+            <p>Coming Soon</p>
           </div>
         </Cols>
       </section>
@@ -34,7 +34,7 @@ export const query = graphql`
     heroImg: file(relativePath: { eq: "hero/honeyful-hero.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }

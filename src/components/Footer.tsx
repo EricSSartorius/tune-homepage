@@ -12,7 +12,7 @@ const Footer = () => {
         logo: file(relativePath: { eq: "favicon.png" }) {
           childImageSharp {
             fixed(width: 100) {
-              ...GatsbyImageSharpFixed_withWebp
+              ...GatsbyImageSharpFixed_withWebp_noBase64
             }
           }
         }

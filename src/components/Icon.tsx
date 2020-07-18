@@ -155,7 +155,7 @@ const Icon = ({ color = "var(--black)", name, onClick, style = {} }: Props) => {
           onClick={onClick}
           style={style}
           aria-labelledby="line-icon"
-          class="line-icon"
+          className="line-icon"
         >
           <title id="line-icon">Line</title>
           <path

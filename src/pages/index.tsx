@@ -1,50 +1,100 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { Link, graphql } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
 import Img from "gatsby-image"
-import Hero from "../components/Hero"
+import { Waypoint } from "react-waypoint"
+import { motion } from "framer-motion"
 import { Wrapper, Grid, below, media } from "../styles"
 import Layout from "../layouts"
 import Carousel from "react-multi-carousel"
 import SEO from "../components/seo"
+
 import "react-multi-carousel/lib/styles.css"
 
+const variants = {
+  open: {
+    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+  },
+  closed: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
+}
+
+const contactVariants = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 },
+    },
+  },
+  closed: {
+    y: 100,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+    },
+  },
+}
+
 const IndexPage = ({ data }) => {
+  const [rightImgShowing, setRightImgShowing] = useState(false)
+  const [leftImgShowing, setLeftImgShowing] = useState(false)
+  const [isContactShowing, setIsContactShowing] = useState(false)
   const { heroImg, allMarkdownRemark } = data
   const projects = allMarkdownRemark.edges
+
   return (
     <Layout>
       <SEO title="Home" />
-      <Hero
-        title="Need to put something dope here perhaps"
-        fluid={heroImg.childImageSharp.fluid}
-        position="top -20px  center"
-        height="100vh"
-      />
+
+      <Img fluid={heroImg.childImageSharp.fluid} style={{ height: "100vh" }} />
+
       <Wrapper>
         <section>
-          <RotateGrid>
-            <h3
-              className="rotate small-title"
-              style={{ margin: "80px 0 0 -60px" }}
-            >
-              Tune & <br />
-              Flying Home Studio
-            </h3>
-            <div className="content">
-              <p className="huge">
-                Tune and his Flying Home Studio design both interior and
-                exterior for modern, high quality, living and working spaces
-              </p>
-            </div>
-          </RotateGrid>
+          <motion.div
+            animate={{
+              opacity: leftImgShowing ? 1 : 0,
+            }}
+            transition={{ type: "spring", damping: 300 }}
+          >
+            <Waypoint
+              bottomOffset="35%"
+              onEnter={() => {
+                if (!leftImgShowing) setLeftImgShowing(true)
+              }}
+            />
+            <RotateGrid>
+              <h3 className="rotate small-title" id="mission-title">
+                Tune & <br />
+                Flying Home Studio
+              </h3>
+              <div className="content">
+                <p className="huge">
+                  Tune and his Flying Home Studio design both interior and
+                  exterior for modern, high quality, living and working spaces
+                </p>
+              </div>
+            </RotateGrid>
+          </motion.div>
         </section>
       </Wrapper>
       <Wrapper>
         <section>
           <Grid cols={[1, 1, 2]}>
-            <div>
+            <motion.div
+              animate={{
+                opacity: rightImgShowing ? 1 : 0,
+                x: rightImgShowing ? 0 : "-50%",
+              }}
+              transition={{ type: "spring", damping: 300 }}
+            >
+              <Waypoint
+                bottomOffset="25%"
+                onEnter={() => {
+                  if (!rightImgShowing) setRightImgShowing(true)
+                }}
+              />
               <h3 className="small-title">The Process</h3>
               <p className="huge">
                 We offer attention to detail every step of the way while making
@@ -53,13 +103,25 @@ const IndexPage = ({ data }) => {
               <p>
                 <Link to="/services/">Services Breakdown &#8594;</Link>
               </p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              animate={{
+                opacity: rightImgShowing ? 1 : 0,
+                x: rightImgShowing ? "15%" : "50%",
+              }}
+              transition={{ type: "spring", damping: 300 }}
+            >
+              <Waypoint
+                bottomOffset="25%"
+                onEnter={() => {
+                  if (!rightImgShowing) setRightImgShowing(true)
+                }}
+              />
               <HomeImg
                 fluid={data.bhavanaHouse.childImageSharp.fluid}
                 alt="Bhavana house"
               />
-            </div>
+            </motion.div>
           </Grid>
         </section>
       </Wrapper>
@@ -86,6 +148,7 @@ const IndexPage = ({ data }) => {
             autoPlay={true}
             // autoPlay={deviceType !== "mobile" ? true : false}
             autoPlaySpeed={5000}
+            centerMode={true}
             keyBoardControl={true}
             // customTransition="all .5"
             transitionDuration={900}
@@ -100,10 +163,12 @@ const IndexPage = ({ data }) => {
               .map(({ node }) => (
                 <Slide key={node.frontmatter.slug}>
                   <Link to={node.frontmatter.slug}>
-                    <Img
-                      fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
-                      alt={node.frontmatter.title}
-                    />
+                    <div className="slide-img">
+                      <Img
+                        fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+                        alt={node.frontmatter.title}
+                      />
+                    </div>
                   </Link>
                   <p>{node.frontmatter.title}</p>
                 </Slide>
@@ -111,52 +176,84 @@ const IndexPage = ({ data }) => {
           </Carousel>
         </CarouselWrapper>
         <Wrapper>
-          <div className="top-padding" style={{ textAlign: "right" }}>
-            <Link to="/projects/">View All Projects &#8594;</Link>
-          </div>
+          <LinkContainer style={{ textAlign: "right" }}>
+            <p>
+              <Link to="/projects/">View All Projects &#8594;</Link>
+            </p>
+          </LinkContainer>
         </Wrapper>
       </section>
-      {/* <BackgroundImage fluid={data.contactBanner.childImageSharp.fluid}> */}
       <Wrapper>
         <section className="center-text">
-          <div>
-            <h2>Have a project in mind?</h2>
-            <h2 className="no-top-margin">
-              Need help bringing it to the world?
-            </h2>
-            <h2 className="no-top-margin"> We’d love to hear from you.</h2>
-          </div>
-
-          <Contact className="margins">
-            <a href="mailto:iam@flyinghomestudio.com">
-              iam@flyinghomestudio.com
-            </a>
-          </Contact>
+          <Waypoint
+            bottomOffset="25%"
+            onEnter={() => {
+              if (!isContactShowing) setIsContactShowing(true)
+            }}
+          />
+          <motion.div
+            variants={variants}
+            initial="closed"
+            animate={isContactShowing ? "open" : "closed"}
+            transition={{ damping: 300 }}
+          >
+            {contactList.map(item => (
+              <motion.h2
+                key={item}
+                className="no-top-margin"
+                variants={contactVariants}
+              >
+                {item}
+              </motion.h2>
+            ))}
+            <Contact
+              className="margins"
+              key="contact"
+              variants={contactVariants}
+            >
+              <a href="mailto:iam@flyinghomestudio.com">
+                iam@flyinghomestudio.com
+              </a>
+            </Contact>
+          </motion.div>
         </section>
       </Wrapper>
-      {/* </BackgroundImage> */}
     </Layout>
   )
 }
 
 export default IndexPage
 
+const contactList = [
+  "Have a project in mind?",
+  "Need help bringing it to the world?",
+  "We’d love to hear from you.",
+]
+
 const RotateGrid = styled.div`
-  /* display: grid;
-  grid-template-columns: 100px 1fr 100px; */
   position: relative;
-  .rotate {
-    transform-origin: 50% 50%;
-    align-self: center;
-    /* white-space: nowrap; */
-    transform: rotate(-90deg);
-    position: absolute;
-    margin: 0;
-    left: 0;
-  }
-  .content {
-    padding: 0 8rem;
-  }
+  ${media.small`
+    .rotate {
+      transform-origin: 50% 50%;
+      align-self: center;
+      transform: rotate(-90deg);
+      position: absolute;
+      margin: 0;
+      left: 0;
+    }
+    #mission-title {
+       margin: 80px 0 0 -60px;
+    }
+    .content {
+      padding: 0 8rem;
+    }
+  `};
+`
+
+const LinkContainer = styled.div`
+  ${below.medium`
+    margin-top: 1rem;
+  `}
 `
 
 const HomeImg = styled(Img)`
@@ -168,16 +265,28 @@ const HomeImg = styled(Img)`
 `
 
 const CarouselWrapper = styled.div`
+  .react-multiple-carousel__arrow {
+    z-index: 8;
+  }
   li {
-    padding: 10px;
     overflow: hidden;
     position: relative;
-    /* height: 40rem; */
   }
-
   ${below.medium`
     li {
       padding: 0;
+    }
+  `};
+  ${media.medium`
+    li {
+      padding: 30px;
+
+    }
+    .react-multi-carousel-item {
+      transition: 0.5s ease all;
+      &.react-multi-carousel-item--active {
+        transform: scale(1.1);
+      }
     }
   `};
 `
@@ -200,15 +309,17 @@ const Slide = styled.div`
     background: rgba(0, 0, 0, 0.4);
     margin: 0;
   }
+  .gatsby-image-wrapper {
+    transition: 0.5s ease all;
+  }
   &:hover {
-    transform: scale(1.1);
-    p {
-      transform: translate3d(10px, 0, 0);
+    .gatsby-image-wrapper {
+      transform: scale(1.1);
     }
   }
 `
 
-const Contact = styled.p`
+const Contact = styled(motion.p)`
   a {
     font-size: var(--hugeFontSize);
     font-family: var(--headingFont);
@@ -223,8 +334,8 @@ const Contact = styled.p`
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-    slidesToSlide: 3, // optional, default to 1.
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -243,7 +354,7 @@ export const query = graphql`
     heroImg: file(relativePath: { eq: "hero/khao-hero.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
@@ -270,14 +381,7 @@ export const query = graphql`
     ) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    contactBanner: file(relativePath: { eq: "hero/yutaro-hero.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
