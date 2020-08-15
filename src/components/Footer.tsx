@@ -168,11 +168,18 @@ const Language = styled.p`
   span + span {
     margin-left: 2rem;
   }
-  .active {
-    font-weight: 700;
-  }
+
   .lang {
     cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3s ease all;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .active {
+    font-weight: 700;
+    opacity: 1;
   }
   ${below.medium`
     text-align: center;

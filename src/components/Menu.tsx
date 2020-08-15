@@ -64,11 +64,18 @@ const Language = styled.li`
   span {
     margin: 1rem;
   }
-  .active {
-    font-weight: 700;
-  }
+
   .lang {
     cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3s ease all;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .active {
+    font-weight: 700;
+    opacity: 1;
   }
 `
 

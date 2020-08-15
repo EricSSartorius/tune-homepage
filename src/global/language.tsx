@@ -6,6 +6,8 @@ import React, {
   useEffect,
 } from "react"
 import { navigate } from "gatsby"
+import Cookies from "js-cookie"
+import { useCookie } from "../hooks"
 
 export const initialLanguageValues = {
   isThai: false,
@@ -15,7 +17,7 @@ export const initialLanguageValues = {
 export const LanguageContext = createContext(initialLanguageValues)
 
 export const LanguageProvider: FC = ({ children }) => {
-  const [isThai, setIsThai] = useState(false)
+  const [isThai, setIsThai] = useCookie({ key: "isThai", expires: 365 })
 
   useEffect(() => {
     if (!isThai && window.location.pathname.endsWith("/th/")) {
@@ -24,6 +26,13 @@ export const LanguageProvider: FC = ({ children }) => {
       navigate(window.location.pathname.replace("/en/", "/th/"))
     }
   }, [isThai])
+
+  useEffect(() => {
+    if (Cookies.get("isThai")) {
+      const isThaiCookie = Cookies.get("isThai") === "true"
+      setIsThai(isThaiCookie)
+    }
+  }, [])
 
   return (
     <LanguageContext.Provider
