@@ -4,7 +4,8 @@ title: "Bhavana House"
 thumbnail: "./images/bhavana-house/bhavana-house.jpg"
 hero: "./images/bhavana-house/bhavana-house.jpg"
 description: "Bhavana House"
-isPersonalProject: true;
+isPersonalProject: true
+isThai: false
 ---
 
 ### Wang Nam Kiew

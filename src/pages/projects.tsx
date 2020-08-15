@@ -4,9 +4,11 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { Grid } from "../styles"
 import SEO from "../components/seo"
+import { useLanguage } from "../global/language"
 import { Wrapper } from "../styles"
 
 const ProjectsPage = ({ data }) => {
+  const { isThai } = useLanguage()
   const projects = data.allMarkdownRemark.edges
 
   return (
@@ -16,19 +18,21 @@ const ProjectsPage = ({ data }) => {
       <Wrapper>
         <section className="margins">
           <ProjectGrid cols={[1, 1, 2]}>
-            {projects.map(({ node }) => (
-              <div className="project" key={node.frontmatter.title}>
-                <Link to={node.frontmatter.slug}>
-                  <div className="project-image">
-                    <Img
-                      fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
-                      alt={node.frontmatter.title}
-                    />
-                  </div>
-                  <h3 className="project-title">{node.frontmatter.title}</h3>
-                </Link>
-              </div>
-            ))}
+            {projects
+              .filter(({ node }) => node.frontmatter.isThai === isThai)
+              .map(({ node }) => (
+                <div className="project" key={node.frontmatter.title}>
+                  <Link to={node.frontmatter.slug}>
+                    <div className="project-image">
+                      <Img
+                        fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+                        alt={node.frontmatter.title}
+                      />
+                    </div>
+                    <h3 className="project-title">{node.frontmatter.title}</h3>
+                  </Link>
+                </div>
+              ))}
           </ProjectGrid>
         </section>
       </Wrapper>
@@ -104,6 +108,8 @@ export const query = graphql`
           frontmatter {
             title
             slug
+            isThai
+            isPersonalProject
             thumbnail {
               childImageSharp {
                 fluid {

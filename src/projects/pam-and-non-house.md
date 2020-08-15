@@ -4,7 +4,8 @@ title: "Pam and Non House"
 thumbnail: "./images/pam-and-non-house/pam-and-non-house-03.jpg"
 hero: "./images/pam-and-non-house/pam-and-non-house-02.jpg"
 description: "Pam and Non House"
-isPersonalProject: false;
+isPersonalProject: false
+isThai: false
 ---
 
 The interior of Pam and Non House is inspired by Scandinavian material tones, Danish furniture details tailored each space in the house. The house is in progress and to be built in the next year.

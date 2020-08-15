@@ -3,13 +3,45 @@ slug: "/fuji-kindergarten/"
 title: "Fuji Kindergarten"
 thumbnail: "./images/fuji-kindergarten/tezuka-02.jpg"
 hero: "./images/fuji-kindergarten/tezuka-02.jpg"
-description: "Fuji Kindergarten"
-isPersonalProject: true;
+description: "A big tree school for children to have fun
+learning in the middle of nature"
+isPersonalProject: true
+isThai: false
 ---
 
-Fuji Kindergarten is selected as one of the first ten Global Innovations by the Finland-based educational organization, HundrED.cts
-The space created by Tezuka seems to have just two floors, but for the children the building has six floors with volumes that are one meter high. The compressed spaces, which can only be reached by crawling, further the freedom of movement and ability to use the body as a means of learning.
+Fuji Kindergarten, a big tree school that wants children to enjoy learning
+in the middle of nature.
 
-At the Fuji Kindergarten, "Ring Around a Tree" by Tezuka Architects promotes freedom of movement as a tool for learning.
+Best learning in kindergarten Is learning by playing. Fuji Kindergarten
+was designed to encourage children to play more efficiently and create
+learning experiences that are open to children.
 
-#### Conceptual Design - Architecture & Interior
+Fuji Kindergarten It was designed by Japanese architect Takaharu
+Tezuka, owner of architect firm TEZUKA, a company that I had the
+opportunity to work with while on a journey to gain more experience in
+Japan after graduation. I was involved in the conceptual design of Ring
+Around The Tree, a circular building that surrounds a big tree.
+
+Fuji Kindergarten is a school that places great emphasis on children&#39;s
+play. The school&#39;s buildings and environment are spherical. Tezuka
+observed the playing behavior of the children and found that nature of
+children is to often run in a circle. The shape of the building and the track
+is therefore designed in a circular motion to match the direction of the
+child&#39;s running.
+
+‘Ring Around The Tree’ is a circular building with a total of 7 floors, but
+only 5 meters high, because all the scales such as sinks, ceilings, steps,
+etc. are designed to fit the child&#39;s body. The circular building is designed
+to allow you to run and play safely on the school building. More
+importantly, the building structure is still a structure that has no clear
+boundaries. There is no block between the natural classroom and the
+play area to open up their imagination in both learning and playing.
+Climbing, hanging, hanging or falling down and wounds from running are
+part of helping children learn and grow.
+
+_Project:_ Fuji Kindergarten, Ring Around The Tree
+
+##### Conceptual Design
+
+_Credits:_ Tezuka Architects Photography Iwan Baan
+_Awards:_ TED Talk Top 10 Kindergarden

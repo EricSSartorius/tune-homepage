@@ -4,7 +4,8 @@ title: "Peace Sindhorn"
 thumbnail: "./images/peace-sindhorn/peace-sindhorn-02.jpg"
 hero: "./images/peace-sindhorn/peace-sindhorn-02.jpg"
 description: "Peace Sindhorn"
-isPersonalProject: true;
+isPersonalProject: true
+isThai: false
 ---
 
 ### Sindhorn Village

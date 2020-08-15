@@ -3,12 +3,40 @@ slug: "/roofless-house/"
 title: "Roofless House"
 thumbnail: "./images/roofless-house/roofless-house-01.jpg"
 hero: "./images/roofless-house/roofless-house-01.jpg"
-description: "Roofless House"
-isPersonalProject: true;
+description: "A roofless house that makes you feel like you&#39;re always outdoors"
+isPersonalProject: true
+isThai: false
 ---
 
-The residential architecture of Atherton, California, is nothing if not eclectic. Although about half of the 5,900 square feet behind the curving enclosure are sheltered under flat roofs, the architect has dubbed the residence the Roofless House, since the remaining space is devoted to courtyards and is open to the sky.
+After finding work experience at an architect company in Japan. I came
+back to work at an architect company in Thailand for a while and set out
+for more experience in the United States.
 
-#### Conceptual Design - Architecture & Interior
+Craig Steel Architecture is a San Francisco-based architect company
+that I contacted for several months while in Thailand and finally got the
+opportunity to come to the event. While working with Craig&#39;s team, the
+Roofless House project, allowed me to learn how to build good
+relationships with clients that help architects and homeowners work on
+designing together – to meet the needs of customers in terms of both
+function and lifestyle.
 
-#### Design Development - Architecture & Interior
+Roofless House is a house without a roof. It has a strange shape that
+similar to a bean. The house is located on the outskirts of Silicon Valley.
+It is a large detached house located in a wide open area surrounded by
+big trees. The homeowners&#39; challenge is the one-story house that feels
+most like being outdoors as possible. The shape of the Roofless House
+is inspired by a sculpture by British artist Henry Moore, whose work is to
+design abstract art in the area. Because the homeowners are creative
+people, they love the idea of ​​this unusual house shape.
+
+California has a Mediterranean climate. In the summer, the climate is
+very hot and dry. In winter, it is warm and rainy. Living space in the
+house, therefore, focuses on open space to make the house look wide
+and light. Sliding glass doors creates limitless view between inside and
+out. Materials and contoured shapes provide a smooth, continuous feel.
+Whether in or outside the house, it feels the same. Inside the house
+there is a courtyard that allows natural light to reach multiple directions.
+The rounded shape of the wooden house creates a natural pattern when
+sunlight hits the birch trees and walls. Looking up, you can see the trees
+and the sky as if under natural shade, according to the concept of a
+roofless house which was the initial idea.
