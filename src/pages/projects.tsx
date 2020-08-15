@@ -3,7 +3,6 @@ import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { Grid } from "../styles"
-import Layout from "../layouts"
 import SEO from "../components/seo"
 import { Wrapper } from "../styles"
 
@@ -11,7 +10,7 @@ const ProjectsPage = ({ data }) => {
   const projects = data.allMarkdownRemark.edges
 
   return (
-    <Layout>
+    <>
       <SEO title="Projects" />
       <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
       <Wrapper>
@@ -33,7 +32,7 @@ const ProjectsPage = ({ data }) => {
           </ProjectGrid>
         </section>
       </Wrapper>
-    </Layout>
+    </>
   )
 }
 
@@ -94,7 +93,7 @@ export const query = graphql`
     heroImg: file(relativePath: { eq: "hero/private-hero.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -108,7 +107,7 @@ export const query = graphql`
             thumbnail {
               childImageSharp {
                 fluid {
-                  ...GatsbyImageSharpFluid_withWebp_noBase64
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }

@@ -4,15 +4,17 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import Icon from "./Icon"
 import { below, Wrapper } from "../styles"
+import { useLanguage } from "../global/language"
 
 const Footer = () => {
+  const { isThai, setIsThai } = useLanguage()
   const { logo } = useStaticQuery(
     graphql`
       query {
         logo: file(relativePath: { eq: "favicon.png" }) {
           childImageSharp {
             fixed(width: 100) {
-              ...GatsbyImageSharpFixed_withWebp_noBase64
+              ...GatsbyImageSharpFixed_withWebp
             }
           }
         }
@@ -25,8 +27,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-logo">
             <h3 className="no-top-margin">
-              Tune <br />
-              <span className="and">and his</span>
+              Tune <span className="and">&</span>
               <br /> Flying home studio
             </h3>
             <Img
@@ -64,12 +65,29 @@ const Footer = () => {
           <p>
             &copy; {new Date().getFullYear()} Tune and his Flying Home Studio
           </p>
-          <p className="pure-func">
-            Crafted by{" "}
-            <a href="https://www.purefunc.dev/" target="_blank">
-              <strong>Pure Func LLC</strong>
-            </a>
-          </p>
+          <div>
+            <Language>
+              <span
+                onClick={() => setIsThai(false)}
+                className={`lang ${!isThai ? "active" : ""}`}
+              >
+                EN
+              </span>
+              <span>|</span>
+              <span
+                onClick={() => setIsThai(true)}
+                className={`lang ${isThai ? "active" : ""}`}
+              >
+                TH
+              </span>
+            </Language>
+            <p className="pure-func">
+              Crafted by{" "}
+              <a href="https://www.purefunc.dev/" target="_blank">
+                <strong>Pure Func LLC</strong>
+              </a>
+            </p>
+          </div>
         </div>
       </Wrapper>
     </FooterWrapper>
@@ -110,6 +128,7 @@ const FooterWrapper = styled.footer`
   .footer-bottom {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     p,
     p a {
       font-size: var(--smallestFontSize);
@@ -141,6 +160,23 @@ const FooterWrapper = styled.footer`
         margin: 1rem;
       }
     }
+  `};
+`
+
+const Language = styled.p`
+  text-align: right;
+  span + span {
+    margin-left: 2rem;
+  }
+  .active {
+    font-weight: 700;
+  }
+  .lang {
+    cursor: pointer;
+  }
+  ${below.medium`
+    text-align: center;
+    padding: 2rem 0 1rem;
   `};
 `
 

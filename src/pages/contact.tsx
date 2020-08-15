@@ -2,13 +2,12 @@ import React, { FC } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import Layout from "../layouts"
 import SEO from "../components/seo"
 import Icon from "../components/Icon"
 import { Wrapper, below, Cols } from "../styles"
 
 const ContactPage: FC = ({ data }) => (
-  <Layout>
+  <>
     <SEO title="Contact" />
     <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
     <Wrapper>
@@ -47,7 +46,7 @@ const ContactPage: FC = ({ data }) => (
         </Cols>
       </section>
     </Wrapper>
-  </Layout>
+  </>
 )
 
 export default ContactPage
@@ -72,7 +71,7 @@ export const query = graphql`
     heroImg: file(relativePath: { eq: "hero/yutaro-hero.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

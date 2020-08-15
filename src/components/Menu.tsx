@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { useLanguage } from "../global/language"
 
 type LinkType = {
   to: string
@@ -13,26 +14,57 @@ type Props = {
   isMenuOpen: boolean
 }
 
-const Menu = ({ links, closeMenu, isMenuOpen }: Props) => (
-  <NavBar isMenuOpen={isMenuOpen}>
-    <ul>
-      {links.map(({ to, text }) => (
-        <li key={text}>
-          <Link
-            to={to}
-            className="nav-link"
-            onClick={closeMenu}
-            aria-label={text}
+const Menu = ({ links, closeMenu, isMenuOpen }: Props) => {
+  const { isThai, setIsThai } = useLanguage()
+
+  return (
+    <NavBar isMenuOpen={isMenuOpen}>
+      <ul>
+        {links.map(({ to, text }) => (
+          <li key={text}>
+            <Link
+              to={to}
+              className="nav-link"
+              onClick={closeMenu}
+              aria-label={text}
+            >
+              {text}
+            </Link>
+          </li>
+        ))}
+        <Language>
+          <span
+            onClick={() => setIsThai(false)}
+            className={`lang ${!isThai ? "active" : ""}`}
           >
-            {text}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </NavBar>
-)
+            EN
+          </span>
+          <span>|</span>
+          <span
+            onClick={() => setIsThai(true)}
+            className={`lang ${isThai ? "active" : ""}`}
+          >
+            TH
+          </span>
+        </Language>
+      </ul>
+    </NavBar>
+  )
+}
 
 export default Menu
+
+const Language = styled.li`
+  span {
+    margin: 1rem;
+  }
+  .active {
+    font-weight: 700;
+  }
+  .lang {
+    cursor: pointer;
+  }
+`
 
 const NavBar = styled.nav`
   display: ${({ isMenuOpen }) => (isMenuOpen ? "flex" : "none")};

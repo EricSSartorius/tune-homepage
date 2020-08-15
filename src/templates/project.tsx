@@ -2,15 +2,16 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, Link } from "gatsby"
 import SEO from "../components/seo"
-import Layout from "../layouts"
 import { Wrapper, Cols, Container } from "../styles"
 import BackgroundImage from "gatsby-background-image"
+import { useLanguage } from "../global/language"
 
 const ProjectTemplate = ({ data }) => {
+  const { isThai, setIsThai } = useLanguage()
   const { markdownRemark } = data
 
   return (
-    <Layout>
+    <>
       <SEO title={markdownRemark.frontmatter.title} />
 
       <HeroBackgroundImage
@@ -21,9 +22,7 @@ const ProjectTemplate = ({ data }) => {
         <div className={"white-text"}>
           <Wrapper>
             <HeroContents>
-              <Container>
-                <h1>{markdownRemark.frontmatter.title}</h1>
-              </Container>
+              <Container></Container>
             </HeroContents>
           </Wrapper>
         </div>
@@ -31,11 +30,15 @@ const ProjectTemplate = ({ data }) => {
       <Wrapper>
         <section>
           <Cols>
-            <ProjectHTML
-              dangerouslySetInnerHTML={{
-                __html: markdownRemark.html,
-              }}
-            />
+            <div>
+              <h1>{markdownRemark.frontmatter.title}</h1>
+              <h5>{markdownRemark.frontmatter.description}</h5>
+              <ProjectHTML
+                dangerouslySetInnerHTML={{
+                  __html: markdownRemark.html,
+                }}
+              />
+            </div>
           </Cols>
           <div className="center-text top-padding">
             <p>
@@ -44,7 +47,7 @@ const ProjectTemplate = ({ data }) => {
           </div>
         </section>
       </Wrapper>
-    </Layout>
+    </>
   )
 }
 
@@ -53,9 +56,8 @@ export default ProjectTemplate
 const ProjectHTML = styled.div`
   p,
   p a {
-    font-size: var(--heading-three);
+    font-size: var(--largeFontSize);
     margin: 4rem 0;
-    font-family: var(--headingFont);
   }
 
   h3 {
@@ -75,7 +77,7 @@ const HeroBackgroundImage = styled(BackgroundImage)``
 
 export const HeroContents = styled.div`
   display: flex;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   padding: 15rem 0;
   h1 {
     margin: 0;
@@ -93,7 +95,7 @@ export const query = graphql`
         hero {
           childImageSharp {
             fluid(quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

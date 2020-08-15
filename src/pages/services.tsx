@@ -2,12 +2,11 @@ import React, { Fragment, FC } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import Layout from "../layouts"
 import SEO from "../components/seo"
 import { Wrapper, Cols } from "../styles"
 
 const ServicesPage: FC = ({ data }) => (
-  <Layout>
+  <>
     <SEO title="Services" />
     <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
     <Wrapper>
@@ -40,7 +39,7 @@ const ServicesPage: FC = ({ data }) => (
         </Cols>
       </section>
     </Wrapper>
-  </Layout>
+  </>
 )
 
 export default ServicesPage
@@ -94,7 +93,7 @@ export const query = graphql`
     heroImg: file(relativePath: { eq: "hero/private-hero.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { ContextProvider } from "../global/state"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -21,11 +22,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <ContextProvider>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
       <Footer siteTitle={data.site.siteMetadata.title} />
-    </>
+    </ContextProvider>
   )
 }
 

@@ -2,12 +2,11 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import Layout from "../layouts"
 import SEO from "../components/seo"
 import { Wrapper, Cols } from "../styles"
 
 const AboutPage: React.FC = ({ data }) => (
-  <Layout>
+  <>
     <SEO title="About" />
     <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
     <Wrapper>
@@ -20,7 +19,7 @@ const AboutPage: React.FC = ({ data }) => (
         </Cols>
       </section>
     </Wrapper>
-  </Layout>
+  </>
 )
 
 export default AboutPage
@@ -34,7 +33,7 @@ export const query = graphql`
     heroImg: file(relativePath: { eq: "hero/honeyful-hero.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

@@ -5,7 +5,6 @@ import Img from "gatsby-image"
 import { Waypoint } from "react-waypoint"
 import { motion } from "framer-motion"
 import { Wrapper, Grid, below, media } from "../styles"
-import Layout from "../layouts"
 import Carousel from "react-multi-carousel"
 import SEO from "../components/seo"
 
@@ -45,7 +44,7 @@ const IndexPage = ({ data }) => {
   const projects = allMarkdownRemark.edges
 
   return (
-    <Layout>
+    <>
       <SEO title="Home" />
 
       <Img fluid={heroImg.childImageSharp.fluid} style={{ height: "100vh" }} />
@@ -218,7 +217,7 @@ const IndexPage = ({ data }) => {
           </motion.div>
         </section>
       </Wrapper>
-    </Layout>
+    </>
   )
 }
 
@@ -354,7 +353,7 @@ export const query = graphql`
     heroImg: file(relativePath: { eq: "hero/khao-hero.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -367,7 +366,7 @@ export const query = graphql`
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 600) {
-                  ...GatsbyImageSharpFluid_withWebp_noBase64
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
@@ -381,7 +380,7 @@ export const query = graphql`
     ) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

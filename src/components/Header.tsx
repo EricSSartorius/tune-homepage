@@ -1,9 +1,9 @@
-import React, { useRef, useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled, { css } from "styled-components"
-import { media, Flex, below } from "../styles"
-import { useScrollPosition } from "../hooks"
-import { useScrollFreeze } from "../hooks"
+import { media, below } from "../styles"
+import { useScrollPosition, useScrollFreeze } from "../hooks"
+import {} from "../hooks"
 import { motion, AnimatePresence } from "framer-motion"
 import Portal from "./Portal"
 import Icon from "./Icon"
@@ -132,7 +132,7 @@ const MenuIcon = styled.button`
   }
 
   .hamburger-box {
-    width: 40px;
+    width: 34px;
     height: 24px;
     display: inline-block;
     position: relative;
@@ -146,7 +146,7 @@ const MenuIcon = styled.button`
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
-    width: 40px;
+    width: 34px;
     height: 4px;
     background-color: var(--white);
     border-radius: 4px;
