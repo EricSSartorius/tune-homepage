@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
-import { graphql, Link } from "gatsby"
+import { graphql, Link, navigate } from "gatsby"
 import SEO from "../components/seo"
 import { Wrapper, Cols, Container } from "../styles"
 import BackgroundImage from "gatsby-background-image"
@@ -9,6 +9,33 @@ import { useLanguage } from "../global/language"
 const ProjectTemplate = ({ data }) => {
   const { isThai, setIsThai } = useLanguage()
   const { markdownRemark } = data
+
+  // useEffect(() => {
+  //   if (
+  //     isThai &&
+  //     markdownRemark.frontmatter.isThai !== isThai &&
+  //     markdownRemark.frontmatter.slug.includes("/th")
+  //   ) {
+  //     navigate(
+  //       markdownRemark.frontmatter.slug.substring(
+  //         0,
+  //         markdownRemark.frontmatter.slug.length - 3
+  //       )
+  //     )
+  //   } else if (
+  //     isThai &&
+  //     markdownRemark.frontmatter.isThai !== isThai &&
+  //     !markdownRemark.frontmatter.slug.includes("/th")
+  //   ) {
+  //     navigate(`${markdownRemark.frontmatter.slug}th/`)
+  //   } else if (
+  //     !isThai &&
+  //     markdownRemark.frontmatter.isThai === isThai &&
+  //     !markdownRemark.frontmatter.slug.includes("/th")
+  //   ) {
+  //     navigate(`${markdownRemark.frontmatter.slug}th/`)
+  //   }
+  // }, [isThai])
 
   return (
     <>
@@ -94,7 +121,7 @@ export const query = graphql`
         description
         hero {
           childImageSharp {
-            fluid(quality: 100) {
+            fluid(maxWidth: 1440, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

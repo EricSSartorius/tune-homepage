@@ -1,5 +1,5 @@
 ---
-slug: "/khao/"
+slug: "/khao/en/"
 title: "Khao"
 thumbnail: "./images/khao/khao-04.jpg"
 hero: "./images/khao/khao-04.jpg"
@@ -16,6 +16,8 @@ Vichit created Khao in Soi Sukhumvit 51, a Thai restaurant serving
 Chef&#39;s Table only, before relocating Khao to Ekamai Soi 10. This branch
 of Khao has changed the layout to have a more family-friendly food
 menu and also Chef&#39;s Table menu.
+
+![Khao](./images/khao/khao-04.jpg)
 
 Chef Vichit is a person who takes &#39;rice&#39; very seriously, believes that good
 rice will make that meal even more special. With a passion for selecting

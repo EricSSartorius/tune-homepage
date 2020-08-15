@@ -1,5 +1,5 @@
 ---
-slug: "/bhavana-house/"
+slug: "/bhavana-house/en/"
 title: "Bhavana House"
 thumbnail: "./images/bhavana-house/bhavana-house.jpg"
 hero: "./images/bhavana-house/bhavana-house.jpg"

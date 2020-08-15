@@ -1,5 +1,5 @@
 ---
-slug: "/roofless-house/"
+slug: "/roofless-house/en/"
 title: "Roofless House"
 thumbnail: "./images/roofless-house/roofless-house-01.jpg"
 hero: "./images/roofless-house/roofless-house-01.jpg"

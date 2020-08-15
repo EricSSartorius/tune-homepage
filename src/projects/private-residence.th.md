@@ -1,5 +1,5 @@
 ---
-slug: "/private-residence/th"
+slug: "/private-residence/th/"
 title: "Keith’s Home"
 thumbnail: "./images/private-residence/private-residence-02.jpg"
 hero: "./images/private-residence/private-residence-01.jpg"

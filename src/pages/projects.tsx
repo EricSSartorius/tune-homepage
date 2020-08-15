@@ -22,7 +22,7 @@ const ProjectsPage = ({ data }) => {
               .filter(({ node }) => node.frontmatter.isThai === isThai)
               .map(({ node }) => (
                 <div className="project" key={node.frontmatter.title}>
-                  <Link to={node.frontmatter.slug}>
+                  <Link to={"/project" + node.frontmatter.slug}>
                     <div className="project-image">
                       <Img
                         fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
@@ -96,7 +96,7 @@ export const query = graphql`
   query {
     heroImg: file(relativePath: { eq: "hero/private-hero.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 1440) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

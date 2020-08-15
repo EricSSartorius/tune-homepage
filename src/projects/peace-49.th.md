@@ -1,5 +1,5 @@
 ---
-slug: "/peace-49/th"
+slug: "/peace-49/th/"
 title: "Peace 49"
 thumbnail: "./images/peace-49/peace-49-04.jpg"
 hero: "./images/peace-49/peace-49-01.jpg"

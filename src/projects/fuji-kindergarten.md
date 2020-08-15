@@ -1,5 +1,5 @@
 ---
-slug: "/fuji-kindergarten/"
+slug: "/fuji-kindergarten/en/"
 title: "Fuji Kindergarten"
 thumbnail: "./images/fuji-kindergarten/tezuka-02.jpg"
 hero: "./images/fuji-kindergarten/tezuka-02.jpg"

@@ -1,8 +1,8 @@
 ---
-slug: "/honeyful-cafe/"
+slug: "/honeyful-cafe/en/"
 title: "Honeyful Cafe"
-thumbnail: "./images/honeyful-cafe/honeyful-cafe-01.jpg"
-hero: "./images/honeyful-cafe/honeyful-cafe-01.jpg"
+thumbnail: "./images/honeyful-cafe/honeyful-cafe.jpg"
+hero: "./images/honeyful-cafe/honeyful-cafe.jpg"
 description: "A cafe that wants sweet people to enjoy eating
 honey"
 isPersonalProject: true
@@ -13,6 +13,8 @@ Honeyful Café is located at Yui&#39;s Ariston Sukhumvit 24
 Hotel - Natthawan Supapong. She is a former Le Cordon Bleu student
 chef who fell in love with honey. I decided to create this cafe to serve the
 story of honey for people to know and enjoy eating honey as she felt.
+
+![Honeyful Cafe 2](./images/honeyful-cafe/honeyful-cafe-2.jpg)
 
 In this project, I also had a chance to help with the branding, and
 overlook the entire design and construction process. The concept of
@@ -27,9 +29,15 @@ seamlessly functional and unified. When used from above it will be used
 as a chair, but in the greenhouse area below, it will be used as a table to
 make limited spaces look more spacious with furniture designs.
 
+![Honeyful Cafe 3](./images/honeyful-cafe/honeyful-cafe-3.jpg)
+
 I wanted to brighten up this hexagon-concept store by putting soft lights to the
 ceiling. It also makes the shop look wide and there is more space than you actually
 can think of. Outside the shop, the same trees were preserved as part of the
 building. Looking through the glass inside the shop, you can see a large palm tree
 trunk inside a glass curved like a jar, therefore like being in a small hive under a big
 tree with honey where you can immerse yourself in honey.
+
+![Honeyful Cafe 4](./images/honeyful-cafe/honeyful-cafe-4.jpg)
+
+![Honeyful Cafe 5](./images/honeyful-cafe/honeyful-cafe-5.jpg)

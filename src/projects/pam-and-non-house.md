@@ -1,5 +1,5 @@
 ---
-slug: "/pam-and-non-house/"
+slug: "/pam-and-non-house/en/"
 title: "Pam and Non House"
 thumbnail: "./images/pam-and-non-house/pam-and-non-house-03.jpg"
 hero: "./images/pam-and-non-house/pam-and-non-house-02.jpg"

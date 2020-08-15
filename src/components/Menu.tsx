@@ -34,14 +34,20 @@ const Menu = ({ links, closeMenu, isMenuOpen }: Props) => {
         ))}
         <Language>
           <span
-            onClick={() => setIsThai(false)}
+            onClick={() => {
+              setIsThai(false)
+              closeMenu()
+            }}
             className={`lang ${!isThai ? "active" : ""}`}
           >
             EN
           </span>
           <span>|</span>
           <span
-            onClick={() => setIsThai(true)}
+            onClick={() => {
+              setIsThai(true)
+              closeMenu()
+            }}
             className={`lang ${isThai ? "active" : ""}`}
           >
             TH

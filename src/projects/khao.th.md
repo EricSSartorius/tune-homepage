@@ -1,5 +1,5 @@
 ---
-slug: "/khao/th"
+slug: "/khao/th/"
 title: "Khao"
 thumbnail: "./images/khao/khao-04.jpg"
 hero: "./images/khao/khao-04.jpg"
