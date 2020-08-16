@@ -1,8 +1,8 @@
 ---
 slug: "/private-residence/th/"
 title: "Keith’s Home"
-thumbnail: "./images/private-residence/private-residence-02.jpg"
-hero: "./images/private-residence/private-residence-01.jpg"
+thumbnail: "./images/private-residence/private-residence.jpg"
+hero: "./images/private-residence/private-residence.jpg"
 description: "โปรเจคตกแต่งภายในห้องพักส่วนตัวโครงการ Saladaeng One"
 isPersonalProject: true
 isThai: true
@@ -12,6 +12,8 @@ isThai: true
 และกลายมาเป็นลูกค้าของผมเนื่องจากชอบงานออกแบบและตกแต่งภายในที่ผม
 ทำในร้าน Khao จึงติดต่อเข้ามาให้ตกแต่งภายในห้องส่วนตัวของโครงการ
 Saladaeng One
+
+![Keith's house 2](./images/private-residence/private-residence-2.jpg)
 
 แต่เดิมห้องนี้เป็นห้องเปล่าที่ยังไม่มีการออกแบบและตกแต่งภายใน
 คุณคีธจึงให้ผมออกแบบให้ทั้งหมดและให้ออกแบบในสไตล์ที่ผมถนัด
@@ -27,3 +29,9 @@ Saladaeng One
 นอกจากนี้เฟอร์นิเจอร์ทั้งหมดยังออกแบบใหม่และสั่งทำพิเศษเพื่อให้เหมาะสมกับ
 ขนาดพื้นที่ภายในห้อง
 ทำให้ห้องที่มีพื้นที่จำกัดดูกว้างขึ้นและใช้พื้นที่ได้อย่างมีประสิทธิภาพ
+
+![Keith's house 3](./images/private-residence/private-residence-3.jpg)
+
+![Keith's house 4](./images/private-residence/private-residence-4.jpg)
+
+![Keith's house](./images/private-residence/private-residence-1.jpg)

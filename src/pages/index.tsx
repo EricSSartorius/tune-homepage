@@ -7,6 +7,7 @@ import { motion } from "framer-motion"
 import { Wrapper, Grid, below, media } from "../styles"
 import Carousel from "react-multi-carousel"
 import SEO from "../components/seo"
+import { useLanguage } from "../global/language"
 
 import "react-multi-carousel/lib/styles.css"
 
@@ -42,6 +43,7 @@ const IndexPage = ({ data }) => {
   const [isContactShowing, setIsContactShowing] = useState(false)
   const { heroImg, allMarkdownRemark } = data
   const projects = allMarkdownRemark.edges
+  const { isThai } = useLanguage()
 
   return (
     <>
@@ -158,7 +160,11 @@ const IndexPage = ({ data }) => {
             itemClass="carousel-item-padding-40-px"
           >
             {projects
-              .filter(project => project.node.frontmatter.thumbnail)
+              .filter(
+                ({ node }) =>
+                  node.frontmatter.thumbnail &&
+                  node.frontmatter.isThai === isThai
+              )
               .map(({ node }) => (
                 <Slide key={node.frontmatter.slug}>
                   <Link to={node.frontmatter.slug}>
@@ -363,6 +369,7 @@ export const query = graphql`
           frontmatter {
             slug
             title
+            isThai
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 600) {

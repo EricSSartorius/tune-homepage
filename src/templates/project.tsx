@@ -1,65 +1,29 @@
-import React, { useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
-import { graphql, Link, navigate } from "gatsby"
+import { graphql, Link } from "gatsby"
 import SEO from "../components/seo"
-import { Wrapper, Cols, Container } from "../styles"
-import BackgroundImage from "gatsby-background-image"
+import Img from "gatsby-image"
+import { Wrapper, Cols, below } from "../styles"
 import { useLanguage } from "../global/language"
 
 const ProjectTemplate = ({ data }) => {
   const { isThai, setIsThai } = useLanguage()
   const { markdownRemark } = data
 
-  // useEffect(() => {
-  //   if (
-  //     isThai &&
-  //     markdownRemark.frontmatter.isThai !== isThai &&
-  //     markdownRemark.frontmatter.slug.includes("/th")
-  //   ) {
-  //     navigate(
-  //       markdownRemark.frontmatter.slug.substring(
-  //         0,
-  //         markdownRemark.frontmatter.slug.length - 3
-  //       )
-  //     )
-  //   } else if (
-  //     isThai &&
-  //     markdownRemark.frontmatter.isThai !== isThai &&
-  //     !markdownRemark.frontmatter.slug.includes("/th")
-  //   ) {
-  //     navigate(`${markdownRemark.frontmatter.slug}th/`)
-  //   } else if (
-  //     !isThai &&
-  //     markdownRemark.frontmatter.isThai === isThai &&
-  //     !markdownRemark.frontmatter.slug.includes("/th")
-  //   ) {
-  //     navigate(`${markdownRemark.frontmatter.slug}th/`)
-  //   }
-  // }, [isThai])
-
   return (
     <>
       <SEO title={markdownRemark.frontmatter.title} />
-
-      <HeroBackgroundImage
+      <HeroImg
         fluid={markdownRemark.frontmatter.hero.childImageSharp.fluid}
         alt={markdownRemark.frontmatter.title}
-        Tag="div"
-      >
-        <div className={"white-text"}>
-          <Wrapper>
-            <HeroContents>
-              <Container></Container>
-            </HeroContents>
-          </Wrapper>
-        </div>
-      </HeroBackgroundImage>
+      />
+
       <Wrapper>
         <section>
           <Cols>
             <div>
               <h1>{markdownRemark.frontmatter.title}</h1>
-              <h5>{markdownRemark.frontmatter.description}</h5>
+              <h4>{markdownRemark.frontmatter.description}</h4>
               <ProjectHTML
                 dangerouslySetInnerHTML={{
                   __html: markdownRemark.html,
@@ -100,15 +64,40 @@ const ProjectHTML = styled.div`
   }
 `
 
-const HeroBackgroundImage = styled(BackgroundImage)``
+const HeroImg = styled(Img)`
+  height: 30vh;
+`
 
 export const HeroContents = styled.div`
   display: flex;
-  /* justify-content: flex-end; */
   padding: 15rem 0;
   h1 {
     margin: 0;
   }
+`
+
+const Language = styled.p`
+  text-align: right;
+  span + span {
+    margin-left: 2rem;
+  }
+
+  .lang {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3s ease all;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .active {
+    font-weight: 700;
+    opacity: 1;
+  }
+  ${below.medium`
+    text-align: center;
+    padding: 2rem 0 1rem;
+  `};
 `
 
 export const query = graphql`

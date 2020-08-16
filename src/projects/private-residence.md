@@ -1,8 +1,8 @@
 ---
 slug: "/private-residence/en/"
 title: "Keith’s Home"
-thumbnail: "./images/private-residence/private-residence-02.jpg"
-hero: "./images/private-residence/private-residence-01.jpg"
+thumbnail: "./images/private-residence/private-residence.jpg"
+hero: "./images/private-residence/private-residence.jpg"
 description: "Private room interior decoration project, Saladaeng One project"
 isPersonalProject: true
 isThai: false
@@ -12,6 +12,8 @@ Keith is one of Khao&#39;s customers that I have designed for. He became
 my customer because he liked the design and interior work I did with
 Khao, and forwarded to contact me to decorate the interior of his private
 residence of Saladaeng One project.
+
+![Keith's house 2](./images/private-residence/private-residence-2.jpg)
 
 Originally, this room was an empty room without interior design and
 decoration so Keith let me design and in the style that I am comfortable
@@ -27,3 +29,9 @@ furniture, floating from walls and shelves using a linear light. In addition,
 all the furniture is redesigned and custom made to fit the space inside
 the room to make this room with limited space look wider and be used
 efficiently.
+
+![Keith's house 3](./images/private-residence/private-residence-3.jpg)
+
+![Keith's house 4](./images/private-residence/private-residence-4.jpg)
+
+![Keith's house](./images/private-residence/private-residence-1.jpg)
