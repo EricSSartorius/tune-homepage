@@ -55,3 +55,5 @@ the past. It is one of my intentions to keep as many large trees in the
 same area as possible.
 
 ![Khao 4](./images/khao/khao-4.jpg)
+
+![Khao 6](./images/khao/khao-6.jpg)

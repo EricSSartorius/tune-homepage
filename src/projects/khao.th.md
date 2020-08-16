@@ -60,3 +60,5 @@ Khao (ข้าว) คือร้านอาหารไทยที่มา
 สุด
 
 ![Khao 4](./images/khao/khao-4.jpg)
+
+![Khao 6](./images/khao/khao-6.jpg)
