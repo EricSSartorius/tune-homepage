@@ -6,7 +6,7 @@ hero: "./images/fuji-kindergarten/tezuka-02.jpg"
 description: "โรงเรียนต้นไม้ใหญ่ที่อยากให้เด็กๆ
 สนุกกับการเรียนรู้ท่ามกลางธรรมชาติ"
 isPersonalProject: true
-isThai: true
+lang: 'th'
 ---
 
 การเรียนรู้ที่ดีที่สุดในวัยเด็ก คือการเรียนรู้ด้วยการเล่น โรงเรียนอนุบาลฟูจิ (Fuji

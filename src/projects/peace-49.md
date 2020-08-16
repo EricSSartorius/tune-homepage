@@ -5,7 +5,7 @@ thumbnail: "./images/peace-49/peace-49-04.jpg"
 hero: "./images/peace-49/peace-49-01.jpg"
 description: "A tea shop that is meticulous in selecting and making drinking tea fun"
 isPersonalProject: true
-isThai: false
+lang: "en"
 ---
 
 Peace - Oriental Teahouse, Sukhumvit 49 branch is the second home of

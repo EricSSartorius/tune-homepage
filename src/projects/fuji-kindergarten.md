@@ -6,7 +6,7 @@ hero: "./images/fuji-kindergarten/tezuka-02.jpg"
 description: "A big tree school for children to have fun
 learning in the middle of nature"
 isPersonalProject: true
-isThai: false
+lang: 'en'
 ---
 
 Fuji Kindergarten, a big tree school that wants children to enjoy learning

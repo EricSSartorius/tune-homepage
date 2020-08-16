@@ -5,7 +5,7 @@ thumbnail: "./images/peace-sindhorn/peace-sindhorn-02.jpg"
 hero: "./images/peace-sindhorn/peace-sindhorn-02.jpg"
 description: "Peace Sindhorn ร้านชาในบรรยากาศร้านสมุนไพรจีนโบราณ"
 isPersonalProject: true
-isThai: true
+lang: "th"
 ---
 
 Peace Oriental Teahouse สาขา Velaa Sindhorn Village เป็นสาขาที่ 5

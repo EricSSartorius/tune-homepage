@@ -5,7 +5,7 @@ thumbnail: "./images/roofless-house/roofless-house-01.jpg"
 hero: "./images/roofless-house/roofless-house-01.jpg"
 description: "บ้านไร้หลังคาที่ทำให้รู้สึกเหมือนได้ใช้ชีวิตกลางแจ้งตลอดเวลา"
 isPersonalProject: true
-isThai: true
+lang: "th"
 ---
 
 หลังจากหาประสบการณ์การทำงานที่บริษัทสถาปนิกในญี่ปุ่น

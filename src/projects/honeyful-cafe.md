@@ -6,7 +6,7 @@ hero: "./images/honeyful-cafe/honeyful-cafe-3.jpg"
 description: "A cafe that wants sweet people to enjoy eating
 honey"
 isPersonalProject: true
-isThai: false
+lang: 'en'
 ---
 
 Honeyful Café is located at Yui&#39;s Ariston Sukhumvit 24

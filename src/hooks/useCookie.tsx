@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import Cookies from 'js-cookie'
+import { useState, useEffect } from "react"
+import Cookies from "js-cookie"
 
 type Props = {
   key: string

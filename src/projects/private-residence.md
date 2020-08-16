@@ -5,7 +5,7 @@ thumbnail: "./images/private-residence/private-residence.jpg"
 hero: "./images/private-residence/private-residence.jpg"
 description: "Private room interior decoration project, Saladaeng One project"
 isPersonalProject: true
-isThai: false
+lang: "en"
 ---
 
 Keith is one of Khao&#39;s customers that I have designed for. He became

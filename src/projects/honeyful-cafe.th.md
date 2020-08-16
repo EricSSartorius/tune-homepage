@@ -5,7 +5,7 @@ thumbnail: "./images/honeyful-cafe/honeyful-cafe-3.jpg"
 hero: "./images/honeyful-cafe/honeyful-cafe-3.jpg"
 description: "คาเฟ่ที่อยากให้สายหวานสนุกกันการกินน้ำผึ้ง"
 isPersonalProject: true
-isThai: true
+lang: "th"
 ---
 
 Honeyful Café คาเฟ่น้ำผึ้งที่ตั้งอยู่ที่โรงแรมอริสตัน สุขุมวิท 24 ของ ยุ้ย-

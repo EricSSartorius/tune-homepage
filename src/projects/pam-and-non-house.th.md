@@ -5,7 +5,7 @@ thumbnail: "./images/pam-and-non-house/pam-and-non-house-03.jpg"
 hero: "./images/pam-and-non-house/pam-and-non-house-02.jpg"
 description: "โปรเจคออกแบบและตกแต่งภายในสไตล์แสกนดิเนเวียน"
 isPersonalProject: false
-isThai: true
+lang: "th"
 ---
 
 โปรเจคนี้เป็นโปรเจคที่ผมมาดูแลในเรื่องการออกแบบและตกแต่งภายใน

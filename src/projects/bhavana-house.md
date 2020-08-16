@@ -5,7 +5,7 @@ thumbnail: "./images/bhavana-house/bhavana-house.jpg"
 hero: "./images/bhavana-house/bhavana-house.jpg"
 description: "Bhavana Garden and the Floating House in Wang Nam Khiao."
 isPersonalProject: true
-isThai: false
+lang: "en"
 ---
 
 Bhavana House is located on a plot of 6 rai in Wang Nam Khiao district, Nakhon

@@ -4,10 +4,9 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import Icon from "./Icon"
 import { below, Wrapper } from "../styles"
-import { useLanguage } from "../global/language"
+import LanguageSelector from "./LanguageSelector"
 
 const Footer = () => {
-  const { isThai, setIsThai } = useLanguage()
   const { logo } = useStaticQuery(
     graphql`
       query {
@@ -66,21 +65,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Tune and his Flying Home Studio
           </p>
           <div>
-            <Language>
-              <span
-                onClick={() => setIsThai(false)}
-                className={`lang ${!isThai ? "active" : ""}`}
-              >
-                EN
-              </span>
-              <span>|</span>
-              <span
-                onClick={() => setIsThai(true)}
-                className={`lang ${isThai ? "active" : ""}`}
-              >
-                TH
-              </span>
-            </Language>
+            <LanguageSelector />
             <p className="pure-func">
               Crafted by{" "}
               <a href="https://www.purefunc.dev/" target="_blank">
@@ -160,30 +145,6 @@ const FooterWrapper = styled.footer`
         margin: 1rem;
       }
     }
-  `};
-`
-
-const Language = styled.p`
-  text-align: right;
-  span + span {
-    margin-left: 2rem;
-  }
-
-  .lang {
-    cursor: pointer;
-    opacity: 0.7;
-    transition: 0.3s ease all;
-    &:hover {
-      opacity: 1;
-    }
-  }
-  .active {
-    font-weight: 700;
-    opacity: 1;
-  }
-  ${below.medium`
-    text-align: center;
-    padding: 2rem 0 1rem;
   `};
 `
 

@@ -5,7 +5,7 @@ thumbnail: "./images/peace-sindhorn/peace-sindhorn-02.jpg"
 hero: "./images/peace-sindhorn/peace-sindhorn-02.jpg"
 description: "A tea shop in the atmosphere of a traditional Chinese herbal shop."
 isPersonalProject: true
-isThai: false
+lang: "en"
 ---
 
 Peace Oriental Teahouse, Velaa Sindhorn Village branch, is the fifth branch that still maintains the design concept that brings out the charm of the East. Other branches focus on minimalism in Japanese style but only in this branch, the design emphasizes on reminiscing Chinese culture and details were designed to recreate this feeling. Each detail of the shop has been re-designed to suit the style of the Peace Oriental Teahouse.

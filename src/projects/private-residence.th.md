@@ -5,7 +5,7 @@ thumbnail: "./images/private-residence/private-residence.jpg"
 hero: "./images/private-residence/private-residence.jpg"
 description: "โปรเจคตกแต่งภายในห้องพักส่วนตัวโครงการ Saladaeng One"
 isPersonalProject: true
-isThai: true
+lang: "th"
 ---
 
 คุณคีธคือหนึ่งในลูกค้าของร้าน Khao ที่ผมเคยออกแบบให้

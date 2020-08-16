@@ -1,44 +1,40 @@
-import React, {
-  FC,
-  useState,
-  createContext,
-  useContext,
-  useEffect,
-} from "react"
+import React, { FC, createContext, useContext, useEffect } from "react"
 import { navigate } from "gatsby"
 import Cookies from "js-cookie"
 import { useCookie } from "../hooks"
 
 export const initialLanguageValues = {
-  isThai: false,
-  setIsThai: (_: boolean) => {},
+  lang: "en",
+  setLang: (_: "en" | "th") => {},
 }
 
 export const LanguageContext = createContext(initialLanguageValues)
 
 export const LanguageProvider: FC = ({ children }) => {
-  const [isThai, setIsThai] = useCookie({ key: "isThai", expires: 365 })
+  const [lang, setLang] = useCookie({ key: "lang", expires: 365 })
 
   useEffect(() => {
-    if (!isThai && window.location.pathname.endsWith("/th/")) {
+    if (lang === "en" && window.location.pathname.endsWith("/th/")) {
       navigate(window.location.pathname.replace("/th/", "/en/"))
-    } else if (isThai && window.location.pathname.endsWith("/en/")) {
+    } else if (lang === "th" && window.location.pathname.endsWith("/en/")) {
       navigate(window.location.pathname.replace("/en/", "/th/"))
     }
-  }, [isThai])
+  }, [lang])
 
   useEffect(() => {
-    if (Cookies.get("isThai")) {
-      const isThaiCookie = Cookies.get("isThai") === "true"
-      setIsThai(isThaiCookie)
+    if (Cookies.get("lang")) {
+      setLang(Cookies.get("lang"))
+    } else {
+      Cookies.set("lang", "en", { expires: 365 })
+      setLang("en")
     }
   }, [])
 
   return (
     <LanguageContext.Provider
       value={{
-        isThai,
-        setIsThai,
+        lang,
+        setLang,
       }}
     >
       {children}

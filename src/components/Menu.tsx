@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { useLanguage } from "../global/language"
+import LanguageSelector from "./LanguageSelector"
 
 type LinkType = {
   to: string
@@ -15,7 +16,7 @@ type Props = {
 }
 
 const Menu = ({ links, closeMenu, isMenuOpen }: Props) => {
-  const { isThai, setIsThai } = useLanguage()
+  const { lang, setLang } = useLanguage()
 
   return (
     <NavBar isMenuOpen={isMenuOpen}>
@@ -32,52 +33,13 @@ const Menu = ({ links, closeMenu, isMenuOpen }: Props) => {
             </Link>
           </li>
         ))}
-        <Language>
-          <span
-            onClick={() => {
-              setIsThai(false)
-              closeMenu()
-            }}
-            className={`lang ${!isThai ? "active" : ""}`}
-          >
-            EN
-          </span>
-          <span>|</span>
-          <span
-            onClick={() => {
-              setIsThai(true)
-              closeMenu()
-            }}
-            className={`lang ${isThai ? "active" : ""}`}
-          >
-            TH
-          </span>
-        </Language>
+        <LanguageSelector isInMenu />
       </ul>
     </NavBar>
   )
 }
 
 export default Menu
-
-const Language = styled.li`
-  span {
-    margin: 1rem;
-  }
-
-  .lang {
-    cursor: pointer;
-    opacity: 0.7;
-    transition: 0.3s ease all;
-    &:hover {
-      opacity: 1;
-    }
-  }
-  .active {
-    font-weight: 700;
-    opacity: 1;
-  }
-`
 
 const NavBar = styled.nav`
   display: ${({ isMenuOpen }) => (isMenuOpen ? "flex" : "none")};

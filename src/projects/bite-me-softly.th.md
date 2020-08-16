@@ -5,7 +5,7 @@ thumbnail: "./images/bite-me-softly/bite-me-softly-03.jpg"
 hero: "./images/bite-me-softly/bite-me-softly-03.jpg"
 description: "คาเฟ่เล็กในรั้วบ้านที่ล้อมรอบด้วยต้นไม้ใหญ่"
 isPersonalProject: true
-isThai: true
+lang: "th"
 ---
 
 Bite Me Softly คือคาเฟ่ขนม ชาและอาหารในตรอกไก่แจ้ ของเช้า-ต่อจันทร์

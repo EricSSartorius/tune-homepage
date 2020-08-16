@@ -5,7 +5,7 @@ thumbnail: "./images/roofless-house/roofless-house-01.jpg"
 hero: "./images/roofless-house/roofless-house-01.jpg"
 description: "A roofless house that makes you feel like you&#39;re always outdoors"
 isPersonalProject: true
-isThai: false
+lang: "en"
 ---
 
 After finding work experience at an architect company in Japan. I came

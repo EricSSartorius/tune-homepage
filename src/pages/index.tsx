@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => {
   const [isContactShowing, setIsContactShowing] = useState(false)
   const { heroImg, allMarkdownRemark } = data
   const projects = allMarkdownRemark.edges
-  const { isThai } = useLanguage()
+  const { lang } = useLanguage()
 
   return (
     <>
@@ -163,11 +163,11 @@ const IndexPage = ({ data }) => {
               .filter(
                 ({ node }) =>
                   node.frontmatter.thumbnail &&
-                  node.frontmatter.isThai === isThai
+                  node.frontmatter.lang === (lang || "en")
               )
               .map(({ node }) => (
-                <Slide key={node.frontmatter.slug}>
-                  <Link to={node.frontmatter.slug}>
+                <Slide key={`/project` + node.frontmatter.slug}>
+                  <Link to={`/project` + node.frontmatter.slug}>
                     <div className="slide-img">
                       <Img
                         fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
@@ -369,7 +369,7 @@ export const query = graphql`
           frontmatter {
             slug
             title
-            isThai
+            lang
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 600) {

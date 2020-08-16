@@ -5,7 +5,7 @@ thumbnail: "./images/bhavana-house/bhavana-house.jpg"
 hero: "./images/bhavana-house/bhavana-house.jpg"
 description: "Bhavana House บ้านสวนตากอากาศในวังน้ำเขียว"
 isPersonalProject: true
-isThai: true
+lang: "th"
 ---
 
 Bhavana House ตั้งอยู่บนพื้นที่ขนาด 6 ไร่ในอำเภอวังน้ำเขียว

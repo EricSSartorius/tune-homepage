@@ -5,7 +5,7 @@ thumbnail: "./images/peace-49/peace-49-04.jpg"
 hero: "./images/peace-49/peace-49-01.jpg"
 description: "ร้านชาที่พิถีพิถันในการคัดสรรและทำให้การดื่มชาเป็นเรื่องสนุก"
 isPersonalProject: true
-isThai: true
+lang: "th"
 ---
 
 Peace - Oriental Teahouse สาขาสุขุมวิท 49 คือบ้านหลังที่ 2

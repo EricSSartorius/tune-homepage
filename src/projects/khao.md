@@ -1,11 +1,11 @@
 ---
 slug: "/khao/en/"
 title: "Khao"
-thumbnail: "./images/khao/khao-04.jpg"
-hero: "./images/khao/khao-04.jpg"
+thumbnail: "./images/khao/khao-5.jpg"
+hero: "./images/khao/khao-5.jpg"
 description: "A Thai restaurant with a Chef who wants everyone to love rice."
 isPersonalProject: true
-isThai: false
+lang: "en"
 ---
 
 Khao is a Thai restaurant based on the concept of Chef Vichit Mukura, a
@@ -17,7 +17,7 @@ Chef&#39;s Table only, before relocating Khao to Ekamai Soi 10. This branch
 of Khao has changed the layout to have a more family-friendly food
 menu and also Chef&#39;s Table menu.
 
-![Khao](./images/khao/khao-04.jpg)
+![Khao](./images/khao/khao.jpg)
 
 Chef Vichit is a person who takes &#39;rice&#39; very seriously, believes that good
 rice will make that meal even more special. With a passion for selecting
@@ -29,16 +29,18 @@ the design and allow customers to experience the Thai style that chefs
 and I interpreted. Starting from the exterior structure, Chef Vichit wanted
 recall a rice barn, an architecture that can be seen commonly in farming
 areas throughout Thailand but is something that is difficult to find in the
-city. I applied the pattern of &#39;pakon&#39;, which is a popular wood decoration
+city.
 
-used in traditional Thai houses to design the building exterior and
-interior. And then I used clear glass between the wood to help increase
-the light in the restaurant to have more natural light to make the
+![Khao 2](./images/khao/khao-2.jpg)
+
+I applied the pattern of &#39;pakon&#39;, which is a popular wood decoration used in traditional Thai houses to design the building exterior and interior. And then I used clear glass between the wood to help increase the light in the restaurant to have more natural light to make the
 restaurant look airy and comfortable, suitable for dining with family. The
 round table used in the restaurant is a newly designed table to look like
 a random fish trap. If you look outside the glass room on the side of the
 restaurant, you will see a model farm planted by Chef Vichit for the
 urban residents to closely experience the atmosphere of farming.
+
+![Khao 3](./images/khao/khao-3.jpg)
 
 Besides being meticulous in the selection of raw materials Chef Vichit
 also emphasizes cleanliness and order in the kitchen that he learned
@@ -51,3 +53,5 @@ room is an open kitchen where you can see the chef&#39;s cooking up close.
 Looking out of the glass room, you will see a large tree that used to be in
 the past. It is one of my intentions to keep as many large trees in the
 same area as possible.
+
+![Khao 4](./images/khao/khao-4.jpg)

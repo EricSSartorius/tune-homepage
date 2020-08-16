@@ -4,10 +4,9 @@ import { graphql, Link } from "gatsby"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
 import { Wrapper, Cols, below } from "../styles"
-import { useLanguage } from "../global/language"
+import LanguageSelector from "../components/LanguageSelector"
 
 const ProjectTemplate = ({ data }) => {
-  const { isThai, setIsThai } = useLanguage()
   const { markdownRemark } = data
 
   return (
@@ -33,21 +32,7 @@ const ProjectTemplate = ({ data }) => {
               />
             </div>
             <aside>
-              <Language>
-                <span
-                  onClick={() => setIsThai(false)}
-                  className={`lang ${!isThai ? "active" : ""}`}
-                >
-                  EN
-                </span>
-                <span>|</span>
-                <span
-                  onClick={() => setIsThai(true)}
-                  className={`lang ${isThai ? "active" : ""}`}
-                >
-                  TH
-                </span>
-              </Language>
+              <LanguageSelector />
             </aside>
           </Cols>
           <div className="center-text top-padding">
@@ -84,7 +69,7 @@ const ProjectHTML = styled.div`
 `
 
 const HeroImg = styled(Img)`
-  height: 30vh;
+  height: 60vh;
 `
 
 export const HeroContents = styled.div`
@@ -93,30 +78,6 @@ export const HeroContents = styled.div`
   h1 {
     margin: 0;
   }
-`
-
-const Language = styled.p`
-  text-align: right;
-  span + span {
-    margin-left: 2rem;
-  }
-
-  .lang {
-    cursor: pointer;
-    opacity: 0.7;
-    transition: 0.3s ease all;
-    &:hover {
-      opacity: 1;
-    }
-  }
-  .active {
-    font-weight: 700;
-    opacity: 1;
-  }
-  ${below.medium`
-    text-align: center;
-    padding: 2rem 0 1rem;
-  `};
 `
 
 export const query = graphql`

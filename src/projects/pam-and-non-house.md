@@ -5,7 +5,7 @@ thumbnail: "./images/pam-and-non-house/pam-and-non-house-03.jpg"
 hero: "./images/pam-and-non-house/pam-and-non-house-02.jpg"
 description: "A Scandinavian style interior design and decoration project"
 isPersonalProject: false
-isThai: false
+lang: "en"
 ---
 
 In this project, I am in charge of interior design and decoration, for an area of ​​approximately 700 square meters, and the custom made aspects and details that we love to create and design.

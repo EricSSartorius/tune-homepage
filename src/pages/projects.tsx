@@ -8,7 +8,7 @@ import { useLanguage } from "../global/language"
 import { Wrapper } from "../styles"
 
 const ProjectsPage = ({ data }) => {
-  const { isThai } = useLanguage()
+  const { lang } = useLanguage()
   const projects = data.allMarkdownRemark.edges
 
   return (
@@ -19,7 +19,7 @@ const ProjectsPage = ({ data }) => {
         <section className="margins">
           <ProjectGrid cols={[1, 1, 2]}>
             {projects
-              .filter(({ node }) => node.frontmatter.isThai === isThai)
+              .filter(({ node }) => node.frontmatter.lang === (lang || "en"))
               .map(({ node }) => (
                 <div className="project" key={node.frontmatter.title}>
                   <Link to={"/project" + node.frontmatter.slug}>
@@ -108,7 +108,7 @@ export const query = graphql`
           frontmatter {
             title
             slug
-            isThai
+            lang
             isPersonalProject
             thumbnail {
               childImageSharp {
