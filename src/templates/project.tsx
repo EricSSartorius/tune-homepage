@@ -21,15 +21,34 @@ const ProjectTemplate = ({ data }) => {
       <Wrapper>
         <section>
           <Cols>
-            <div>
+            <div css={below.medium`grid-row: 2;`}>
               <h1>{markdownRemark.frontmatter.title}</h1>
-              <h4>{markdownRemark.frontmatter.description}</h4>
+              <h4 className="no-top-margin">
+                {markdownRemark.frontmatter.description}
+              </h4>
               <ProjectHTML
                 dangerouslySetInnerHTML={{
                   __html: markdownRemark.html,
                 }}
               />
             </div>
+            <aside>
+              <Language>
+                <span
+                  onClick={() => setIsThai(false)}
+                  className={`lang ${!isThai ? "active" : ""}`}
+                >
+                  EN
+                </span>
+                <span>|</span>
+                <span
+                  onClick={() => setIsThai(true)}
+                  className={`lang ${isThai ? "active" : ""}`}
+                >
+                  TH
+                </span>
+              </Language>
+            </aside>
           </Cols>
           <div className="center-text top-padding">
             <p>
