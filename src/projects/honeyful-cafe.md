@@ -1,8 +1,8 @@
 ---
 slug: "/honeyful-cafe/en/"
 title: "Honeyful Cafe"
-thumbnail: "./images/honeyful-cafe/honeyful-cafe.jpg"
-hero: "./images/honeyful-cafe/honeyful-cafe.jpg"
+thumbnail: "./images/honeyful-cafe/honeyful-cafe-3.jpg"
+hero: "./images/honeyful-cafe/honeyful-cafe-3.jpg"
 description: "A cafe that wants sweet people to enjoy eating
 honey"
 isPersonalProject: true
