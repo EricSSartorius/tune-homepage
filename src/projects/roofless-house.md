@@ -1,8 +1,8 @@
 ---
 slug: "/roofless-house/en/"
 title: "Roofless House"
-thumbnail: "./images/roofless-house/roofless-house-01.jpg"
-hero: "./images/roofless-house/roofless-house-01.jpg"
+thumbnail: "./images/roofless-house/roofless-house.jpg"
+hero: "./images/roofless-house/roofless-house-2.jpg"
 description: "A roofless house that makes you feel like you&#39;re always outdoors"
 isPersonalProject: true
 lang: "en"
@@ -12,6 +12,8 @@ After finding work experience at an architect company in Japan. I came
 back to work at an architect company in Thailand for a while and set out
 for more experience in the United States.
 
+![Roofless House 2](./images/roofless-house/roofless-house-2.jpg)
+
 Craig Steel Architecture is a San Francisco-based architect company
 that I contacted for several months while in Thailand and finally got the
 opportunity to come to the event. While working with Craig&#39;s team, the
@@ -19,6 +21,8 @@ Roofless House project, allowed me to learn how to build good
 relationships with clients that help architects and homeowners work on
 designing together – to meet the needs of customers in terms of both
 function and lifestyle.
+
+![Roofless House 3](./images/roofless-house/roofless-house-3.jpg)
 
 Roofless House is a house without a roof. It has a strange shape that
 similar to a bean. The house is located on the outskirts of Silicon Valley.
@@ -28,6 +32,8 @@ most like being outdoors as possible. The shape of the Roofless House
 is inspired by a sculpture by British artist Henry Moore, whose work is to
 design abstract art in the area. Because the homeowners are creative
 people, they love the idea of ​​this unusual house shape.
+
+![Roofless House 4](./images/roofless-house/roofless-house-4.jpeg)
 
 California has a Mediterranean climate. In the summer, the climate is
 very hot and dry. In winter, it is warm and rainy. Living space in the
