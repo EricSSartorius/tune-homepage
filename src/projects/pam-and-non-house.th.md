@@ -1,8 +1,8 @@
 ---
 slug: "/pam-and-non-house/th/"
 title: "Pam and Nonn’s House"
-thumbnail: "./images/pam-and-non-house/pam-and-non-house-03.jpg"
-hero: "./images/pam-and-non-house/pam-and-non-house-02.jpg"
+thumbnail: "./images/pam-and-non-house/pam-and-non-house-2.jpg"
+hero: "./images/pam-and-non-house/pam-and-non-house-2.jpg"
 description: "โปรเจคออกแบบและตกแต่งภายในสไตล์แสกนดิเนเวียน"
 isPersonalProject: false
 lang: "th"
@@ -13,6 +13,8 @@ lang: "th"
 เป็นอีกหนึ่งโปรเจคที่เจ้าของบ้านและผมมีความสนใจในเรื่องงานออกแบบสไตล์แ
 สกนดิเนเวียนเหมือนกัน และเป็นงาน Custom Made
 เพื่อลูกค้าในแบบที่เราถนัดอยู่แล้ว
+
+![Pam and Non's house](./images/pam-and-non-house/pam-and-non-house.jpg)
 
 เจ้าของบ้านมีความสนใจและชื่นชอบงานตกแต่งภายในสไตล์แสกนดิเนเวียนที่มีทั้
 งความโมเดิร์นและมินิมอล
