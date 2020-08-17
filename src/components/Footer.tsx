@@ -25,15 +25,15 @@ const Footer = () => {
       <Wrapper>
         <div className="footer-grid">
           <div className="footer-logo">
+            <Img
+              fixed={logo.childImageSharp.fixed}
+              alt="Site logo"
+              css={below.medium`margin-left: 5rem;`}
+            />
             <h3 className="no-top-margin">
               Tune <span className="and">&</span>
               <br /> Flying home studio
             </h3>
-            <Img
-              fixed={logo.childImageSharp.fixed}
-              alt="Site logo"
-              style={{ marginLeft: "5rem" }}
-            />
           </div>
           <div className="footer-contact">
             <p className="no-top-margin">
