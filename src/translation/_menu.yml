@@ -1,0 +1,19 @@
+english:
+  menu:
+    about: About
+    services: Services
+    projects: Projects
+    contact: Contact
+  address1: 87 Chalermpong, Saimai
+  address2: Bangkok 10220
+  address3: Thailand
+
+thai:
+  menu:
+    about: เกี่ยวกับเรา
+    services: บริการ
+    projects: โครงการ
+    contact: ติดต่อ
+  address1: 87 เฉลิมพงษ์, สายไหม
+  address2: กรุงเทพมหานคร 10220
+  address3: ประเทศไทย

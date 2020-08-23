@@ -5,49 +5,56 @@ import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Icon from "../components/Icon"
 import { Wrapper, below, Cols } from "../styles"
+import { useLanguage } from "../global/language"
+import { english, thai } from "../translation/contact.yml"
 
-const ContactPage: FC = ({ data }) => (
-  <>
-    <SEO title="Contact" />
-    <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
-    <Wrapper>
-      <section>
-        <Cols isReverse>
-          <div>
-            <h1>Let’s Work Together</h1>
-            {/* <h2>
-              Have a project in mind? Need help bringing it to the world? We’d
-              love to hear from you.
-            </h2> */}
-          </div>
-          <div>
-            <h4 className="small-title">For design inquiries</h4>
-            <Email>
-              <a className="email-link" href="mailto:iam@flyinghomestudio.com">
-                iam@flyinghomestudio.com
-              </a>
-            </Email>
+const ContactPage: FC = ({ data }) => {
+  const { lang } = useLanguage()
+
+  const currentLanguage = lang === "th" ? thai : english
+
+  return (
+    <>
+      <SEO title="Contact" />
+      <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
+      <Wrapper>
+        <section>
+          <Cols isReverse>
             <div>
+              <h1>{currentLanguage.workTogether}</h1>
+            </div>
+            <div>
+              <h4 className="small-title">{currentLanguage.inquiries}</h4>
+              <Email>
+                <a
+                  className="email-link"
+                  href="mailto:iam@flyinghomestudio.com"
+                >
+                  iam@flyinghomestudio.com
+                </a>
+              </Email>
+              <div>
+                <p className="large">
+                  <Icon name="phone" style={{ marginRight: "1rem" }} />+
+                  088-694-4946
+                </p>
+                <p className="large">
+                  <Icon name="line" style={{ marginRight: "1rem" }} />+
+                  088-694-4946
+                </p>
+              </div>
               <p className="large">
-                <Icon name="phone" style={{ marginRight: "1rem" }} />+
-                088-694-4946
-              </p>
-              <p className="large">
-                <Icon name="line" style={{ marginRight: "1rem" }} />+
-                088-694-4946
+                {currentLanguage.address1}
+                <br /> {currentLanguage.address2}
+                <br /> {currentLanguage.address3}
               </p>
             </div>
-            <p className="large">
-              87 Chalermpong, Saimai
-              <br /> Bangkok 10220
-              <br /> Thailand
-            </p>
-          </div>
-        </Cols>
-      </section>
-    </Wrapper>
-  </>
-)
+          </Cols>
+        </section>
+      </Wrapper>
+    </>
+  )
+}
 
 export default ContactPage
 

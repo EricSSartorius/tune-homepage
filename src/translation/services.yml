@@ -1,5 +1,55 @@
 english:
   title: Breakdown of Architecture and Interior design services
+  services:
+    - title: Conceptual Design
+      items:
+        - Layout (basic schematic drawing)
+        - 3 or 4 Conceptual Renderings
+    - title: Design Development
+      items:
+        - Schematic drawing and lighting plan
+        - Elevations and Sections
+        - Updated Renderings
+    - title: Construction Drawing 1 - Permit Drawing (Architecture) and Tender Drawing
+      items:
+        - Tender Package including (Interior Plans, Elevations, Sections, Structural Section)
+        - Permit Drawing
+    - title: Construction Drawing 2 - Tender Drawing
+      items:
+        - Complete drawing including finishing (floor, ceiling), and lighting plan
+        - Complete drawing including finishing (wall), and lighting elevation
+        - Loose Furniture Recommendations
+    - title: Construction Period
+    - title: Project Handover
+      items:
+        - Assist the Client to oversee the quality of work done by the Contractor
+  included: "*included: Structural engineer"
+  notIncluded: "*not included: Permit Drawing Architect fee, Electrical engineer, Sanitary engineer, Land Survey, Landscape Design"
 
 thai:
-  title: THAI
+  title: รายละเอียดของบริการออกแบบสถาปัตยกรรมและตกแต่งภายใน
+  services:
+    - title: แนวคิดการออกแบบงานสถาปัตยกรรม
+      items:
+        - แผนผังสถาปัตยกรรม (แบบแผนผังพื้นฐาน)
+        - ภาพกราฟิกส์ตามแนวคิดการออกแบบ
+    - title: การพัฒนาแบบสถาปัตยกรรม
+      items:
+        - แบบแผนผัง
+        - แบบรูปด้านรูปตัด ระดับความสูงและส่วนต่างๆ
+        - ภาพกราฟิกที่ปรับปรุงให้เป็นข้อมูลล่าสุด
+    - title: แบบก่อสร้าง 1 สถาปัตยกรรม - แบบสำหรับยื่นขอใบอนุญาต, แบบเพื่อการประกวดราคา
+      items:
+        - แพ็คเกจสำหรับประกวดราคา รวมถึง (แผนผังภายใน, ระดับความสูง, ส่วนต่างๆ, ส่วนโครงสร้าง)
+        - แบบสำหรับยื่นขอใบอนุญาต (ไม่รวมค่าธรรมเนียมแบบสถาปัตยกรรมสำหรับยื่นขอใบอนุญาตท้องถิ่น)
+    - title: แบบก่อสร้าง 2 รายละเอียด
+      items:
+        - แบบก่อสร้าง รวมถึง (แบบแปลนภายใน, ระดับความสูง, ส่วนต่างๆ, แบบแสดงรายละเอียด)
+        - คำแนะนำสำหรับเฟอร์นิเจอร์ลอยตัว
+        - แบบเฟอร์นิเจอร์บิวท์อิน
+    - title: ระหว่างก่อสร้างเสร็จ
+    - title: การส่งมอบโครงการ
+      items:
+        - นักออกแบบ จะให้ความช่วยเหลือแก่ลูกค้าในการควบคุมคุณภาพของงานที่ดำเนินการโดยผู้รับเหมา
+  included: "*รวม: วิศวกรโครงสร้าง"
+  notIncluded: "**ไม่รวม: ค่าใบอนุญาตเขียนแบบสถาปนิกวิศวกรไฟฟ้าวิศวกรสุขาภิบาลสำรวจที่ดินออกแบบภูมิทัศน์"
