@@ -7,6 +7,7 @@ import { motion } from "framer-motion"
 import { Wrapper, Grid, below, media } from "../styles"
 import Carousel from "react-multi-carousel"
 import SEO from "../components/seo"
+import { english, thai } from "../translation/homepage.yml"
 import { useLanguage } from "../global/language"
 
 import "react-multi-carousel/lib/styles.css"
@@ -45,6 +46,8 @@ const IndexPage = ({ data }) => {
   const projects = allMarkdownRemark.edges
   const { lang } = useLanguage()
 
+  const currentLanguage = lang === "th" ? thai : english
+
   return (
     <>
       <SEO title="Home" />
@@ -71,10 +74,7 @@ const IndexPage = ({ data }) => {
                 Flying Home Studio
               </h3>
               <div className="content">
-                <p className="huge">
-                  Tune and his Flying Home Studio design both interior and
-                  exterior for modern, high quality, living and working spaces
-                </p>
+                <p className="huge">{currentLanguage.mission}</p>
               </div>
             </RotateGrid>
           </motion.div>
@@ -96,13 +96,12 @@ const IndexPage = ({ data }) => {
                   if (!rightImgShowing) setRightImgShowing(true)
                 }}
               />
-              <h3 className="small-title">The Process</h3>
-              <p className="huge">
-                We offer attention to detail every step of the way while making
-                your dream become a reality
-              </p>
+              <h3 className="small-title">{currentLanguage.process.title}</h3>
+              <p className="huge">{currentLanguage.process.text}</p>
               <p>
-                <Link to="/services/">Services Breakdown &#8594;</Link>
+                <Link to="/services/">
+                  {currentLanguage.servicesBreakdown} &#8594;
+                </Link>
               </p>
             </motion.div>
             <motion.div
@@ -130,10 +129,10 @@ const IndexPage = ({ data }) => {
         <Wrapper>
           <RotateGrid>
             <h3 className="small-title rotate" style={{ marginTop: "30px" }}>
-              Projects
+              {currentLanguage.projects}
             </h3>
             <div className="content">
-              <p className="huge">The dope places I made</p>
+              <p className="huge">{currentLanguage.galleryTitle}</p>
             </div>
           </RotateGrid>
         </Wrapper>
@@ -183,7 +182,9 @@ const IndexPage = ({ data }) => {
         <Wrapper>
           <LinkContainer style={{ textAlign: "right" }}>
             <p>
-              <Link to="/projects/">View All Projects &#8594;</Link>
+              <Link to="/projects/">
+                {currentLanguage.viewProjects} &#8594;
+              </Link>
             </p>
           </LinkContainer>
         </Wrapper>
@@ -202,15 +203,16 @@ const IndexPage = ({ data }) => {
             animate={isContactShowing ? "open" : "closed"}
             transition={{ damping: 300 }}
           >
-            {contactList.map(item => (
-              <motion.h2
-                key={item}
-                className="no-top-margin"
-                variants={contactVariants}
-              >
-                {item}
-              </motion.h2>
-            ))}
+            <motion.h2 className="no-top-margin" variants={contactVariants}>
+              {currentLanguage.contact.text1}
+            </motion.h2>
+            <motion.h2 className="no-top-margin" variants={contactVariants}>
+              {currentLanguage.contact.text2}
+            </motion.h2>
+            <motion.h2 className="no-top-margin" variants={contactVariants}>
+              {currentLanguage.contact.text3}
+            </motion.h2>
+
             <Contact
               className="margins"
               key="contact"
@@ -228,12 +230,6 @@ const IndexPage = ({ data }) => {
 }
 
 export default IndexPage
-
-const contactList = [
-  "Have a project in mind?",
-  "Need help bringing it to the world?",
-  "I’d love to hear from you.",
-]
 
 const RotateGrid = styled.div`
   position: relative;

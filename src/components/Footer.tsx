@@ -5,8 +5,13 @@ import styled from "styled-components"
 import Icon from "./Icon"
 import { below, Wrapper } from "../styles"
 import LanguageSelector from "./LanguageSelector"
+import { english, thai } from "../translation/_menu.yml"
+import { useLanguage } from "../global/language"
 
 const Footer = () => {
+  const { lang } = useLanguage()
+  const currentLanguage = lang === "th" ? thai : english
+
   const { logo } = useStaticQuery(
     graphql`
       query {
@@ -20,6 +25,26 @@ const Footer = () => {
       }
     `
   )
+
+  const siteLinks = [
+    {
+      text: currentLanguage.menu.about,
+      to: "/about/",
+    },
+    {
+      text: currentLanguage.menu.services,
+      to: "/services/",
+    },
+    {
+      text: currentLanguage.menu.projects,
+      to: "/projects/",
+    },
+    {
+      text: currentLanguage.menu.contact,
+      to: "/contact/",
+    },
+  ]
+
   return (
     <FooterWrapper>
       <Wrapper>
@@ -47,9 +72,9 @@ const Footer = () => {
               <Icon name="phone" style={{ marginLeft: "1rem" }} />
             </div>
             <p>
-              87 Chalermpong, Saimai
-              <br /> Bangkok 10220
-              <br /> Thailand
+              {currentLanguage.address1}
+              <br /> {currentLanguage.address2}
+              <br /> {currentLanguage.address3}
             </p>
           </div>
           <nav className="footer-links">
@@ -149,22 +174,3 @@ const FooterWrapper = styled.footer`
 `
 
 export default Footer
-
-const siteLinks = [
-  {
-    text: "About",
-    to: "/about/",
-  },
-  {
-    text: "Services",
-    to: "/services/",
-  },
-  {
-    text: "Projects",
-    to: "/projects/",
-  },
-  {
-    text: "Contact",
-    to: "/contact/",
-  },
-]
