@@ -3,7 +3,7 @@ slug: "/honeyful-cafe/th/"
 title: "Honeyful Cafe"
 thumbnail: "./images/honeyful-cafe/honeyful-cafe-3.jpg"
 hero: "./images/honeyful-cafe/honeyful-cafe-3.jpg"
-description: "คาเฟ่ที่อยากให้สายหวานสนุกกันการกินน้ำผึ้ง"
+description: "Honeyful Café คาเฟ่ที่อยากให้สายหวานสนุกกับการกินน้ำผึ้ง"
 isPersonalProject: true
 lang: "th"
 ---

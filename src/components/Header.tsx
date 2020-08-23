@@ -8,31 +8,36 @@ import { motion, AnimatePresence } from "framer-motion"
 import Portal from "./Portal"
 import Icon from "./Icon"
 import Menu from "./Menu"
-
-const links = [
-  {
-    text: "About",
-    to: "/about/",
-  },
-  {
-    text: "Services",
-    to: "/services/",
-  },
-  {
-    text: "Projects",
-    to: "/projects/",
-  },
-  {
-    text: "Contact",
-    to: "/contact/",
-  },
-]
+import { english, thai } from "../translation/_menu.yml"
+import { useLanguage } from "../global/language"
 
 const Header = () => {
   const [hasHeaderBg, setHasHeaderBg] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
   const closeMenu = () => setIsMenuOpen(false)
+
+  const { lang } = useLanguage()
+  const currentLanguage = lang === "th" ? thai : english
+
+  const links = [
+    {
+      text: currentLanguage.menu.about,
+      to: "/about/",
+    },
+    {
+      text: currentLanguage.menu.services,
+      to: "/services/",
+    },
+    {
+      text: currentLanguage.menu.projects,
+      to: "/projects/",
+    },
+    {
+      text: currentLanguage.menu.contact,
+      to: "/contact/",
+    },
+  ]
 
   useScrollPosition(
     ({ currPos }) => {

@@ -1,26 +1,34 @@
-import React from "react"
+import React, { FC } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 import { Wrapper, Cols } from "../styles"
+import { useLanguage } from "../global/language"
+import { english, thai } from "../translation/about.yml"
 
-const AboutPage: React.FC = ({ data }) => (
-  <>
-    <SEO title="About" />
-    <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
-    <Wrapper>
-      <section>
-        <Cols isReverse>
-          <h1>About</h1>
-          <div style={{ marginTop: "var(--baseMargin)" }}>
-            <p>Coming Soon</p>
-          </div>
-        </Cols>
-      </section>
-    </Wrapper>
-  </>
-)
+const AboutPage: FC = ({ data }) => {
+  const { lang } = useLanguage()
+
+  const currentLanguage = lang === "th" ? thai : english
+
+  return (
+    <>
+      <SEO title="About" />
+      <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
+      <Wrapper>
+        <section>
+          <Cols isReverse>
+            <h1>{currentLanguage.title}</h1>
+            <div style={{ marginTop: "var(--baseMargin)" }}>
+              <p>Coming Soon</p>
+            </div>
+          </Cols>
+        </section>
+      </Wrapper>
+    </>
+  )
+}
 
 export default AboutPage
 
