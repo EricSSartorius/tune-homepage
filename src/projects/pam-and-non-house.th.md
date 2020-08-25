@@ -28,3 +28,5 @@ lang: "th"
 และเฟอร์นิเจอร์แบบ Custom Made
 ซึ่งหากลูกค้าต้องการบริการด้านนี้เป็นพิเศษก็สามารถให้คำปรึกษาและช่วยให้คำ
 แนะนำได้เช่นกัน
+
+![Pam and Non's house](./images/pam-and-non-house/pam-and-non-house-3.jpeg)
