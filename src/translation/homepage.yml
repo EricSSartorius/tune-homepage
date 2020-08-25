@@ -1,6 +1,6 @@
 english:
-  mission: Tune and his Flying Home offer attention to detail every step of the way while making your
-  dream become a reality
+  mission: >
+    Tune and his Flying Home offer attention to detail every step of the way while making your dream become a reality
   process:
     title: The Process
     text: We design both interior and exterior for modern, high quality, living and working spaces
@@ -14,17 +14,19 @@ english:
     text3: I’d love to hear from you.
 
 thai:
-  mission: Tune and Flying Home Studio สตูดิโอออกแบบภายในและภายนอก
-  ที่จะทำให้ความฝันของคุณกลายเป็นจริง
+  mission: >
+    Tune and Flying Home Studio สตูดิโอออกแบบภายในและภายนอก
+    ที่จะทำให้ความฝันของคุณกลายเป็นจริง
   process:
     title: กระบวนการ
-    text: สตูดิโอของเรารับออกแบบพื้นที่ทั้งภายในและภายนอก เราใส่ใจในทุกรายละเอียดและความต้องการของลูกค้า
-    เพื่อที่จะได้สร้างสรรค์บ้าน สถานที่ทำงาน และทุกๆ พื้นที่ของคุณให้ตรงตามความต้องการและมีคุณภาพมากที่สุด
+    text: >
+      สตูดิโอของเรารับออกแบบพื้นที่ทั้งภายในและภายนอก เราใส่ใจในทุกรายละเอียดและความต้องการของลูกค้า
+      เพื่อที่จะได้สร้างสรรค์บ้าน สถานที่ทำงาน และทุกๆ พื้นที่ของคุณให้ตรงตามความต้องการและมีคุณภาพมากที่สุด
   projects: Projects
   servicesBreakdown: รายละเอียดการบริการ
   galleryTitle: ผลงานที่ผ่านมา
   viewProjects: View All Projects
   contact:
-    text1: มีโครงการในใจหรือไม่?
-    text2: ต้องการความช่วยเหลือในการนำเสนอสู่โลกหรือไม่?
-    text3: ฉันอยากที่จะได้ยินจากคุณ
+    text1: ตอนนี้คุณมีโปรเจคในใจแล้วหรือยัง?
+    text2: ถ้าอยากทำให้ความฝันนี้เป็นจริง
+    text3: เล่าให้เราฟังได้นะ
