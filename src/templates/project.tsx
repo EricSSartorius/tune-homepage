@@ -1,13 +1,19 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql, Link } from "gatsby"
+import Carousel from "react-multi-carousel"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
-import { Wrapper, Cols, below } from "../styles"
+import { Wrapper, Cols, below, media } from "../styles"
 import LanguageSelector from "../components/LanguageSelector"
+import Modal from "../components/Modal"
+
+import "react-multi-carousel/lib/styles.css"
 
 const ProjectTemplate = ({ data, location }) => {
   const { markdownRemark } = data
+  const [isImageModalShowing, setIsImageModalShowing] = useState(false)
+  const [imageIndex, setImageIndex] = useState(0)
 
   return (
     <>
@@ -32,7 +38,7 @@ const ProjectTemplate = ({ data, location }) => {
                 {markdownRemark.frontmatter.description}
               </h4>
               <ProjectHTML
-                className={location.pathname.includes("/th") ? "th" : ""}
+                isThai={location.pathname.includes("/th")}
                 dangerouslySetInnerHTML={{
                   __html: markdownRemark.html,
                 }}
@@ -42,12 +48,64 @@ const ProjectTemplate = ({ data, location }) => {
               <LanguageSelector />
             </aside>
           </Cols>
+
+          {markdownRemark.frontmatter.images && (
+            <CarouselWrapper>
+              <Carousel
+                swipeable={false}
+                draggable={false}
+                showDots={false}
+                responsive={responsive}
+                ssr={true} // means to render carousel on server-side.
+                infinite={true}
+                autoPlay={true}
+                // autoPlay={deviceType !== "mobile" ? true : false}
+                autoPlaySpeed={5000}
+                centerMode={true}
+                keyBoardControl={true}
+                // customTransition="all .5"
+                transitionDuration={900}
+                containerClass="carousel-container"
+                // removeArrowOnDeviceType={["tablet", "mobile"]}
+                // deviceType={deviceType}
+                // dotListClass="custom-dot-list-style"
+                itemClass="carousel-item-padding-40-px"
+              >
+                {markdownRemark.frontmatter.images.map((image, i) => (
+                  <>
+                    <Slide
+                      key={"image" + i}
+                      onClick={() => {
+                        setImageIndex(i)
+                        setIsImageModalShowing(true)
+                      }}
+                    >
+                      <Img fluid={image.childImageSharp.fluid} />
+                    </Slide>
+                  </>
+                ))}
+              </Carousel>
+            </CarouselWrapper>
+          )}
           <div className="center-text top-padding">
             <p>
               <Link to="/projects/">&#8592; All Projects</Link>
             </p>
           </div>
         </section>
+        {markdownRemark.frontmatter.images && (
+          <Modal
+            isActive={isImageModalShowing}
+            closeAction={() => setIsImageModalShowing(false)}
+          >
+            <Img
+              fluid={
+                markdownRemark.frontmatter.images[imageIndex].childImageSharp
+                  .fluid
+              }
+            />
+          </Modal>
+        )}
       </Wrapper>
     </>
   )
@@ -61,18 +119,6 @@ const ProjectHTML = styled.div`
     font-size: var(--largeFontSize);
     margin: 4rem 0;
   }
-
-  h3 {
-    font-family: var(--bodyFont);
-    font-weight: normal;
-  }
-  h4 {
-    font-family: var(--bodyFont);
-
-    font-weight: bold;
-    font-size: var(--baseFontSize);
-    margin: 2rem 0;
-  }
 `
 
 const HeroImg = styled(Img)`
@@ -85,6 +131,30 @@ export const HeroContents = styled.div`
   h1 {
     margin: 0;
   }
+`
+
+const Slide = styled.div`
+  cursor: pointer;
+`
+
+const CarouselWrapper = styled.div`
+  .react-multiple-carousel__arrow {
+    z-index: 8;
+  }
+  li {
+    overflow: hidden;
+    position: relative;
+  }
+  ${below.medium`
+    li {
+      padding: 0;
+    }
+  `};
+  ${media.medium`
+    li {
+      padding: 30px;
+    }
+  `};
 `
 
 export const query = graphql`
@@ -102,7 +172,32 @@ export const query = graphql`
             }
           }
         }
+        images {
+          childImageSharp {
+            fluid(maxWidth: 1440, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
     }
   }
 `
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
+}

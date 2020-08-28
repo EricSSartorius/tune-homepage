@@ -3,6 +3,13 @@ slug: "/khao/en/"
 title: "Khao"
 thumbnail: "./images/khao/khao-5.jpg"
 hero: "./images/khao/khao-5.jpg"
+images:
+  - "./images/khao/khao.jpg"
+  - "./images/khao/khao-2.jpg"
+  - "./images/khao/khao-3.jpg"
+  - "./images/khao/khao-4.jpg"
+  - "./images/khao/khao-5.jpg"
+  - "./images/khao/khao-6.jpg"
 description: "A Thai restaurant with a Chef who wants everyone to love rice."
 isPersonalProject: true
 lang: "en"
@@ -53,7 +60,3 @@ room is an open kitchen where you can see the chef&#39;s cooking up close.
 Looking out of the glass room, you will see a large tree that used to be in
 the past. It is one of my intentions to keep as many large trees in the
 same area as possible.
-
-![Khao 4](./images/khao/khao-4.jpg)
-
-![Khao 6](./images/khao/khao-6.jpg)

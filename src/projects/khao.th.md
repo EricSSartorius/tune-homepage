@@ -3,6 +3,13 @@ slug: "/khao/th/"
 title: "Khao"
 thumbnail: "./images/khao/khao-5.jpg"
 hero: "./images/khao/khao-5.jpg"
+images:
+  - "./images/khao/khao.jpg"
+  - "./images/khao/khao-2.jpg"
+  - "./images/khao/khao-3.jpg"
+  - "./images/khao/khao-4.jpg"
+  - "./images/khao/khao-5.jpg"
+  - "./images/khao/khao-6.jpg"
 description: "ร้านอาหารไทยที่เชฟอยากให้ทุกคนรักข้าว"
 isPersonalProject: true
 lang: "th"
@@ -58,7 +65,3 @@ Khao (ข้าว) คือร้านอาหารไทยที่มา
 มองออกไปนอกห้องกระจกจะเห็นต้นไม้ใหญ่ที่เคยอยู่มาแต่ตั้งเดิม
 เป็นหนึ่งในความตั้งใจของผมที่อยากเก็บต้นไม้ใหญ่ในพื้นที่เดิมเอาไว้ให้ได้มากที่
 สุด
-
-![Khao 4](./images/khao/khao-4.jpg)
-
-![Khao 6](./images/khao/khao-6.jpg)
