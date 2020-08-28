@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import { Wrapper, Cols, below } from "../styles"
 import LanguageSelector from "../components/LanguageSelector"
 
-const ProjectTemplate = ({ data }) => {
+const ProjectTemplate = ({ data, location }) => {
   const { markdownRemark } = data
 
   return (
@@ -21,11 +21,18 @@ const ProjectTemplate = ({ data }) => {
         <section>
           <Cols>
             <div css={below.medium`grid-row: 2;`}>
-              <h1>{markdownRemark.frontmatter.title}</h1>
-              <h4 className="no-top-margin">
+              <h1 className={location.pathname.includes("/th") ? "th" : ""}>
+                {markdownRemark.frontmatter.title}
+              </h1>
+              <h4
+                className={`no-top-margin ${
+                  location.pathname.includes("/th") ? "th" : ""
+                }`}
+              >
                 {markdownRemark.frontmatter.description}
               </h4>
               <ProjectHTML
+                className={location.pathname.includes("/th") ? "th" : ""}
                 dangerouslySetInnerHTML={{
                   __html: markdownRemark.html,
                 }}

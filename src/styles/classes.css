@@ -2,6 +2,11 @@
 /* 🔒 Not configurable */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+/* Thai Font */
+.th {
+  font-family: var(--thaiFont);
+}
+
 /* --- Color Classes --- */
 .gray-bg {
   background: var(--lightesterGray);
@@ -49,6 +54,16 @@ p.subtext {
   margin: 0;
   font-size: var(--smallestFontSize);
   color: var(--darkGray);
+}
+
+h1.th,
+h2.th,
+h3.th,
+h4.th,
+h5.th,
+h6.th,
+p.th {
+  font-family: var(--thaiFont) !important;
 }
 
 /* --- Container Classes --- */

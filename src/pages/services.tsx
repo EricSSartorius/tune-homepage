@@ -19,25 +19,27 @@ const ServicesPage: FC = ({ data }) => {
       <Wrapper>
         <section>
           <Cols isReverse>
-            <h1>{currentLanguage.title}</h1>
+            <h1 className={lang}>{currentLanguage.title}</h1>
             <div>
               {currentLanguage.services.map(({ title, items }) => (
                 <Fragment key={title}>
-                  <h3>{title}</h3>
+                  <h3 className={lang}>{title}</h3>
                   {items && (
                     <ul>
                       {items.map(item => (
-                        <li key={item}>{item}</li>
+                        <li key={item} className={lang}>
+                          {item}
+                        </li>
                       ))}
                     </ul>
                   )}
                 </Fragment>
               ))}
               <p className="margins">
-                <em>{currentLanguage.included}</em>
+                <em className={lang}>{currentLanguage.included}</em>
               </p>
               <p>
-                <em>{currentLanguage.notIncluded}</em>
+                <em className={lang}>{currentLanguage.notIncluded}</em>
               </p>
             </div>
           </Cols>

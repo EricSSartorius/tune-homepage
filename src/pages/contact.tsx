@@ -21,10 +21,12 @@ const ContactPage: FC = ({ data }) => {
         <section>
           <Cols isReverse>
             <div>
-              <h1>{currentLanguage.workTogether}</h1>
+              <h1 className={lang}>{currentLanguage.workTogether}</h1>
             </div>
             <div>
-              <h4 className="small-title">{currentLanguage.inquiries}</h4>
+              <h4 className={`small-title ${lang}`}>
+                {currentLanguage.inquiries}
+              </h4>
               <Email>
                 <a
                   className="email-link"
@@ -43,7 +45,7 @@ const ContactPage: FC = ({ data }) => {
                   088-694-4946
                 </p>
               </div>
-              <p className="large">
+              <p className={`large ${lang}`}>
                 {currentLanguage.address1}
                 <br /> {currentLanguage.address2}
                 <br /> {currentLanguage.address3}

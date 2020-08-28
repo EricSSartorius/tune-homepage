@@ -16,8 +16,7 @@ type Props = {
 }
 
 const Menu = ({ links, closeMenu, isMenuOpen }: Props) => {
-  const { lang, setLang } = useLanguage()
-
+  const { lang } = useLanguage()
   return (
     <NavBar isMenuOpen={isMenuOpen}>
       <ul>
@@ -25,7 +24,7 @@ const Menu = ({ links, closeMenu, isMenuOpen }: Props) => {
           <li key={text}>
             <Link
               to={to}
-              className="nav-link"
+              className={`nav-link ${lang}`}
               onClick={closeMenu}
               aria-label={text}
             >

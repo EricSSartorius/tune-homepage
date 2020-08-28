@@ -71,7 +71,7 @@ const Footer = () => {
               + 088-694-4946
               <Icon name="phone" style={{ marginLeft: "1rem" }} />
             </div>
-            <p>
+            <p className={lang}>
               {currentLanguage.address1}
               <br /> {currentLanguage.address2}
               <br /> {currentLanguage.address3}
@@ -79,16 +79,14 @@ const Footer = () => {
           </div>
           <nav className="footer-links">
             {siteLinks.map(({ text, to }) => (
-              <p key={text}>
+              <p key={text} className={lang}>
                 <Link to={to}>{text}</Link>
               </p>
             ))}
           </nav>
         </div>
         <div className="footer-bottom">
-          <p>
-            &copy; {new Date().getFullYear()} Tune and his Flying Home Studio
-          </p>
+          <p>&copy; {new Date().getFullYear()} Tune & Flying Home Studio</p>
           <div>
             <LanguageSelector />
             <p className="pure-func">

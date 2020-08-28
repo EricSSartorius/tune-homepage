@@ -74,7 +74,7 @@ const IndexPage = ({ data }) => {
                 Flying Home Studio
               </h3>
               <div className="content">
-                <p className="huge">{currentLanguage.mission}</p>
+                <p className={`huge ${lang}`}>{currentLanguage.mission}</p>
               </div>
             </RotateGrid>
           </motion.div>
@@ -96,10 +96,12 @@ const IndexPage = ({ data }) => {
                   if (!rightImgShowing) setRightImgShowing(true)
                 }}
               />
-              <h3 className="small-title">{currentLanguage.process.title}</h3>
-              <p className="huge">{currentLanguage.process.text}</p>
+              <h3 className={`small-title ${lang}`}>
+                {currentLanguage.process.title}
+              </h3>
+              <p className={`huge ${lang}`}>{currentLanguage.process.text}</p>
               <p>
-                <Link to="/services/">
+                <Link to="/services/" className={lang}>
                   {currentLanguage.servicesBreakdown} &#8594;
                 </Link>
               </p>
@@ -128,11 +130,14 @@ const IndexPage = ({ data }) => {
       <section>
         <Wrapper>
           <RotateGrid>
-            <h3 className="small-title rotate" style={{ marginTop: "30px" }}>
+            <h3
+              className={`small-title rotate ${lang}`}
+              style={{ marginTop: "30px" }}
+            >
               {currentLanguage.projects}
             </h3>
             <div className="content">
-              <p className="huge">{currentLanguage.galleryTitle}</p>
+              <p className={`huge ${lang}`}>{currentLanguage.galleryTitle}</p>
             </div>
           </RotateGrid>
         </Wrapper>
@@ -182,7 +187,7 @@ const IndexPage = ({ data }) => {
         <Wrapper>
           <LinkContainer style={{ textAlign: "right" }}>
             <p>
-              <Link to="/projects/">
+              <Link to="/projects/" className={lang}>
                 {currentLanguage.viewProjects} &#8594;
               </Link>
             </p>
@@ -203,13 +208,22 @@ const IndexPage = ({ data }) => {
             animate={isContactShowing ? "open" : "closed"}
             transition={{ damping: 300 }}
           >
-            <motion.h2 className="no-top-margin" variants={contactVariants}>
+            <motion.h2
+              className={`no-to-margin ${lang}`}
+              variants={contactVariants}
+            >
               {currentLanguage.contact.text1}
             </motion.h2>
-            <motion.h2 className="no-top-margin" variants={contactVariants}>
+            <motion.h2
+              className={`no-to-margin ${lang}`}
+              variants={contactVariants}
+            >
               {currentLanguage.contact.text2}
             </motion.h2>
-            <motion.h2 className="no-top-margin" variants={contactVariants}>
+            <motion.h2
+              className={`no-to-margin ${lang}`}
+              variants={contactVariants}
+            >
               {currentLanguage.contact.text3}
             </motion.h2>
 
@@ -310,6 +324,9 @@ const Slide = styled.div`
     background: rgba(0, 0, 0, 0.4);
     margin: 0;
   }
+  &.th {
+    font-family: var(--thaiFont);
+  }
   .gatsby-image-wrapper {
     transition: 0.5s ease all;
   }
@@ -324,6 +341,9 @@ const Contact = styled(motion.p)`
   a {
     font-size: var(--hugeFontSize);
     font-family: var(--headingFont);
+    &.th {
+      font-family: var(--thaiFont);
+    }
     font-weight: bold;
     ${below.medium`
       font-size: var(--largeFontSize);

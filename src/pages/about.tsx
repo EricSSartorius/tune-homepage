@@ -19,7 +19,7 @@ const AboutPage: FC = ({ data }) => {
       <Wrapper>
         <section>
           <Cols isReverse>
-            <h1>{currentLanguage.title}</h1>
+            <h1 className={lang}>{currentLanguage.title}</h1>
             <div style={{ marginTop: "var(--baseMargin)" }}>
               <p>Coming Soon</p>
             </div>
