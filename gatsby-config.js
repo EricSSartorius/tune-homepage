@@ -20,10 +20,38 @@ module.exports = {
         name: "projects",
       },
     },
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "en",
+        langKeyForNull: "en",
+        useLangKeyLayout: false,
+        prefixDefault: false,
+        markdownRemark: {
+          postPage: "src/templates/project.tsx",
+          query: `
+            {
+              allMarkdownRemark {
+                edges {
+                  node {
+                    frontmatter {
+                      slug
+                      title
+                      description
+                      lang
+                    }
+                  }
+                }
+              }
+            }
+          `,
+        },
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-layout`,
+    // `gatsby-plugin-layout`,
     {
       resolve: "gatsby-transformer-remark",
       options: {

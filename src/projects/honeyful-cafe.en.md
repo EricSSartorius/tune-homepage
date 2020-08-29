@@ -1,5 +1,5 @@
 ---
-slug: "/honeyful-cafe/en/"
+slug: "/project/honeyful-cafe/"
 title: "Honeyful Cafe"
 thumbnail: "./images/honeyful-cafe/honeyful-cafe-3.jpg"
 hero: "./images/honeyful-cafe/honeyful-cafe-3.jpg"

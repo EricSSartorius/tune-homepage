@@ -1,6 +1,4 @@
 import React from "react"
-import { LanguageProvider } from "../global/language"
-
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
@@ -9,13 +7,13 @@ import "../styles/reset.css"
 import "../styles/global.css"
 import "../styles/classes.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location, lang }) => {
   return (
-    <LanguageProvider>
-      <Header />
+    <>
+      <Header location={location} lang={lang} />
       <main>{children}</main>
-      <Footer />
-    </LanguageProvider>
+      <Footer location={location} lang={lang} />
+    </>
   )
 }
 

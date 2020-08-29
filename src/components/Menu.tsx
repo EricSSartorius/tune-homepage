@@ -1,22 +1,22 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { useLanguage } from "../global/language"
 import LanguageSelector from "./LanguageSelector"
 
-type LinkType = {
-  to: string
-  text: string
-}
-
 type Props = {
-  links: LinkType[]
   closeMenu: () => void
   isMenuOpen: boolean
+  location: {
+    pathname: string
+  }
+  lang: "en" | "th"
+  links: {
+    to: string
+    text: string
+  }[]
 }
 
-const Menu = ({ links, closeMenu, isMenuOpen }: Props) => {
-  const { lang } = useLanguage()
+const Menu = ({ closeMenu, isMenuOpen, location, lang, links }: Props) => {
   return (
     <NavBar isMenuOpen={isMenuOpen}>
       <ul>
@@ -32,7 +32,7 @@ const Menu = ({ links, closeMenu, isMenuOpen }: Props) => {
             </Link>
           </li>
         ))}
-        <LanguageSelector isInMenu />
+        <LanguageSelector isInMenu location={location} lang={lang} />
       </ul>
     </NavBar>
   )

@@ -4,7 +4,11 @@
 
 /* Thai Font */
 .th {
-  font-family: var(--thaiFont);
+  font-family: var(--thaiFont) !important;
+}
+
+.th * {
+  font-family: var(--thaiFont) !important;
 }
 
 /* --- Color Classes --- */

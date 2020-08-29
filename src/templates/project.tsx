@@ -6,20 +6,22 @@ import SEO from "../components/seo"
 import Img from "gatsby-image"
 import { Wrapper, Cols, below } from "../styles"
 import LanguageSelector from "../components/LanguageSelector"
-import { useLanguage } from "../global/language"
 import Modal from "../components/Modal"
+import Layout from "../layouts"
 
 import "react-multi-carousel/lib/styles.css"
 
 const ProjectTemplate = ({ data, location }) => {
-  const { lang } = useLanguage()
   const { markdownRemark } = data
   const [isImageModalShowing, setIsImageModalShowing] = useState(false)
   const [imageIndex, setImageIndex] = useState(0)
-
+  console.log("ME", markdownRemark.frontmatter)
   return (
-    <>
-      <SEO title={markdownRemark.frontmatter.title} lang={lang} />
+    <Layout lang={markdownRemark.frontmatter.lang} location={location}>
+      <SEO
+        title={markdownRemark.frontmatter.title}
+        lang={markdownRemark.frontmatter.lang}
+      />
       <HeroImg
         fluid={markdownRemark.frontmatter.hero.childImageSharp.fluid}
         alt={markdownRemark.frontmatter.title}
@@ -29,25 +31,26 @@ const ProjectTemplate = ({ data, location }) => {
         <section>
           <Cols>
             <div css={below.medium`grid-row: 2;`}>
-              <h1 className={location.pathname.includes("/th") ? "th" : ""}>
+              <h1 className={markdownRemark.frontmatter.lang}>
                 {markdownRemark.frontmatter.title}
               </h1>
               <h4
-                className={`no-top-margin ${
-                  location.pathname.includes("/th") ? "th" : ""
-                }`}
+                className={`no-top-margin ${markdownRemark.frontmatter.lang}`}
               >
                 {markdownRemark.frontmatter.description}
               </h4>
               <ProjectHTML
-                isThai={location.pathname.includes("/th")}
+                isThai={location.pathname.startsWith("/th")}
                 dangerouslySetInnerHTML={{
                   __html: markdownRemark.html,
                 }}
               />
             </div>
             <aside>
-              <LanguageSelector />
+              <LanguageSelector
+                location={location}
+                lang={markdownRemark.frontmatter.lang}
+              />
             </aside>
           </Cols>
 
@@ -93,7 +96,13 @@ const ProjectTemplate = ({ data, location }) => {
           )}
           <div className="center-text top-padding">
             <p>
-              <Link to="/projects/">&#8592; All Projects</Link>
+              <Link
+                to={`${
+                  markdownRemark.frontmatter.lang === "th" ? "/th" : ""
+                }/projects/`}
+              >
+                &#8592; All Projects
+              </Link>
             </p>
           </div>
         </section>
@@ -111,7 +120,7 @@ const ProjectTemplate = ({ data, location }) => {
           </Modal>
         )}
       </Wrapper>
-    </>
+    </Layout>
   )
 }
 
@@ -179,6 +188,7 @@ export const query = graphql`
         title
         slug
         description
+        lang
         hero {
           childImageSharp {
             fluid(maxWidth: 1440, quality: 100) {

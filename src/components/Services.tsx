@@ -1,17 +1,25 @@
-import React, { Fragment, FC } from "react"
+import React, { Fragment } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 import { Wrapper, Cols } from "../styles"
-import { useLanguage } from "../global/language"
 import { english, thai } from "../translation/services.yml"
 
-const ServicesPage: FC = ({ data }) => {
-  const { lang } = useLanguage()
-
+const Services = ({
+  data,
+  lang,
+}: {
+  data: {
+    heroImg: {
+      childImageSharp: {
+        fluid: string
+      }
+    }
+  }
+  lang: "en" | "th"
+}) => {
   const currentLanguage = lang === "th" ? thai : english
-
   return (
     <>
       <SEO
@@ -53,20 +61,8 @@ const ServicesPage: FC = ({ data }) => {
   )
 }
 
-export default ServicesPage
+export default Services
 
 const HeroImg = styled(Img)`
   max-height: 30rem;
-`
-
-export const query = graphql`
-  query {
-    heroImg: file(relativePath: { eq: "hero/private-hero.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1440) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
 `

@@ -1,27 +1,38 @@
 import React from "react"
-import { useLanguage } from "../global/language"
+import { Link } from "gatsby"
 import styled, { css } from "styled-components"
 import { below } from "../styles"
 
-const LanguageSelector = ({ isInMenu = false }: { isInMenu?: boolean }) => {
-  const { lang, setLang } = useLanguage()
+const LanguageSelector = ({
+  isInMenu = false,
+  location,
+  lang,
+}: {
+  isInMenu?: boolean
+  location: {
+    pathname: string
+  }
+  lang: "en" | "th"
+}) => {
   console.log("lang", lang)
-
   return (
     <Language isInMenu={isInMenu}>
-      <span
-        onClick={() => setLang("en")}
-        className={`lang ${lang === "en" ? "active" : ""}`}
-      >
-        EN
-      </span>
+      {lang === "en" ? (
+        <span className="active lang">EN</span>
+      ) : (
+        <Link to={location.pathname.replace("/th", "")} className="lang">
+          EN
+        </Link>
+      )}
+
       <span>|</span>
-      <span
-        onClick={() => setLang("th")}
-        className={`lang ${lang === "th" ? "active" : ""}`}
-      >
-        TH
-      </span>
+      {lang === "th" ? (
+        <span className="active lang">TH</span>
+      ) : (
+        <Link to={`/th${location.pathname}`} className="lang">
+          TH
+        </Link>
+      )}
     </Language>
   )
 }
@@ -32,13 +43,16 @@ const Language = styled.p`
   ${({ isInMenu }) =>
     isInMenu
       ? css`
-          span {
+          span,
+          a {
             margin: 1rem;
           }
         `
       : css`
           text-align: right;
-          span + span {
+          span,
+          a + span,
+          a {
             margin-left: 2rem;
           }
           ${below.medium`

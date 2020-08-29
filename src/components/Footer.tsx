@@ -6,10 +6,8 @@ import Icon from "./Icon"
 import { below, Wrapper } from "../styles"
 import LanguageSelector from "./LanguageSelector"
 import { english, thai } from "../translation/_menu.yml"
-import { useLanguage } from "../global/language"
 
-const Footer = () => {
-  const { lang } = useLanguage()
+const Footer = ({ location, lang }) => {
   const currentLanguage = lang === "th" ? thai : english
 
   const { logo } = useStaticQuery(
@@ -80,7 +78,7 @@ const Footer = () => {
           <nav className="footer-links">
             {siteLinks.map(({ text, to }) => (
               <p key={text} className={lang}>
-                <Link to={to}>{text}</Link>
+                <Link to={`${lang === "th" ? "/th" : ""}${to}`}>{text}</Link>
               </p>
             ))}
           </nav>
@@ -88,7 +86,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} Tune & Flying Home Studio</p>
           <div>
-            <LanguageSelector />
+            <LanguageSelector location={location} lang={lang} />
             <p className="pure-func">
               Crafted by{" "}
               <a href="https://www.purefunc.dev/" target="_blank">
@@ -106,8 +104,6 @@ const FooterWrapper = styled.footer`
   border-top: 1px solid var(--lineColor);
   .footer-grid {
     padding: var(--margins);
-    /* display: flex;
-    justify-content: space-between; */
     display: grid;
     align-items: flex-start;
     grid-template-columns: 25% 1fr 25%;
@@ -122,8 +118,6 @@ const FooterWrapper = styled.footer`
     }
     .footer-links {
       justify-self: flex-end;
-      /* display: grid;
-      grid-template-columns: 1fr 50%; */
       p {
         margin: 1rem;
         a {

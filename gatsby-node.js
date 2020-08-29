@@ -12,6 +12,7 @@ exports.createPages = ({ graphql, actions }) => {
                 slug
                 title
                 description
+                lang
               }
             }
           }
@@ -20,7 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(results => {
       results.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
-          path: `/project${node.frontmatter.slug}`,
+          path: node.frontmatter.slug,
           component: path.resolve("./src/templates/project.tsx"),
           context: {
             slug: node.frontmatter.slug,

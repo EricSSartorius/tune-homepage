@@ -8,7 +8,6 @@ import { Wrapper, Grid, below, media } from "../styles"
 import Carousel from "react-multi-carousel"
 import SEO from "../components/seo"
 import { english, thai } from "../translation/homepage.yml"
-import { useLanguage } from "../global/language"
 
 import "react-multi-carousel/lib/styles.css"
 
@@ -38,13 +37,12 @@ const contactVariants = {
   },
 }
 
-const IndexPage = ({ data }) => {
+const Home = ({ data, lang }) => {
   const [rightImgShowing, setRightImgShowing] = useState(false)
   const [leftImgShowing, setLeftImgShowing] = useState(false)
   const [isContactShowing, setIsContactShowing] = useState(false)
   const { heroImg, allMarkdownRemark } = data
   const projects = allMarkdownRemark.edges
-  const { lang } = useLanguage()
 
   const currentLanguage = lang === "th" ? thai : english
 
@@ -100,7 +98,10 @@ const IndexPage = ({ data }) => {
               </h3>
               <p className={`huge ${lang}`}>{currentLanguage.process.text}</p>
               <p>
-                <Link to="/services/" className={lang}>
+                <Link
+                  to={`${lang === "th" ? "/th" : ""}/services/`}
+                  className={lang}
+                >
                   {currentLanguage.servicesBreakdown} &#8594;
                 </Link>
               </p>
@@ -165,12 +166,11 @@ const IndexPage = ({ data }) => {
             {projects
               .filter(
                 ({ node }) =>
-                  node.frontmatter.thumbnail &&
-                  node.frontmatter.lang === (lang || "en")
+                  node.frontmatter.thumbnail && node.frontmatter.lang === lang
               )
               .map(({ node }) => (
-                <Slide key={`/project` + node.frontmatter.slug}>
-                  <Link to={`/project` + node.frontmatter.slug}>
+                <Slide key={node.frontmatter.slug}>
+                  <Link to={node.frontmatter.slug}>
                     <div className="slide-img">
                       <Img
                         fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
@@ -186,7 +186,10 @@ const IndexPage = ({ data }) => {
         <Wrapper>
           <LinkContainer style={{ textAlign: "right" }}>
             <p>
-              <Link to="/projects/" className={lang}>
+              <Link
+                to={`${lang === "th" ? "/th" : ""}/projects/`}
+                className={lang}
+              >
                 {currentLanguage.viewProjects} &#8594;
               </Link>
             </p>
@@ -242,7 +245,7 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export default IndexPage
+export default Home
 
 const RotateGrid = styled.div`
   position: relative;
@@ -368,43 +371,3 @@ const responsive = {
     slidesToSlide: 1, // optional, default to 1.
   },
 }
-
-export const query = graphql`
-  query {
-    heroImg: file(relativePath: { eq: "hero/khao-hero.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1440, quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            slug
-            title
-            lang
-            thumbnail {
-              childImageSharp {
-                fluid(maxWidth: 600) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    #
-    bhavanaHouse: file(
-      relativePath: { eq: "images/bhavana-house/bhavana-house-03.jpg" }
-    ) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`

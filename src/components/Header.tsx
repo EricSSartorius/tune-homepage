@@ -8,34 +8,32 @@ import { motion, AnimatePresence } from "framer-motion"
 import Portal from "./Portal"
 import Icon from "./Icon"
 import Menu from "./Menu"
-import { useLanguage } from "../global/language"
 import { english, thai } from "../translation/_menu.yml"
 
-const Header = () => {
+const Header = ({ location, lang }) => {
   const [hasHeaderBg, setHasHeaderBg] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
   const closeMenu = () => setIsMenuOpen(false)
 
-  const { lang } = useLanguage()
   const currentLanguage = lang === "th" ? thai : english
-
+  const thaiPrefix = lang === "th" ? "/th" : ""
   const links = [
     {
       text: currentLanguage.menu.about,
-      to: "/about/",
+      to: thaiPrefix + "/about/",
     },
     {
       text: currentLanguage.menu.services,
-      to: "/services/",
+      to: thaiPrefix + "/services/",
     },
     {
       text: currentLanguage.menu.projects,
-      to: "/projects/",
+      to: thaiPrefix + "/projects/",
     },
     {
       text: currentLanguage.menu.contact,
-      to: "/contact/",
+      to: thaiPrefix + "/contact/",
     },
   ]
 
@@ -54,14 +52,17 @@ const Header = () => {
     >
       <InnerHeader>
         <div className="logo">
-          <Link to="/" aria-label="Home page">
+          <Link to={lang === "th" ? "/th/" : "/"} aria-label="Home page">
             Tune <span className="and">&</span>{" "}
             <span className="flying">Flying Home Studio</span>
           </Link>
         </div>
         <div className="nav-wrapper">
           <nav>
-            <Link to="/projects/" className="grid-link">
+            <Link
+              to={`${lang === "th" ? "/th" : ""}/projects/`}
+              className="grid-link"
+            >
               <Icon
                 name="grid"
                 color={
@@ -88,6 +89,8 @@ const Header = () => {
                     isMenuOpen={isMenuOpen}
                     closeMenu={closeMenu}
                     links={links}
+                    location={location}
+                    lang={lang}
                   />
                 )}
               </AnimatePresence>
@@ -101,7 +104,7 @@ const Header = () => {
 
 export default Header
 
-const MenuModal = ({ isMenuOpen, closeMenu, links }) => {
+const MenuModal = ({ isMenuOpen, closeMenu, links, lang, location }) => {
   useScrollFreeze()
   const pointerEvents = isMenuOpen ? `all` : `none`
 
@@ -116,7 +119,13 @@ const MenuModal = ({ isMenuOpen, closeMenu, links }) => {
           style={{ position: "relative" }}
         >
           <MenuWrapper style={{ pointerEvents }}>
-            <Menu links={links} closeMenu={closeMenu} isMenuOpen={isMenuOpen} />
+            <Menu
+              closeMenu={closeMenu}
+              isMenuOpen={isMenuOpen}
+              location={location}
+              lang={lang}
+              links={links}
+            />
           </MenuWrapper>
         </Transport>
       </ModalWrapper>

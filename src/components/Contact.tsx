@@ -1,16 +1,24 @@
-import React, { FC } from "react"
-import { graphql } from "gatsby"
+import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Icon from "../components/Icon"
 import { Wrapper, below, Cols } from "../styles"
-import { useLanguage } from "../global/language"
 import { english, thai } from "../translation/contact.yml"
 
-const ContactPage: FC = ({ data }) => {
-  const { lang } = useLanguage()
-
+const Contact = ({
+  data,
+  lang,
+}: {
+  data: {
+    heroImg: {
+      childImageSharp: {
+        fluid: string
+      }
+    }
+  }
+  lang: "en" | "th"
+}) => {
   const currentLanguage = lang === "th" ? thai : english
 
   return (
@@ -62,7 +70,7 @@ const ContactPage: FC = ({ data }) => {
   )
 }
 
-export default ContactPage
+export default Contact
 
 const HeroImg = styled(Img)`
   max-height: 30rem;
@@ -77,16 +85,4 @@ const Email = styled.p`
       font-size: var(--heading-five);
     }
   `};
-`
-
-export const query = graphql`
-  query {
-    heroImg: file(relativePath: { eq: "hero/yutaro-hero.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1440) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
 `

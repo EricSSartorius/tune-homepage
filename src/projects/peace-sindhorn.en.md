@@ -1,5 +1,5 @@
 ---
-slug: "/peace-sindhorn/en/"
+slug: "/project/peace-sindhorn/"
 title: "Peace Sindhorn"
 thumbnail: "./images/peace-sindhorn/peace-sindhorn-2.jpg"
 hero: "./images/peace-sindhorn/peace-sindhorn-2.jpg"

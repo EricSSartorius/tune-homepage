@@ -4,9 +4,22 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 import { Wrapper } from "../styles"
+import Layout from "../layouts"
 
-const NotFoundPage: React.FC = ({ data }) => (
-  <>
+const NotFoundPage = ({
+  data,
+  location,
+}: {
+  location: object
+  data: {
+    heroImg: {
+      childImageSharp: {
+        fluid: string
+      }
+    }
+  }
+}) => (
+  <Layout location={location} lang="en">
     <SEO title="404" description="Page not found" />
     <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
 
@@ -15,7 +28,7 @@ const NotFoundPage: React.FC = ({ data }) => (
         <h1>404: Not Found</h1>
       </section>
     </Wrapper>
-  </>
+  </Layout>
 )
 
 export default NotFoundPage

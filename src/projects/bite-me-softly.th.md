@@ -1,5 +1,5 @@
 ---
-slug: "/bite-me-softly/th/"
+slug: "/th/project/bite-me-softly/"
 title: "Bite Me Softly"
 thumbnail: "./images/bite-me-softly/bite-me-softly-03.jpg"
 hero: "./images/bite-me-softly/bite-me-softly-03.jpg"

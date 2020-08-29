@@ -4,11 +4,9 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { Grid } from "../styles"
 import SEO from "../components/seo"
-import { useLanguage } from "../global/language"
 import { Wrapper } from "../styles"
 
-const ProjectsPage = ({ data }) => {
-  const { lang } = useLanguage()
+const Projects = ({ data, lang }) => {
   const projects = data.allMarkdownRemark.edges
 
   return (
@@ -23,10 +21,10 @@ const ProjectsPage = ({ data }) => {
         <section className="margins">
           <ProjectGrid cols={[1, 1, 2]}>
             {projects
-              .filter(({ node }) => node.frontmatter.lang === (lang || "en"))
+              .filter(({ node }) => node.frontmatter.lang === lang)
               .map(({ node }) => (
                 <div className="project" key={node.frontmatter.title}>
-                  <Link to={"/project" + node.frontmatter.slug}>
+                  <Link to={node.frontmatter.slug}>
                     <div className="project-image">
                       <Img
                         fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
@@ -44,7 +42,7 @@ const ProjectsPage = ({ data }) => {
   )
 }
 
-export default ProjectsPage
+export default Projects
 
 const ProjectGrid = styled(Grid)`
   .project {
@@ -94,36 +92,4 @@ const ProjectGrid = styled(Grid)`
 
 const HeroImg = styled(Img)`
   max-height: 30rem;
-`
-
-export const query = graphql`
-  query {
-    heroImg: file(relativePath: { eq: "hero/private-hero.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1440) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    allMarkdownRemark {
-      edges {
-        node {
-          excerpt
-          frontmatter {
-            title
-            slug
-            lang
-            isPersonalProject
-            thumbnail {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 `
