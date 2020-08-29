@@ -7,7 +7,7 @@ images:
   - "./images/roofless-house/roofless-house.jpg"
   - "./images/roofless-house/roofless-house-2.jpg"
   - "./images/roofless-house/roofless-house-3.jpg"
-  - "./images/roofless-house/roofless-house-4.jpg"
+  - "./images/roofless-house/roofless-house-4.jpeg"
 description: "บ้านไร้หลังคาที่ทำให้รู้สึกเหมือนได้ใช้ชีวิตกลางแจ้งตลอดเวลา"
 isPersonalProject: true
 lang: "th"

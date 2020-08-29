@@ -7,7 +7,7 @@ images:
   - "./images/roofless-house/roofless-house.jpg"
   - "./images/roofless-house/roofless-house-2.jpg"
   - "./images/roofless-house/roofless-house-3.jpg"
-  - "./images/roofless-house/roofless-house-4.jpg"
+  - "./images/roofless-house/roofless-house-4.jpeg"
 description: "A roofless house that makes you feel like you&#39;re always outdoors"
 isPersonalProject: true
 lang: "en"
