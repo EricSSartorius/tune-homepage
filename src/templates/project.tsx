@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { graphql, Link } from "gatsby"
 import Carousel from "react-multi-carousel"
 import SEO from "../components/seo"
@@ -120,6 +120,13 @@ const ProjectHTML = styled.div`
   p a {
     font-size: var(--largeFontSize);
     margin: 4rem 0;
+  }
+  * {
+    ${isThai =>
+      isThai &&
+      css`
+        font-family: var(--thaiFont) !important;
+      `};
   }
 `
 
