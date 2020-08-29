@@ -5,6 +5,7 @@ import { below } from "../styles"
 
 const LanguageSelector = ({ isInMenu = false }: { isInMenu?: boolean }) => {
   const { lang, setLang } = useLanguage()
+  console.log("lang", lang)
 
   return (
     <Language isInMenu={isInMenu}>
