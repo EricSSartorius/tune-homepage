@@ -6,7 +6,7 @@ hero: "./images/pam-and-non-house/pam-and-non-house-2.jpg"
 images:
   - "./images/pam-and-non-house/pam-and-non-house.jpg"
   - "./images/pam-and-non-house/pam-and-non-house-2.jpg"
-  - "./images/pam-and-non-house/pam-and-non-house-3.jpg"
+  - "./images/pam-and-non-house/pam-and-non-house-3.jpeg"
 description: "โปรเจคออกแบบและตกแต่งภายในสไตล์แสกนดิเนเวียน"
 isPersonalProject: false
 lang: "th"
