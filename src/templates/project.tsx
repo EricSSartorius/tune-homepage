@@ -15,7 +15,6 @@ const ProjectTemplate = ({ data, location }) => {
   const { markdownRemark } = data
   const [isImageModalShowing, setIsImageModalShowing] = useState(false)
   const [imageIndex, setImageIndex] = useState(0)
-  console.log("ME", markdownRemark.frontmatter)
   return (
     <Layout lang={markdownRemark.frontmatter.lang} location={location}>
       <SEO

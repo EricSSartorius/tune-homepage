@@ -14,7 +14,6 @@ const LanguageSelector = ({
   }
   lang: "en" | "th"
 }) => {
-  console.log("lang", lang)
   return (
     <Language isInMenu={isInMenu}>
       {lang === "en" ? (
