@@ -15,7 +15,11 @@ const ContactPage: FC = ({ data }) => {
 
   return (
     <>
-      <SEO title="Contact" />
+      <SEO
+        title="Contact"
+        description="Get in touch with Tune & Flying Home Studio"
+        lang={lang}
+      />
       <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
       <Wrapper>
         <section>

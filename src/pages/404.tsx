@@ -7,7 +7,7 @@ import { Wrapper } from "../styles"
 
 const NotFoundPage: React.FC = ({ data }) => (
   <>
-    <SEO title="404" />
+    <SEO title="404" description="Page not found" />
     <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
 
     <Wrapper>

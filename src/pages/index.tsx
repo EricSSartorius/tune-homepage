@@ -50,8 +50,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <SEO title="Home" />
-
+      <SEO lang={lang} />
       <Img fluid={heroImg.childImageSharp.fluid} style={{ height: "100vh" }} />
 
       <Wrapper>

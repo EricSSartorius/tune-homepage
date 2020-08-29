@@ -14,7 +14,11 @@ const AboutPage: FC = ({ data }) => {
 
   return (
     <>
-      <SEO title="About" />
+      <SEO
+        title="About"
+        description="About Tune & Flying Home Studio"
+        lang={lang}
+      />
       <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
       <Wrapper>
         <section>

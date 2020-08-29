@@ -4,7 +4,7 @@ import Cookies from "js-cookie"
 import { useCookie } from "../hooks"
 
 export const initialLanguageValues = {
-  lang: null,
+  lang: "en",
   setLang: (_: "en" | "th") => {},
 }
 
@@ -12,6 +12,7 @@ export const LanguageContext = createContext(initialLanguageValues)
 
 export const LanguageProvider: FC = ({ children }) => {
   const [lang, setLang] = useCookie({ key: "lang", expires: 365 })
+  console.log("LANGUAGE: ", lang)
 
   useEffect(() => {
     if (lang === "en" && window.location.pathname.includes("/th")) {
@@ -19,6 +20,7 @@ export const LanguageProvider: FC = ({ children }) => {
     } else if (lang === "th" && window.location.pathname.includes("/en")) {
       navigate(window.location.pathname.replace("/en", "/th"))
     }
+    console.log("LANGUAGE2: ", lang)
   }, [lang])
 
   useEffect(() => {
@@ -31,6 +33,7 @@ export const LanguageProvider: FC = ({ children }) => {
       Cookies.set("lang", "en", { expires: 365 })
       setLang("en")
     }
+    console.log("LANGUAGE1: ", lang)
   }, [])
 
   return (

@@ -4,20 +4,22 @@ import { graphql, Link } from "gatsby"
 import Carousel from "react-multi-carousel"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
-import { Wrapper, Cols, below, media } from "../styles"
+import { Wrapper, Cols, below } from "../styles"
 import LanguageSelector from "../components/LanguageSelector"
+import { useLanguage } from "../global/language"
 import Modal from "../components/Modal"
 
 import "react-multi-carousel/lib/styles.css"
 
 const ProjectTemplate = ({ data, location }) => {
+  const { lang } = useLanguage()
   const { markdownRemark } = data
   const [isImageModalShowing, setIsImageModalShowing] = useState(false)
   const [imageIndex, setImageIndex] = useState(0)
 
   return (
     <>
-      <SEO title={markdownRemark.frontmatter.title} />
+      <SEO title={markdownRemark.frontmatter.title} lang={lang} />
       <HeroImg
         fluid={markdownRemark.frontmatter.hero.childImageSharp.fluid}
         alt={markdownRemark.frontmatter.title}

@@ -8,8 +8,8 @@ import { motion, AnimatePresence } from "framer-motion"
 import Portal from "./Portal"
 import Icon from "./Icon"
 import Menu from "./Menu"
-import { english, thai } from "../translation/_menu.yml"
 import { useLanguage } from "../global/language"
+import { english, thai } from "../translation/_menu.yml"
 
 const Header = () => {
   const [hasHeaderBg, setHasHeaderBg] = useState(false)

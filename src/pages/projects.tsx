@@ -13,7 +13,11 @@ const ProjectsPage = ({ data }) => {
 
   return (
     <>
-      <SEO title="Projects" />
+      <SEO
+        title="Projects"
+        description="A collection of past and current projects from both Tune & Flying Home Studio"
+        lang={lang}
+      />
       <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
       <Wrapper>
         <section className="margins">

@@ -1,6 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { ContextProvider } from "../global/state"
+import { LanguageProvider } from "../global/language"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -11,22 +10,12 @@ import "../styles/global.css"
 import "../styles/classes.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
-    <ContextProvider>
-      <Header siteTitle={data.site.siteMetadata.title} />
+    <LanguageProvider>
+      <Header />
       <main>{children}</main>
-      <Footer siteTitle={data.site.siteMetadata.title} />
-    </ContextProvider>
+      <Footer />
+    </LanguageProvider>
   )
 }
 

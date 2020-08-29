@@ -14,7 +14,11 @@ const ServicesPage: FC = ({ data }) => {
 
   return (
     <>
-      <SEO title="Services" />
+      <SEO
+        title="Services"
+        description="Breakdown of Architecture and Interior design services"
+        lang={lang}
+      />
       <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
       <Wrapper>
         <section>
