@@ -32,12 +32,7 @@ const ModalAnimation = ({
   )
 }
 
-const Modal = ({
-  isActive,
-  children,
-  maxWidth,
-  closeAction,
-}: ModalAnimationProps) => {
+const Modal = ({ isActive, children, closeAction }: ModalAnimationProps) => {
   useScrollFreeze()
   const pointerEvents = isActive ? `all` : `none`
   return (

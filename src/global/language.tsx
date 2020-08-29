@@ -4,7 +4,7 @@ import Cookies from "js-cookie"
 import { useCookie } from "../hooks"
 
 export const initialLanguageValues = {
-  lang: "en",
+  lang: null,
   setLang: (_: "en" | "th") => {},
 }
 
