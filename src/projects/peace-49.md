@@ -3,6 +3,11 @@ slug: "/peace-49/en/"
 title: "Peace 49"
 thumbnail: "./images/peace-49/peace-49.jpg"
 hero: "./images/peace-49/peace-49-4.jpg"
+images:
+  - "./images/peace-49/peace-49.jpg"
+  - "./images/peace-49/peace-49-2.jpg"
+  - "./images/peace-49/peace-49-3.jpg"
+  - "./images/peace-49/peace-49-4.jpg"
 description: "A tea shop that is meticulous in selecting and making drinking tea fun"
 isPersonalProject: true
 lang: "en"
@@ -36,5 +41,3 @@ to sit on the platform with small tables and cushions prepared. You can
 also sit on the platform and lower your legs to look at the tea making at
 the bar counter, or you can sit by the glass to look at the outside
 atmosphere of Sukhumvit Soi 49 as well.
-
-![Peace 49 2](./images/peace-49/peace-49-2.jpg)

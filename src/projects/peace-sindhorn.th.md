@@ -3,6 +3,10 @@ slug: "/peace-sindhorn/th/"
 title: "Peace Sindhorn"
 thumbnail: "./images/peace-sindhorn/peace-sindhorn-2.jpg"
 hero: "./images/peace-sindhorn/peace-sindhorn-2.jpg"
+images:
+  - "./images/peace-sindhorn/peace-sindhorn.jpg"
+  - "./images/peace-sindhorn/peace-sindhorn-2.jpg"
+  - "./images/peace-sindhorn/peace-sindhorn-3.jpg"
 description: "Peace Sindhorn ร้านชาในบรรยากาศร้านสมุนไพรจีนโบราณ"
 isPersonalProject: true
 lang: "th"
@@ -31,5 +35,3 @@ Courtyards) การออกแบบบ้านจีนโบราณท�
 ส่วนเคาท์เตอร์บาร์ที่เป็นอีก Signature
 หนึ่งของร้านได้ออกแบบดีเทลใหม่ให้เข้ากับความเป็นจีน
 และพัฒนาฟังก์ชันการใช้งานใหม่ให้ดีขึ้นกว่าเดิม
-
-![Peace Sindhorn 3](./images/peace-sindhorn/peace-sindhorn-3.jpg)

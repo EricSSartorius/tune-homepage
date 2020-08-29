@@ -3,6 +3,12 @@ slug: "/private-residence/en/"
 title: "Keith’s Home"
 thumbnail: "./images/private-residence/private-residence.jpg"
 hero: "./images/private-residence/private-residence.jpg"
+images:
+  - "./images/private-residence/private-residence.jpg"
+  - "./images/private-residence/private-residence-1.jpg"
+  - "./images/private-residence/private-residence-2.jpg"
+  - "./images/private-residence/private-residence-3.jpg"
+  - "./images/private-residence/private-residence-4.jpg"
 description: "Private room interior decoration project, Saladaeng One project"
 isPersonalProject: true
 lang: "en"
@@ -29,9 +35,3 @@ furniture, floating from walls and shelves using a linear light. In addition,
 all the furniture is redesigned and custom made to fit the space inside
 the room to make this room with limited space look wider and be used
 efficiently.
-
-![Keith's house 3](./images/private-residence/private-residence-3.jpg)
-
-![Keith's house 4](./images/private-residence/private-residence-4.jpg)
-
-![Keith's house](./images/private-residence/private-residence-1.jpg)

@@ -3,6 +3,12 @@ slug: "/private-residence/th/"
 title: "Keith’s Home"
 thumbnail: "./images/private-residence/private-residence.jpg"
 hero: "./images/private-residence/private-residence.jpg"
+images:
+  - "./images/private-residence/private-residence.jpg"
+  - "./images/private-residence/private-residence-1.jpg"
+  - "./images/private-residence/private-residence-2.jpg"
+  - "./images/private-residence/private-residence-3.jpg"
+  - "./images/private-residence/private-residence-4.jpg"
 description: "โปรเจคตกแต่งภายในห้องพักส่วนตัวโครงการ Saladaeng One"
 isPersonalProject: true
 lang: "th"
@@ -29,9 +35,3 @@ Saladaeng One
 นอกจากนี้เฟอร์นิเจอร์ทั้งหมดยังออกแบบใหม่และสั่งทำพิเศษเพื่อให้เหมาะสมกับ
 ขนาดพื้นที่ภายในห้อง
 ทำให้ห้องที่มีพื้นที่จำกัดดูกว้างขึ้นและใช้พื้นที่ได้อย่างมีประสิทธิภาพ
-
-![Keith's house 3](./images/private-residence/private-residence-3.jpg)
-
-![Keith's house 4](./images/private-residence/private-residence-4.jpg)
-
-![Keith's house](./images/private-residence/private-residence-1.jpg)

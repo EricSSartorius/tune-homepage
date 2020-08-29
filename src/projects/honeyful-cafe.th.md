@@ -3,6 +3,11 @@ slug: "/honeyful-cafe/th/"
 title: "Honeyful Cafe"
 thumbnail: "./images/honeyful-cafe/honeyful-cafe-3.jpg"
 hero: "./images/honeyful-cafe/honeyful-cafe-3.jpg"
+images:
+  - "./images/honeyful-cafe/honeyful-cafe-2.jpg"
+  - "./images/honeyful-cafe/honeyful-cafe-3.jpg"
+  - "./images/honeyful-cafe/honeyful-cafe-4.jpg"
+  - "./images/honeyful-cafe/honeyful-cafe-5.jpg"
 description: "Honeyful Café คาเฟ่ที่อยากให้สายหวานสนุกกับการกินน้ำผึ้ง"
 isPersonalProject: true
 lang: "th"
@@ -42,7 +47,3 @@ Honeyful Café เหมือนการก้าวเข้ามาสู�
 
 เมื่อมองผ่านกระจกภายในร้านจะเห็นลำต้นของต้นปาล์มขนาดใหญ่อยู่ในโหลแก้
 ว จึงเหมือนได้อยู่ในรังผึ้งเล็กๆ ใต้ต้นไม้ใหญ่ที่มีน้ำผึ้งให้ดื่มกินได้ตลอดทั้งวัน
-
-![Honeyful Cafe 4](./images/honeyful-cafe/honeyful-cafe-4.jpg)
-
-![Honeyful Cafe 5](./images/honeyful-cafe/honeyful-cafe-5.jpg)

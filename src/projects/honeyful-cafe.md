@@ -3,6 +3,11 @@ slug: "/honeyful-cafe/en/"
 title: "Honeyful Cafe"
 thumbnail: "./images/honeyful-cafe/honeyful-cafe-3.jpg"
 hero: "./images/honeyful-cafe/honeyful-cafe-3.jpg"
+images:
+  - "./images/honeyful-cafe/honeyful-cafe-2.jpg"
+  - "./images/honeyful-cafe/honeyful-cafe-3.jpg"
+  - "./images/honeyful-cafe/honeyful-cafe-4.jpg"
+  - "./images/honeyful-cafe/honeyful-cafe-5.jpg"
 description: "A cafe that wants sweet people to enjoy eating
 honey"
 isPersonalProject: true
@@ -37,7 +42,3 @@ can think of. Outside the shop, the same trees were preserved as part of the
 building. Looking through the glass inside the shop, you can see a large palm tree
 trunk inside a glass curved like a jar, therefore like being in a small hive under a big
 tree with honey where you can immerse yourself in honey.
-
-![Honeyful Cafe 4](./images/honeyful-cafe/honeyful-cafe-4.jpg)
-
-![Honeyful Cafe 5](./images/honeyful-cafe/honeyful-cafe-5.jpg)

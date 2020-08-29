@@ -3,6 +3,11 @@ slug: "/peace-49/th/"
 title: "Peace 49"
 thumbnail: "./images/peace-49/peace-49.jpg"
 hero: "./images/peace-49/peace-49-4.jpg"
+images:
+  - "./images/peace-49/peace-49.jpg"
+  - "./images/peace-49/peace-49-2.jpg"
+  - "./images/peace-49/peace-49-3.jpg"
+  - "./images/peace-49/peace-49-4.jpg"
 description: "ร้านชาที่พิถีพิถันในการคัดสรรและทำให้การดื่มชาเป็นเรื่องสนุก"
 isPersonalProject: true
 lang: "th"
@@ -40,5 +45,3 @@ Master มากขึ้น ได้เห็นกระบวนการช
 ลูกค้าสามารถเลือกขึ้นมานั่งบนชั้นลอยที่มีโต๊ะเล็กและเบาะรองนั่งเตรียมไว้
 จะนั่งชั้นลอยแล้วหย่อนขาหันมามาดูการชงชาที่เคาท์เตอร์บาร์ก็ได้
 หรือจะนั่งริมกระจกมองบรรยากาศข้างนอกของซอยสุขุมวิท 49 ก็ได้เช่นกัน
-
-![Peace 49 2](./images/peace-49/peace-49-2.jpg)

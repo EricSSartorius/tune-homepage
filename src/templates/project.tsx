@@ -54,21 +54,21 @@ const ProjectTemplate = ({ data, location }) => {
               <Carousel
                 swipeable={false}
                 draggable={false}
-                showDots={false}
+                // showDots={true}
                 responsive={responsive}
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
-                autoPlay={true}
+                autoPlay={false}
                 // autoPlay={deviceType !== "mobile" ? true : false}
-                autoPlaySpeed={5000}
+                // autoPlaySpeed={5000}
                 centerMode={true}
                 keyBoardControl={true}
                 // customTransition="all .5"
-                transitionDuration={900}
+                // transitionDuration={900}
                 containerClass="carousel-container"
                 // removeArrowOnDeviceType={["tablet", "mobile"]}
                 // deviceType={deviceType}
-                // dotListClass="custom-dot-list-style"
+                // dotListClass="dot-list"
                 itemClass="carousel-item-padding-40-px"
               >
                 {markdownRemark.frontmatter.images.map((image, i) => (
@@ -80,7 +80,9 @@ const ProjectTemplate = ({ data, location }) => {
                         setIsImageModalShowing(true)
                       }}
                     >
-                      <Img fluid={image.childImageSharp.fluid} />
+                      <div className="slide-img">
+                        <Img fluid={image.childImageSharp.fluid} />
+                      </div>
                     </Slide>
                   </>
                 ))}
@@ -145,6 +147,16 @@ const CarouselWrapper = styled.div`
     overflow: hidden;
     position: relative;
   }
+  .react-multi-carousel-dot button {
+    height: 1.8rem;
+    width: 1.8rem;
+    border-color: var(--textColor);
+  }
+
+  .react-multi-carousel-dot--active button {
+    background: var(--textColor);
+  }
+
   ${below.medium`
     li {
       padding: 0;
@@ -152,7 +164,7 @@ const CarouselWrapper = styled.div`
   `};
   ${media.medium`
     li {
-      padding: 30px;
+      padding: 10px;
     }
   `};
 `

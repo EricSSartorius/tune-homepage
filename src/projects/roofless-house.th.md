@@ -3,6 +3,11 @@ slug: "/roofless-house/th/"
 title: "Roofless House"
 thumbnail: "./images/roofless-house/roofless-house.jpg"
 hero: "./images/roofless-house/roofless-house-2.jpg"
+images:
+  - "./images/roofless-house/roofless-house.jpg"
+  - "./images/roofless-house/roofless-house-2.jpg"
+  - "./images/roofless-house/roofless-house-3.jpg"
+  - "./images/roofless-house/roofless-house-4.jpg"
 description: "บ้านไร้หลังคาที่ทำให้รู้สึกเหมือนได้ใช้ชีวิตกลางแจ้งตลอดเวลา"
 isPersonalProject: true
 lang: "th"
