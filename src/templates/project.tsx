@@ -164,16 +164,9 @@ const CarouselWrapper = styled.div`
     background: var(--textColor);
   }
 
-  ${below.medium`
-    li {
-      padding: 0;
-    }
-  `};
-  ${media.medium`
-    li {
-      padding: 10px;
-    }
-  `};
+  li {
+    padding: 10px;
+  }
 `
 
 export const query = graphql`
@@ -206,12 +199,12 @@ export const query = graphql`
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 1,
+    items: 3,
     slidesToSlide: 1, // optional, default to 1.
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 1,
+    items: 2,
     slidesToSlide: 1, // optional, default to 1.
   },
   mobile: {

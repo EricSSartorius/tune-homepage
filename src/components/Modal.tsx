@@ -48,12 +48,10 @@ const Modal = ({
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <ModalContent style={{ pointerEvents }} data-testid="modal">
-            {closeAction && (
-              <CloseButton onClick={closeAction}>&#10005;</CloseButton>
-            )}
-            <div>{children}</div>
-          </ModalContent>
+          {closeAction && (
+            <CloseButton onClick={closeAction}>&#10005;</CloseButton>
+          )}
+          <ModalContent style={{ pointerEvents }}>{children}</ModalContent>
         </Transport>
       </ModalWrapper>
       <Background
@@ -79,18 +77,10 @@ const ModalWrapper = styled.div`
   overflow-y: scroll;
   pointer-events: none;
   z-index: var(--highestLevel);
+  padding: 10%;
 `
 
-const ModalContent = styled.div`
-  > div {
-    > *:first-child {
-      margin-top: 0;
-    }
-    > *:last-child {
-      margin-bottom: 0;
-    }
-  }
-`
+const ModalContent = styled.div``
 
 const CloseButton = styled.button`
   pointer-events: all;
@@ -116,11 +106,8 @@ const Background = styled.div`
 
 const Transport = styled(motion.div)`
   position: relative;
-  width: 90%;
-  margin-top: auto;
-  margin-bottom: auto;
+  width: 100%;
   min-width: 320px;
-  max-width: 75vw;
 `
 
 export default ModalAnimation
