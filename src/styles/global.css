@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "SukhunvitSet-Light";
+  src: url("../fonts/SukhumvitSet-Light.woff");
+  src: url("../fonts/SukhumvitSet-Light.ttf");
+}
+
 html {
   /* Sets 1 REM to 10px */
   font-size: 62.5%;
