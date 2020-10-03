@@ -3,6 +3,13 @@ slug: "/th/project/bite-me-softly/"
 title: "Bite Me Softly"
 thumbnail: "./images/bite-me-softly/bite-me-softly-03.jpg"
 hero: "./images/bite-me-softly/bite-me-softly-03.jpg"
+images:
+  - "./images/bite-me-softly/bite-me-softly-01.jpg"
+  - "./images/bite-me-softly/bite-me-softly-02.jpg"
+  - "./images/bite-me-softly/bite-me-softly-03.jpg"
+  - "./images/bite-me-softly/bite-me-softly-04.jpg"
+  - "./images/bite-me-softly/bite-me-softly-05.jpg"
+  - "./images/bite-me-softly/bite-me-softly-06.jpg"
 description: "คาเฟ่เล็กในรั้วบ้านที่ล้อมรอบด้วยต้นไม้ใหญ่"
 isPersonalProject: true
 lang: "th"

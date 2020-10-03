@@ -3,10 +3,16 @@ slug: "/project/bite-me-softly/"
 title: "Bite Me Softly"
 thumbnail: "./images/bite-me-softly/bite-me-softly-03.jpg"
 hero: "./images/bite-me-softly/bite-me-softly-03.jpg"
-description: "A small cafe in a gated house surrounded by big trees.
-"
+images:
+  - "./images/bite-me-softly/bite-me-softly-01.jpg"
+  - "./images/bite-me-softly/bite-me-softly-02.jpg"
+  - "./images/bite-me-softly/bite-me-softly-03.jpg"
+  - "./images/bite-me-softly/bite-me-softly-04.jpg"
+  - "./images/bite-me-softly/bite-me-softly-05.jpg"
+  - "./images/bite-me-softly/bite-me-softly-06.jpg"
+description: "A small cafe in a gated house surrounded by big trees."
 isPersonalProject: true
-lang: 'en'
+lang: "en"
 ---
 
 Bite Me Softly is a cafe for snacks, tea and food in Tor Kai Chae Road by Chao, Tawjan Boonyasingha, a young woman who loves to cook as well as eating. Chao has long been a person who likes to cook and sell snacks under the name of Bite Me Softly since before there was no storefront. From her long baking experience and her crafting recipes that are adapted to the Thai palate, I wanted to build a cafe that embraces everything and is in an area that she can manage by herself. Bite Me Softly now has a small cafe in the same fence as the house, but the building is separated from her house by a landscape contour.

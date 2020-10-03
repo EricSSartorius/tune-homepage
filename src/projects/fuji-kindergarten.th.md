@@ -3,6 +3,12 @@ slug: "/th/project/fuji-kindergarten/"
 title: "Fuji Kindergarten"
 thumbnail: "./images/fuji-kindergarten/tezuka-02.jpg"
 hero: "./images/fuji-kindergarten/tezuka-02.jpg"
+images:
+  - "./images/fuji-kindergarten/tezuka-01.jpg"
+  - "./images/fuji-kindergarten/tezuka-02.jpg"
+  - "./images/fuji-kindergarten/tezuka-03.jpg"
+  - "./images/fuji-kindergarten/tezuka-04.jpg"
+  - "./images/fuji-kindergarten/tezuka-05.jpg"
 description: "โรงเรียนต้นไม้ใหญ่ที่อยากให้เด็กๆ
 สนุกกับการเรียนรู้ท่ามกลางธรรมชาติ"
 isPersonalProject: true
