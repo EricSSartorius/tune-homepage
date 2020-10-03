@@ -9,8 +9,6 @@ import LanguageSelector from "../components/LanguageSelector"
 import Modal from "../components/Modal"
 import Layout from "../layouts"
 
-import "react-multi-carousel/lib/styles.css"
-
 const ProjectTemplate = ({ data, location }) => {
   const { markdownRemark } = data
   const [isImageModalShowing, setIsImageModalShowing] = useState(false)
