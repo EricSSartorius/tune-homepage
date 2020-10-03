@@ -14,7 +14,7 @@ isPersonalProject: true
 lang: 'en'
 ---
 
-Honeyful Café is located at Yui&#39;s Ariston Sukhumvit 24
+Honeyful Café is located at Yui's Ariston Sukhumvit 24
 Hotel - Natthawan Supapong. She is a former Le Cordon Bleu student
 chef who fell in love with honey. I decided to create this cafe to serve the
 story of honey for people to know and enjoy eating honey as she felt.
@@ -24,7 +24,7 @@ story of honey for people to know and enjoy eating honey as she felt.
 In this project, I also had a chance to help with the branding, and
 overlook the entire design and construction process. The concept of
 Honeyful Café is like stepping into the world of bees with sweet honey
-and various flavors and forms waiting to be discovered. Yui&#39;s original
+and various flavors and forms waiting to be discovered. Yui's original
 idea was to have a greenhouse in front, so I designed the front
 greenhouse to be a hexagonal honeycomb shape and put this shape in
 other parts of the store, such as the logo, the pattern on the wood floor,

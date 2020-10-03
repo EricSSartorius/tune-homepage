@@ -51,8 +51,8 @@ export const query = graphql`
       }
     }
     #
-    bhavanaHouse: file(
-      relativePath: { eq: "images/bhavana-house/bhavana-house-03.jpg" }
+    moonRiverHouse: file(
+      relativePath: { eq: "images/moon-river-house/moon-river-house-04.jpg" }
     ) {
       childImageSharp {
         fluid {

@@ -1,6 +1,6 @@
 ---
 slug: "/project/private-residence/"
-title: "Keith’s Home"
+title: "Kidd’s Home"
 thumbnail: "./images/private-residence/private-residence.jpg"
 hero: "./images/private-residence/private-residence.jpg"
 images:
@@ -14,15 +14,15 @@ isPersonalProject: true
 lang: "en"
 ---
 
-Keith is one of Khao&#39;s customers that I have designed for. He became
+Kidd is one of Khao's customers that I have designed for. He became
 my customer because he liked the design and interior work I did with
 Khao, and forwarded to contact me to decorate the interior of his private
 residence of Saladaeng One project.
 
-![Keith's house 2](./images/private-residence/private-residence-2.jpg)
+![Kidd's house 2](./images/private-residence/private-residence-2.jpg)
 
 Originally, this room was an empty room without interior design and
-decoration so Keith let me design and in the style that I am comfortable
+decoration so Kidd let me design and in the style that I am comfortable
 with including giving the opportunity to experiment with something new
 in the design of this room together. The area of ​​approximately 50 square
 meters is designed to look wide and make the most of the space. From a

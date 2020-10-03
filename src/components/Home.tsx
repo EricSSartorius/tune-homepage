@@ -120,8 +120,8 @@ const Home = ({ data, lang }) => {
                 }}
               />
               <HomeImg
-                fluid={data.bhavanaHouse.childImageSharp.fluid}
-                alt="Bhavana house"
+                fluid={data.moonRiverHouse.childImageSharp.fluid}
+                alt="Moon River and Floating House"
               />
             </motion.div>
           </Grid>

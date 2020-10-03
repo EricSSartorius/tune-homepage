@@ -22,16 +22,16 @@ opportunity to work with while on a journey to gain more experience in
 Japan after graduation. I was involved in the conceptual design of Ring
 Around The Tree, a circular building that surrounds a big tree.
 
-Fuji Kindergarten is a school that places great emphasis on children&#39;s
-play. The school&#39;s buildings and environment are spherical. Tezuka
+Fuji Kindergarten is a school that places great emphasis on children's
+play. The school's buildings and environment are spherical. Tezuka
 observed the playing behavior of the children and found that nature of
 children is to often run in a circle. The shape of the building and the track
 is therefore designed in a circular motion to match the direction of the
-child&#39;s running.
+child's running.
 
 ‘Ring Around The Tree’ is a circular building with a total of 7 floors, but
 only 5 meters high, because all the scales such as sinks, ceilings, steps,
-etc. are designed to fit the child&#39;s body. The circular building is designed
+etc. are designed to fit the child's body. The circular building is designed
 to allow you to run and play safely on the school building. More
 importantly, the building structure is still a structure that has no clear
 boundaries. There is no block between the natural classroom and the

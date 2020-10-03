@@ -8,7 +8,7 @@ images:
   - "./images/roofless-house/roofless-house-2.jpg"
   - "./images/roofless-house/roofless-house-3.jpg"
   - "./images/roofless-house/roofless-house-4.jpeg"
-description: "A roofless house that makes you feel like you&#39;re always outdoors"
+description: "A roofless house that makes you feel like you're always outdoors"
 isPersonalProject: true
 lang: "en"
 ---
@@ -21,7 +21,7 @@ for more experience in the United States.
 
 Craig Steel Architecture is a San Francisco-based architect company
 that I contacted for several months while in Thailand and finally got the
-opportunity to come to the event. While working with Craig&#39;s team, the
+opportunity to come to the event. While working with Craig's team, the
 Roofless House project, allowed me to learn how to build good
 relationships with clients that help architects and homeowners work on
 designing together – to meet the needs of customers in terms of both
@@ -32,7 +32,7 @@ function and lifestyle.
 Roofless House is a house without a roof. It has a strange shape that
 similar to a bean. The house is located on the outskirts of Silicon Valley.
 It is a large detached house located in a wide open area surrounded by
-big trees. The homeowners&#39; challenge is the one-story house that feels
+big trees. The homeowners' challenge is the one-story house that feels
 most like being outdoors as possible. The shape of the Roofless House
 is inspired by a sculpture by British artist Henry Moore, whose work is to
 design abstract art in the area. Because the homeowners are creative

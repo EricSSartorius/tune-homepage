@@ -1,6 +1,6 @@
 ---
 slug: "/th/project/private-residence/"
-title: "Keith’s Home"
+title: "Kidd’s Home"
 thumbnail: "./images/private-residence/private-residence.jpg"
 hero: "./images/private-residence/private-residence.jpg"
 images:
@@ -19,7 +19,7 @@ lang: "th"
 ทำในร้าน Khao จึงติดต่อเข้ามาให้ตกแต่งภายในห้องส่วนตัวของโครงการ
 Saladaeng One
 
-![Keith's house 2](./images/private-residence/private-residence-2.jpg)
+![Kidd's house 2](./images/private-residence/private-residence-2.jpg)
 
 แต่เดิมห้องนี้เป็นห้องเปล่าที่ยังไม่มีการออกแบบและตกแต่งภายใน
 คุณคีธจึงให้ผมออกแบบให้ทั้งหมดและให้ออกแบบในสไตล์ที่ผมถนัด
