@@ -3,6 +3,7 @@ module.exports = {
     title: `Tune & his Flying Home Studio`,
     description: `Tune & his Flying Home Studio`,
     author: `@_purefunc`,
+    image: "./logo.jpg",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

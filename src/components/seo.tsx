@@ -1,7 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import defaultSeoImage from "../images/logo.png"
 
 type Props = {
   description?: string
@@ -26,6 +25,7 @@ function SEO({
             title
             description
             author
+            image
           }
         }
       }
@@ -33,6 +33,7 @@ function SEO({
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const seoImage = image || site.metaData.image
 
   return (
     <Helmet
@@ -48,7 +49,7 @@ function SEO({
         },
         {
           property: `image`,
-          content: image || defaultSeoImage,
+          content: seoImage,
         },
         {
           property: `og:title`,
@@ -64,7 +65,7 @@ function SEO({
         },
         {
           property: `og:image`,
-          content: image || defaultSeoImage,
+          content: seoImage,
         },
         {
           name: `twitter:card`,
@@ -84,7 +85,7 @@ function SEO({
         },
         {
           property: `twitter:image`,
-          content: image || defaultSeoImage,
+          content: seoImage,
         },
       ].concat(meta)}
     />
