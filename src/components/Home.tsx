@@ -46,7 +46,7 @@ const Home = ({ data, lang }) => {
 
   return (
     <>
-      <SEO lang={lang} />
+      <SEO lang={lang} title="Home" />
       <Img fluid={heroImg.childImageSharp.fluid} style={{ height: "100vh" }} />
 
       <Wrapper>
