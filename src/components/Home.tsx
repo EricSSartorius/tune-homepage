@@ -37,7 +37,7 @@ const contactVariants = {
   },
 }
 
-const Home = ({ data, lang }) => {
+const Home = ({ data, lang, pathname }) => {
   const [rightImgShowing, setRightImgShowing] = useState(false)
   const [leftImgShowing, setLeftImgShowing] = useState(false)
   const [isContactShowing, setIsContactShowing] = useState(false)
@@ -48,7 +48,12 @@ const Home = ({ data, lang }) => {
 
   return (
     <>
-      <SEO lang={lang} title="Home" />
+      <SEO
+        lang={lang}
+        title="Home"
+        pathname={pathname}
+        image={heroImg.childImageSharp.fixed.src}
+      />
       <Img fluid={heroImg.childImageSharp.fluid} style={{ height: "100vh" }} />
 
       <Wrapper>

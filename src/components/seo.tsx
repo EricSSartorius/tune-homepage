@@ -7,7 +7,8 @@ type Props = {
   lang?: string
   meta?: []
   title?: string
-  image?: string
+  image: string
+  pathname?: string
 }
 
 function SEO({
@@ -15,7 +16,8 @@ function SEO({
   lang = "en",
   meta = [],
   title = "",
-  image = "",
+  image,
+  pathname = "",
 }: Props) {
   const { site } = useStaticQuery(
     graphql`
@@ -25,7 +27,7 @@ function SEO({
             title
             description
             author
-            image
+            siteUrl
           }
         }
       }
@@ -33,7 +35,7 @@ function SEO({
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const seoImage = image || site.metaData.image
+  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
 
   return (
     <Helmet
@@ -42,6 +44,16 @@ function SEO({
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={
+        canonical
+          ? [
+              {
+                rel: "canonical",
+                href: canonical,
+              },
+            ]
+          : []
+      }
       meta={[
         {
           name: `description`,
@@ -49,7 +61,7 @@ function SEO({
         },
         {
           property: `image`,
-          content: seoImage,
+          content: image,
         },
         {
           property: `og:title`,
@@ -65,7 +77,7 @@ function SEO({
         },
         {
           property: `og:image`,
-          content: seoImage,
+          content: image,
         },
         {
           name: `twitter:card`,
@@ -85,7 +97,7 @@ function SEO({
         },
         {
           property: `twitter:image`,
-          content: seoImage,
+          content: image,
         },
       ].concat(meta)}
     />

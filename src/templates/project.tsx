@@ -21,6 +21,7 @@ const ProjectTemplate = ({ data, location }) => {
         title={markdownRemark.frontmatter.title}
         lang={markdownRemark.frontmatter.lang}
         image={markdownRemark.frontmatter.hero.childImageSharp.fixed.src}
+        pathname={location.pathname}
       />
       <HeroImg
         fluid={markdownRemark.frontmatter.hero.childImageSharp.fluid}

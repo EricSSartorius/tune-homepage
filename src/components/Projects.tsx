@@ -6,7 +6,7 @@ import { Grid } from "../styles"
 import SEO from "../components/seo"
 import { Wrapper } from "../styles"
 
-const Projects = ({ data, lang }) => {
+const Projects = ({ data, lang, pathname }) => {
   const projects = data.allMarkdownRemark.edges
 
   return (
@@ -15,6 +15,8 @@ const Projects = ({ data, lang }) => {
         title="Projects"
         description="A collection of past and current projects from both Tune & Flying Home Studio"
         lang={lang}
+        pathname={pathname}
+        image={data.heroImg.childImageSharp.fixed.src}
       />
       <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
       <Wrapper>

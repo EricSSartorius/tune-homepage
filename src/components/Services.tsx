@@ -1,5 +1,4 @@
 import React, { Fragment } from "react"
-import { graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
@@ -9,15 +8,20 @@ import { english, thai } from "../translation/services.yml"
 const Services = ({
   data,
   lang,
+  pathname,
 }: {
   data: {
     heroImg: {
       childImageSharp: {
         fluid: string
+        fixed: {
+          src: string
+        }
       }
     }
   }
   lang: "en" | "th"
+  pathname: string
 }) => {
   const currentLanguage = lang === "th" ? thai : english
   return (
@@ -26,6 +30,8 @@ const Services = ({
         title="Services"
         description="Breakdown of Architecture and Interior design services"
         lang={lang}
+        pathname={pathname}
+        image={data.heroImg.childImageSharp.fixed.src}
       />
       <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
       <Wrapper>

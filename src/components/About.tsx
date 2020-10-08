@@ -8,15 +8,20 @@ import { english, thai } from "../translation/about.yml"
 const About = ({
   data,
   lang,
+  pathname,
 }: {
   data: {
     heroImg: {
       childImageSharp: {
         fluid: string
+        fixed: {
+          src: string
+        }
       }
     }
   }
   lang: "en" | "th"
+  pathname: string
 }) => {
   const currentLanguage = lang === "th" ? thai : english
 
@@ -26,6 +31,8 @@ const About = ({
         title="About"
         description="About Tune & Flying Home Studio"
         lang={lang}
+        pathname={pathname}
+        image={data.heroImg.childImageSharp.fixed.src}
       />
       <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
       <Wrapper>

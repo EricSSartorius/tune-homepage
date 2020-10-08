@@ -6,8 +6,11 @@ import Layout from "../layouts"
 const IndexPage = ({
   data,
   location,
+  pathname,
 }: {
-  location: object
+  location: {
+    pathname: string
+  }
   data: {
     heroImg: {
       childImageSharp: {
@@ -17,7 +20,7 @@ const IndexPage = ({
   }
 }) => (
   <Layout lang="en" location={location}>
-    <Home data={data} lang="en" />
+    <Home data={data} lang="en" pathname={location.pathname} />
   </Layout>
 )
 
@@ -29,6 +32,9 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 1440, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
+        }
+        fixed {
+          src
         }
       }
     }
