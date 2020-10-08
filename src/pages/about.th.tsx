@@ -7,7 +7,9 @@ const AboutPageTH = ({
   data,
   location,
 }: {
-  location: object
+  location: {
+    pathname: string
+  }
   data: {
     heroImg: {
       childImageSharp: {
@@ -17,7 +19,7 @@ const AboutPageTH = ({
   }
 }) => (
   <Layout lang="th" location={location}>
-    <About lang="th" data={data} />
+    <About lang="th" data={data} pathname={location.pathname} />
   </Layout>
 )
 
@@ -29,6 +31,9 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 1440) {
           ...GatsbyImageSharpFluid_withWebp
+        }
+        fixed {
+          src
         }
       }
     }

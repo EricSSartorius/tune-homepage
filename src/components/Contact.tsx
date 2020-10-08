@@ -9,15 +9,20 @@ import { english, thai } from "../translation/contact.yml"
 const Contact = ({
   data,
   lang,
+  pathname,
 }: {
   data: {
     heroImg: {
       childImageSharp: {
         fluid: string
+        fixed: {
+          src: string
+        }
       }
     }
   }
   lang: "en" | "th"
+  pathname: string
 }) => {
   const currentLanguage = lang === "th" ? thai : english
 
@@ -27,6 +32,8 @@ const Contact = ({
         title="Contact"
         description="Get in touch with Tune & Flying Home Studio"
         lang={lang}
+        pathname={pathname}
+        image={data.heroImg.childImageSharp.fixed.src}
       />
       <HeroImg fluid={data.heroImg.childImageSharp.fluid} />
       <Wrapper>
