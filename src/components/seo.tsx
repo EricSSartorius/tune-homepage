@@ -1,15 +1,23 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import defaultSeoImage from "../images/logo.png"
 
 type Props = {
   description?: string
   lang?: string
   meta?: []
   title?: string
+  image?: string
 }
 
-function SEO({ description = "", lang = "en", meta = [], title = "" }: Props) {
+function SEO({
+  description = "",
+  lang = "en",
+  meta = [],
+  title = "",
+  image = "",
+}: Props) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -39,6 +47,10 @@ function SEO({ description = "", lang = "en", meta = [], title = "" }: Props) {
           content: metaDescription,
         },
         {
+          property: `image`,
+          content: image || defaultSeoImage,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -49,6 +61,10 @@ function SEO({ description = "", lang = "en", meta = [], title = "" }: Props) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: image || defaultSeoImage,
         },
         {
           name: `twitter:card`,
@@ -65,6 +81,10 @@ function SEO({ description = "", lang = "en", meta = [], title = "" }: Props) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          property: `twitter:image`,
+          content: image || defaultSeoImage,
         },
       ].concat(meta)}
     />

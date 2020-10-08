@@ -20,6 +20,7 @@ const ProjectTemplate = ({ data, location }) => {
       <SEO
         title={markdownRemark.frontmatter.title}
         lang={markdownRemark.frontmatter.lang}
+        image={markdownRemark.frontmatter.hero.childImageSharp.fixed.src}
       />
       <HeroImg
         fluid={markdownRemark.frontmatter.hero.childImageSharp.fluid}
@@ -180,7 +181,7 @@ const CarouselWrapper = styled.div`
 `
 
 export const query = graphql`
-  query PostQuery($slug: String!) {
+  query ProjectQuery($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -192,6 +193,9 @@ export const query = graphql`
           childImageSharp {
             fluid(maxWidth: 1440, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
+            }
+            fixed {
+              src
             }
           }
         }
