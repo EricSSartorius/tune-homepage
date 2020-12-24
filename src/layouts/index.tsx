@@ -2,10 +2,8 @@ import React from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
-import "../styles/vars.css"
-import "../styles/reset.css"
-import "../styles/global.css"
-import "../styles/classes.css"
+import "../styles/styles.css"
+import "react-multi-carousel/lib/styles.css"
 
 const Layout = ({ children, location, lang }) => {
   return (

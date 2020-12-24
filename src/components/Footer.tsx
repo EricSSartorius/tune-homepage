@@ -25,10 +25,10 @@ const Footer = ({ location, lang }) => {
   )
 
   const siteLinks = [
-    {
-      text: currentLanguage.menu.about,
-      to: "/about/",
-    },
+    // {
+    //   text: currentLanguage.menu.about,
+    //   to: "/about/",
+    // },
     {
       text: currentLanguage.menu.services,
       to: "/services/",

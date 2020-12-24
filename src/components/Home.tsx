@@ -9,8 +9,6 @@ import Carousel from "react-multi-carousel"
 import SEO from "../components/seo"
 import { english, thai } from "../translation/homepage.yml"
 
-import "react-multi-carousel/lib/styles.css"
-
 const variants = {
   open: {
     transition: { staggerChildren: 0.07, delayChildren: 0.2 },
@@ -50,7 +48,8 @@ const Home = ({ data, lang, pathname }) => {
     <>
       <SEO
         lang={lang}
-        title="Home"
+        title={currentLanguage.seo.title}
+        description={currentLanguage.seo.description}
         pathname={pathname}
         image={heroImg.childImageSharp.fixed.src}
       />

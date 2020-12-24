@@ -1,4 +1,8 @@
 english:
+  seo:
+    title: Services
+    description: Breakdown of Architecture and Interior design services
+    
   title: Breakdown of Architecture and Interior design services
   services:
     - title: Conceptual Design
@@ -27,6 +31,10 @@ english:
   notIncluded: "*not included: Permit Drawing Architect fee, Electrical engineer, Sanitary engineer, Land Survey, Landscape Design"
 
 thai:
+  seo:
+    title: Services
+    description: Breakdown of Architecture and Interior design services
+
   title: รายละเอียดของบริการออกแบบสถาปัตยกรรมและตกแต่งภายใน
   services:
     - title: แนวคิดการออกแบบงานสถาปัตยกรรม

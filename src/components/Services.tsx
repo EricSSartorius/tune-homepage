@@ -27,8 +27,8 @@ const Services = ({
   return (
     <>
       <SEO
-        title="Services"
-        description="Breakdown of Architecture and Interior design services"
+        title={currentLanguage.seo.title}
+        description={currentLanguage.seo.description}
         lang={lang}
         pathname={pathname}
         image={data.heroImg.childImageSharp.fixed.src}

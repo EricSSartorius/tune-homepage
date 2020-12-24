@@ -1,4 +1,8 @@
 english:
+  seo:
+    title: Home
+    description: Tune and his Flying Home offer attention to detail every step of the way while making your dream become a reality
+
   mission: >
     Tune and his Flying Home offer attention to detail every step of the way while making your dream become a reality
   process:
@@ -14,6 +18,10 @@ english:
     text3: I’d love to hear from you.
 
 thai:
+  seo:
+    title: Home
+    description: Tune and his Flying Home offer attention to detail every step of the way while making your dream become a reality
+    
   mission: >
     Tune and Flying Home Studio สตูดิโอออกแบบภายในและภายนอก
     ที่จะทำให้ความฝันของคุณกลายเป็นจริง

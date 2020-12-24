@@ -19,10 +19,10 @@ const Header = ({ location, lang }) => {
   const currentLanguage = lang === "th" ? thai : english
   const thaiPrefix = lang === "th" ? "/th" : ""
   const links = [
-    {
-      text: currentLanguage.menu.about,
-      to: thaiPrefix + "/about/",
-    },
+    // {
+    //   text: currentLanguage.menu.about,
+    //   to: thaiPrefix + "/about/",
+    // },
     {
       text: currentLanguage.menu.services,
       to: thaiPrefix + "/services/",

@@ -28,8 +28,8 @@ const About = ({
   return (
     <>
       <SEO
-        title="About"
-        description="About Tune & Flying Home Studio"
+        title={currentLanguage.seo.title}
+        description={currentLanguage.seo.description}
         lang={lang}
         pathname={pathname}
         image={data.heroImg.childImageSharp.fixed.src}

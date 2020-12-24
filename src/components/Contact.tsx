@@ -29,8 +29,8 @@ const Contact = ({
   return (
     <>
       <SEO
-        title="Contact"
-        description="Get in touch with Tune & Flying Home Studio"
+        title={currentLanguage.seo.title}
+        description={currentLanguage.seo.description}
         lang={lang}
         pathname={pathname}
         image={data.heroImg.childImageSharp.fixed.src}

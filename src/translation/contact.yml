@@ -1,4 +1,8 @@
 english:
+  seo:
+    title: Contact
+    description: Get in touch with Tune & Flying Home Studio
+    
   workTogether: Let’s Work Together
   inquiries: For design inquiries
   address1: 87 Chalermpong, Saimai
@@ -6,6 +10,10 @@ english:
   address3: Thailand
 
 thai:
+  seo:
+    title: Contact
+    description: Get in touch with Tune & Flying Home Studio
+
   workTogether: Let’s Work Together
   inquiries: สอบถามข้อมูลการออกแบบ
   address1: 87 เฉลิมพงษ์, สายไหม
