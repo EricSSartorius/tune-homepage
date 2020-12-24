@@ -17,6 +17,7 @@ const ProjectTemplate = ({ data, location }) => {
     <Layout lang={markdownRemark.frontmatter.lang} location={location}>
       <SEO
         title={markdownRemark.frontmatter.title}
+        description={markdownRemark.frontmatter.description}
         lang={markdownRemark.frontmatter.lang}
         image={markdownRemark.frontmatter.hero.childImageSharp.fixed.src}
         pathname={location.pathname}

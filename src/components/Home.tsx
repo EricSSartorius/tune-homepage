@@ -48,7 +48,8 @@ const Home = ({ data, lang, pathname }) => {
     <>
       <SEO
         lang={lang}
-        title="Home"
+        title={currentLanguage.seo.title}
+        description={currentLanguage.seo.description}
         pathname={pathname}
         image={heroImg.childImageSharp.fixed.src}
       />
