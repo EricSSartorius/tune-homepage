@@ -6,7 +6,6 @@ import Layout from "../layouts"
 const IndexPage = ({
   data,
   location,
-  pathname,
 }: {
   location: {
     pathname: string

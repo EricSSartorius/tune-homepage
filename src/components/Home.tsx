@@ -321,6 +321,7 @@ const Slide = styled.div`
     position: absolute;
     bottom: 0;
     right: 0;
+    top: 0;
     padding: 2rem;
     color: var(--white);
     z-index: 1000;

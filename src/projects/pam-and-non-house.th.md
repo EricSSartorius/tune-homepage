@@ -7,6 +7,11 @@ images:
   - "./images/pam-and-non-house/pam-and-non-house.jpg"
   - "./images/pam-and-non-house/pam-and-non-house-2.jpg"
   - "./images/pam-and-non-house/pam-and-non-house-3.jpeg"
+  - "./images/pam-and-non-house/pam-and-non-house-4.jpg"
+  - "./images/pam-and-non-house/pam-and-non-house-5.jpg"
+  - "./images/pam-and-non-house/pam-and-non-house-6.jpg"
+  - "./images/pam-and-non-house/pam-and-non-house-7.jpg"
+  - "./images/pam-and-non-house/pam-and-non-house-8.jpg"
 description: "โปรเจคออกแบบและตกแต่งภายในสไตล์แสกนดิเนเวียน"
 isPersonalProject: false
 lang: "th"

@@ -8,6 +8,11 @@ images:
   - "./images/honeyful-cafe/honeyful-cafe-3.jpg"
   - "./images/honeyful-cafe/honeyful-cafe-4.jpg"
   - "./images/honeyful-cafe/honeyful-cafe-5.jpg"
+  - "./images/honeyful-cafe/honeyful-cafe-6.jpg"
+  - "./images/honeyful-cafe/honeyful-cafe-7.jpg"
+  - "./images/honeyful-cafe/honeyful-cafe-8.jpg"
+  - "./images/honeyful-cafe/honeyful-cafe-9.jpg"
+  - "./images/honeyful-cafe/honeyful-cafe-10.jpg"
 description: "A cafe that wants sweet people to enjoy eating
 honey"
 isPersonalProject: true
