@@ -1,18 +1,17 @@
 ---
 slug: "/th/project/honeyful-cafe/"
 title: "Honeyful Cafe"
-thumbnail: "./images/honeyful-cafe/honeyful-cafe-3.jpg"
-hero: "./images/honeyful-cafe/honeyful-cafe-3.jpg"
+thumbnail: "./images/honeyful-cafe/honeyful-cafe-8.jpg"
+hero: "./images/honeyful-cafe/honeyful-cafe-8.jpg"
 images:
-  - "./images/honeyful-cafe/honeyful-cafe-2.jpg"
+
   - "./images/honeyful-cafe/honeyful-cafe-3.jpg"
   - "./images/honeyful-cafe/honeyful-cafe-4.jpg"
   - "./images/honeyful-cafe/honeyful-cafe-5.jpg"
   - "./images/honeyful-cafe/honeyful-cafe-6.jpg"
   - "./images/honeyful-cafe/honeyful-cafe-7.jpg"
-  - "./images/honeyful-cafe/honeyful-cafe-8.jpg"
   - "./images/honeyful-cafe/honeyful-cafe-9.jpg"
-  - "./images/honeyful-cafe/honeyful-cafe-10.jpg"
+  - "./images/honeyful-cafe/honeyful-cafe-8.jpg"
 description: "Honeyful Café คาเฟ่ที่อยากให้สายหวานสนุกกับการกินน้ำผึ้ง"
 isPersonalProject: true
 lang: "th"
@@ -24,7 +23,7 @@ Honeyful Café คาเฟ่น้ำผึ้งที่ตั้งอย�
 จึงตั้งใจทำคาเฟ่นี้ขึ้นมาเพื่อเสิร์ฟเรื่องราวของน้ำผึ้งให้คนได้รู้จักและสนุกกันการ
 กินน้ำผึ้งอย่างที่เธอรู้สึก
 
-![Honeyful Cafe 2](./images/honeyful-cafe/honeyful-cafe-2.jpg)
+![Honeyful Cafe 2](./images/honeyful-cafe/honeyful-cafe-4.jpg)
 
 โปรเจคนี้เป็นโปรเจคนี้ผมมีโอกาสได้ช่วยตั้งแต่การออกแบบโลโก้
 ออกแบบคอนเซ็ปต์ร้าน
