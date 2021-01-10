@@ -67,6 +67,8 @@ const ProjectGrid = styled(Grid)`
       margin: 0;
       left: 0;
       opacity: 0;
+      padding: 10px;
+      text-align: center;
       transition: opacity 0.5s ease;
       background: rgba(0, 0, 0, 0.4);
       display: flex;
