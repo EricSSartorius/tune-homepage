@@ -1,9 +1,10 @@
 ---
 slug: "/project/honeyful-cafe/"
 title: "Honeyful Cafe"
-thumbnail: "./images/honeyful-cafe/honeyful-cafe-8.jpg"
-hero: "./images/honeyful-cafe/honeyful-cafe-8.jpg"
+thumbnail: "./images/honeyful-cafe/honeyful-cafe-2.jpg"
+hero: "./images/honeyful-cafe/honeyful-cafe-2.jpg"
 images:
+  - "./images/honeyful-cafe/honeyful-cafe-2.jpg"
   - "./images/honeyful-cafe/honeyful-cafe-3.jpg"
   - "./images/honeyful-cafe/honeyful-cafe-4.jpg"
   - "./images/honeyful-cafe/honeyful-cafe-5.jpg"
@@ -37,7 +38,7 @@ seamlessly functional and unified. When used from above it will be used
 as a chair, but in the greenhouse area below, it will be used as a table to
 make limited spaces look more spacious with furniture designs.
 
-![Honeyful Cafe 3](./images/honeyful-cafe/honeyful-cafe-3.jpg)
+![Honeyful Cafe 3](./images/honeyful-cafe/honeyful-cafe-1.jpg)
 
 I wanted to brighten up this hexagon-concept store by putting soft lights to the
 ceiling. It also makes the shop look wide and there is more space than you actually

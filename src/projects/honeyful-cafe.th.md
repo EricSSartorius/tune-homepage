@@ -1,10 +1,10 @@
 ---
 slug: "/th/project/honeyful-cafe/"
 title: "Honeyful Cafe"
-thumbnail: "./images/honeyful-cafe/honeyful-cafe-8.jpg"
-hero: "./images/honeyful-cafe/honeyful-cafe-8.jpg"
+thumbnail: "./images/honeyful-cafe/honeyful-cafe-2.jpg"
+hero: "./images/honeyful-cafe/honeyful-cafe-2.jpg"
 images:
-
+  - "./images/honeyful-cafe/honeyful-cafe-2.jpg"
   - "./images/honeyful-cafe/honeyful-cafe-3.jpg"
   - "./images/honeyful-cafe/honeyful-cafe-4.jpg"
   - "./images/honeyful-cafe/honeyful-cafe-5.jpg"
