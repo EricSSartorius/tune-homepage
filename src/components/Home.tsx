@@ -174,15 +174,18 @@ const Home = ({ data, lang, pathname }) => {
               )
               .map(({ node }) => (
                 <Slide key={node.frontmatter.slug}>
-                  <Link to={node.frontmatter.slug}>
-                    <div className="slide-img">
-                      <Img
-                        fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
-                        alt={node.frontmatter.title}
-                      />
-                    </div>
-                  </Link>
-                  <p>{node.frontmatter.title}</p>
+                  <div className="slide-img">
+                    <Img
+                      fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+                      alt={node.frontmatter.title}
+                    />
+                  </div>
+
+                  <p>
+                    <Link to={node.frontmatter.slug}>
+                      {node.frontmatter.title}
+                    </Link>
+                  </p>
                 </Slide>
               ))}
           </Carousel>
@@ -317,19 +320,22 @@ const Slide = styled.div`
   overflow: hidden;
   transition: 0.5s ease all;
   p {
-    transition: 0.5s ease all;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    top: 0;
-    padding: 2rem;
-    color: var(--white);
-    z-index: 1000;
-    font-family: var(--headingFont);
-    font-size: var(--largeFontSize);
-    width: 100%;
-    background: rgba(0, 0, 0, 0.4);
     margin: 0;
+    a {
+      transition: 0.5s ease all;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      top: 0;
+      padding: 2rem;
+      color: var(--white);
+      z-index: 1000;
+      font-family: var(--headingFont);
+      font-size: var(--largeFontSize);
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      margin: 0;
+    }
   }
   &.th {
     font-family: var(--thaiFont);
