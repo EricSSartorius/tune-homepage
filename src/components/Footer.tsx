@@ -89,8 +89,8 @@ const Footer = ({ location, lang }) => {
             <LanguageSelector location={location} lang={lang} />
             <p className="pure-func">
               Crafted by{" "}
-              <a href="https://www.purefunc.dev/" target="_blank">
-                <strong>Pure Func LLC</strong>
+              <a href="https://www.purefunc.io/" target="_blank">
+                <strong>Pure Func</strong>
               </a>
             </p>
           </div>

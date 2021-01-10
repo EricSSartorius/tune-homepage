@@ -3,7 +3,7 @@
   "private": true,
   "description": "Tune and his Flying Home Studio",
   "version": "0.1.0",
-  "author": "Pure Func LLC <eric@purefunc.com>",
+  "author": "Pure Func <eric@purefunc.io>",
   "dependencies": {
     "framer-motion": "^1.11.1",
     "gatsby": "^2.23.3",
