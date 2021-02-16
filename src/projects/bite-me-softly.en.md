@@ -20,3 +20,6 @@ Bite Me Softly is a cafe for snacks, tea and food in Tor Kai Chae Road by Chao, 
 The building has an area of ​​25 square meters and has two old trees already in the fence of the house, so I used these two trees to determine the shape of the building and try to allocate the available space to the maximum benefit. The concept of this restaurant is to make a 'Café Around The Tree', a cafe surrounded by big trees. A warm white color and clear floated glass is used to make the building look bright and broad.
 
 When entering the store, it will not feel cramped. If you look outside the shop, you will see a garden and large trees to hide the privacy of the house next to it. After several experiments with various lighting designs, I decided to orient lighting upwards for a softer, more comfortable light than directly from the ceiling.
+
+Architrecture and Interior: Tune Kantharoup / Spacy Architecture
+Photographs: Rungkit Charoenwat
