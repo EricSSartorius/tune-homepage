@@ -45,11 +45,8 @@ play area to open up their imagination in both learning and playing.
 Climbing, hanging, hanging or falling down and wounds from running are
 part of helping children learn and grow.
 
-_Project:_ Fuji Kindergarten, Ring Around The Tree
-
-##### Conceptual Design
-
-_Conceptual Design:_ Tune Kantharoup with Tezuka Architects 
-_Architecture and Interior:_ Tezuka Architects 
-_Photography:_ Iwan Baan
+_Project:_ Fuji Kindergarten, Ring Around The Tree  
+_Conceptual Design:_ Tune Kantharoup with Tezuka Architects  
+_Architecture and Interior:_ Tezuka Architects  
+_Photography:_ Iwan Baan  
 _Awards:_ TED Talk Top 10 Kindergarden
