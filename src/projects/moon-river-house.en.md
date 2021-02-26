@@ -32,5 +32,5 @@ mound. The interior design and decoration in the living room gives you a great
 view from the inside, a view that makes me feel like I'm living in a house
 floating in the sky.
 
-_Architecture and Interior:_ Tune Kantharoup with Spacy Architecture
+_Architecture and Interior:_ Tune Kantharoup  
 _Photography:_ Tune & Flying Home Studio
