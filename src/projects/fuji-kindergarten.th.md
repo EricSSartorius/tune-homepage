@@ -51,11 +51,8 @@ Ring Around The Tree เป็นอาคารทรงกลมที่ม�
 เพราะบาดแผลจากการวิ่งเล่นจะเป็นส่วนหนึ่งที่ช่วยให้พวกเขาเรียนรู้และเติบโตไ
 ด้อย่างเข้มแข็ง
 
-_Project:_ Fuji Kindergarten, Ring Around The Tree
-
-##### Conceptual Design
-
-_Conceptual Design:_ Tune Kantharoup with Tezuka Architects 
-_Architecture and Interior:_ Tezuka Architects 
-_Photography:_ Iwan Baan
+_Project:_ Fuji Kindergarten, Ring Around The Tree  
+_Conceptual Design:_ Tune Kantharoup with Tezuka Architects   
+_Architecture and Interior:_ Tezuka Architects  
+_Photography:_ Iwan Baan  
 _Awards:_ TED Talk Top 10 Kindergarden
