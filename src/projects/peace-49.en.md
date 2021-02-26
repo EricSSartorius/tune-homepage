@@ -41,3 +41,6 @@ to sit on the platform with small tables and cushions prepared. You can
 also sit on the platform and lower your legs to look at the tea making at
 the bar counter, or you can sit by the glass to look at the outside
 atmosphere of Sukhumvit Soi 49 as well.
+
+_Architecture and Interior:_ Tune Kantharoup with Spacy Architecture
+_Photography:_ Ketsiree Wongwan
