@@ -35,3 +35,6 @@ furniture, floating from walls and shelves using a linear light. In addition,
 all the furniture is redesigned and custom made to fit the space inside
 the room to make this room with limited space look wider and be used
 efficiently.
+
+_Architecture and Interior:_ Tune Kantharoup with Spacy Architecture
+_Photography:_ Rungkit Charoenwat
