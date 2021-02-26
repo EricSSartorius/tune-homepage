@@ -34,9 +34,6 @@ Peace - Oriental Teahouse
 
 ![Peace 49 3](./images/peace-49/peace-49-3.jpg)
 
-_Architecture and Interior:_ Tune Kantharoup with Spacy Architecture
-_Photography:_ Ketsiree Wongwan
-
 บริเวณตรงกลางร้านออกแบบเป็นเคาท์เตอร์บาร์ที่ทำให้ลูกค้าได้ใกล้ชิดกับ Tea
 Master มากขึ้น ได้เห็นกระบวนการชงชาและพูดคุยกันอย่างใกล้ชิด
 ซึ่งการทำเคาท์เตอร์บาร์ลักษะนี้ได้กลายมาเป็นเป็นซิกเนเจอร์ของร้านที่ถูกนำไปใ
@@ -48,3 +45,6 @@ Master มากขึ้น ได้เห็นกระบวนการช
 ลูกค้าสามารถเลือกขึ้นมานั่งบนชั้นลอยที่มีโต๊ะเล็กและเบาะรองนั่งเตรียมไว้
 จะนั่งชั้นลอยแล้วหย่อนขาหันมามาดูการชงชาที่เคาท์เตอร์บาร์ก็ได้
 หรือจะนั่งริมกระจกมองบรรยากาศข้างนอกของซอยสุขุมวิท 49 ก็ได้เช่นกัน
+
+_Architecture and Interior:_ Tune Kantharoup with Spacy Architecture  
+_Photography:_ Ketsiree Wongwan
