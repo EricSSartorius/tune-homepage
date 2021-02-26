@@ -48,6 +48,6 @@ trunk inside a glass curved like a jar, therefore like being in a small hive und
 tree with honey where you can immerse yourself in honey.
 
 
-_Architecture and Interior:_ Tune Kantharoup with Spacy Architecture
-_Photography:_ Rungkit Charoenwat and Designsomething
+_Architecture and Interior:_ Tune Kantharoup with Spacy Architecture  
+_Photography:_ Rungkit Charoenwat and Designsomething  
 
