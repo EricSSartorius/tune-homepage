@@ -49,5 +49,7 @@ _Project:_ Fuji Kindergarten, Ring Around The Tree
 
 ##### Conceptual Design
 
-_Credits:_ Tezuka Architects Photography Iwan Baan
+_Conceptual Design:_ Tune Kantharoup with Tezuka Architects 
+_Architecture and Interior:_ Tezuka Architects 
+_Photography:_ Iwan Baan
 _Awards:_ TED Talk Top 10 Kindergarden
