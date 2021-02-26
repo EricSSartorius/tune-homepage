@@ -61,5 +61,5 @@ Looking out of the glass room, you will see a large tree that used to be in
 the past. It is one of my intentions to keep as many large trees in the
 same area as possible.
 
-_Architecture and Interior:_ Tune Kantharoup with Spacy Architecture
-_Photography:_ Rungkit Charoenwat and Wison Tungthunya
+_Architecture and Interior:_ Tune Kantharoup with Spacy Architecture  
+_Photography:_ Rungkit Charoenwat and Wison Tungthunya  
