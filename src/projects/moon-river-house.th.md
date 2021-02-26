@@ -36,5 +36,5 @@ Landscape โดยรอบ
 การออกแบบและตกแต่งภายในที่เป็นห้องกระจกใสจะทำให้ได้วิวที่ดีมากเมื่อมองจ
 ากภายใน และทำให้รู้สึกเหมือนได้อาศัยอยู่ในบ้านที่ลอยอยู่ในอากาศ
 
-_Architecture and Interior:_ Tune Kantharoup with Spacy Architecture
+_Architecture and Interior:_ Tune Kantharoup   
 _Photography:_ Flying Home Studio
