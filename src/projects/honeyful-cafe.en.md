@@ -46,3 +46,8 @@ can think of. Outside the shop, the same trees were preserved as part of the
 building. Looking through the glass inside the shop, you can see a large palm tree
 trunk inside a glass curved like a jar, therefore like being in a small hive under a big
 tree with honey where you can immerse yourself in honey.
+
+
+_Architecture and Interior:_ Tune Kantharoup with Spacy Architecture
+_Photography:_ Rungkit Charoenwat and Designsomething
+
