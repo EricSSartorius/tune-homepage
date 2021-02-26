@@ -37,3 +37,6 @@ lang: "th"
 และเฟอร์นิเจอร์แบบ Custom Made
 ซึ่งหากลูกค้าต้องการบริการด้านนี้เป็นพิเศษก็สามารถให้คำปรึกษาและช่วยให้คำ
 แนะนำได้เช่นกัน
+
+_Architecture and Interior:_ Tune Kantharoup & Flying Home Studio
+_Photography:_ Tune Kantharoup & Flying Home Studio
