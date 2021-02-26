@@ -35,3 +35,6 @@ Saladaeng One
 นอกจากนี้เฟอร์นิเจอร์ทั้งหมดยังออกแบบใหม่และสั่งทำพิเศษเพื่อให้เหมาะสมกับ
 ขนาดพื้นที่ภายในห้อง
 ทำให้ห้องที่มีพื้นที่จำกัดดูกว้างขึ้นและใช้พื้นที่ได้อย่างมีประสิทธิภาพ
+
+_Architecture and Interior:_ Tune Kantharoup with Spacy Architecture
+_Photography:_ Rungkit Charoenwat
