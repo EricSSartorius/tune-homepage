@@ -51,3 +51,6 @@ The rounded shape of the wooden house creates a natural pattern when
 sunlight hits the birch trees and walls. Looking up, you can see the trees
 and the sky as if under natural shade, according to the concept of a
 roofless house which was the initial idea.
+
+_Architecture and Interior:_ Tune Kantharoup with Craig Steely
+_Photography:_ Darren Bradley
