@@ -66,5 +66,5 @@ Khao (ข้าว) คือร้านอาหารไทยที่มา
 เป็นหนึ่งในความตั้งใจของผมที่อยากเก็บต้นไม้ใหญ่ในพื้นที่เดิมเอาไว้ให้ได้มากที่
 สุด
 
-_Architecture and Interior:_ Tune Kantharoup with Spacy Architecture
+_Architecture and Interior:_ Tune Kantharoup with Spacy Architecture   
 _Photography:_ Rungkit Charoenwat and Wison Tungthunya
