@@ -21,5 +21,5 @@ The building has an area of ​​25 square meters and has two old trees already
 
 When entering the store, it will not feel cramped. If you look outside the shop, you will see a garden and large trees to hide the privacy of the house next to it. After several experiments with various lighting designs, I decided to orient lighting upwards for a softer, more comfortable light than directly from the ceiling.
 
-Architecture and Interior: Tune Kantharoup / Spacy Architecture  
+Architecture and Interior: Tune Kantharoup with Spacy Architecture  
 Photographs: Rungkit Charoenwat
