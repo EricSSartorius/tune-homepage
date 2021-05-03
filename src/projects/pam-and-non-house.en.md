@@ -1,6 +1,6 @@
 ---
 slug: "/project/pam-and-non-house/"
-title: "Pam and Nonn’s House"
+title: "Pamm and Nonn’s House"
 thumbnail: "./images/pam-and-non-house/pam-and-non-house-2.jpg"
 hero: "./images/pam-and-non-house/pam-and-non-house-2.jpg"
 images:
